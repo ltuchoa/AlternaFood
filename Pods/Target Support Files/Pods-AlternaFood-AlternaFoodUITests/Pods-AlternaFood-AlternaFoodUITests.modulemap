@@ -1,0 +1,6 @@
+framework module Pods_AlternaFood_AlternaFoodUITests {
+  umbrella header "Pods-AlternaFood-AlternaFoodUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
