@@ -1,8 +1,11 @@
+
 excluded:
 - Pods
-#
-#line_length: 220
-#
+- Carthage
+
+line_length: 220
+
+
 #type_name:
 #  min_length: 1 # only warning
 #  max_length: # warning and error

@@ -4,7 +4,6 @@
 //
 //  Created by Leonardo Gomes Fernandes on 18/11/20.
 //
-//swiftlint:disable line_length
 
 import UIKit
 import CoreData
