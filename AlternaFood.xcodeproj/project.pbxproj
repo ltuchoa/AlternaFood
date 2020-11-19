@@ -144,6 +144,7 @@
 		736CB73D25654A9B00A51F28 /* AlternaFood */ = {
 			isa = PBXGroup;
 			children = (
+				A4A6F43F2566EFC80094F278 /* Extensions */,
 				545C3ADE2566E5BB0095273A /* Model */,
 				545C3ADD2566E5B40095273A /* View */,
 				736CB77B25654B7A00A51F28 /* Controller */,
@@ -182,6 +183,13 @@
 				732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4A6F43F2566EFC80094F278 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CEA9897E991FC4F1EC9F8707 /* Pods */ = {
