@@ -23,6 +23,7 @@
 		73895AE525656BFE00D6EC41 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 73895AE425656BFE00D6EC41 /* .swiftlint.yml */; };
 		7C446860DB50939D3BB6B2E0 /* Pods_AlternaFood_AlternaFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EE89487B3E025F5A0941A7 /* Pods_AlternaFood_AlternaFoodUITests.framework */; };
 		9B149A0DE202957D64112E3D /* Pods_AlternaFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */; };
+		A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		73895AE425656BFE00D6EC41 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		762FD369B4931FC03F82714C /* Pods-AlternaFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.release.xcconfig"; sourceTree = "<group>"; };
 		970D70D61FDE500B93A93E17 /* Pods-AlternaFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.debug.xcconfig"; sourceTree = "<group>"; };
+		A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */,
+				A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */,
 				736CB74325654A9B00A51F28 /* ViewController.swift in Sources */,
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
 				545C3AE02566E5DA0095273A /* ViewAvulsa.swift in Sources */,
