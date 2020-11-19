@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13DFF3B300110C203C6267FD /* Pods_AlternaFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */; };
+		545C3AE02566E5DA0095273A /* ViewAvulsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */; };
+		545C3AE82566E5EB0095273A /* ModelAvulsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3AE72566E5EB0095273A /* ModelAvulsa.swift */; };
 		732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */; };
 		736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB73E25654A9B00A51F28 /* AppDelegate.swift */; };
 		736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74025654A9B00A51F28 /* SceneDelegate.swift */; };
@@ -46,6 +48,8 @@
 		238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		387A051957879E78E8EFAFAE /* Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43B7FDBDB1CC35A282AC38B4 /* Pods-AlternaFood-AlternaFoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; sourceTree = "<group>"; };
+		545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAvulsa.swift; sourceTree = "<group>"; };
+		545C3AE72566E5EB0095273A /* ModelAvulsa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAvulsa.swift; sourceTree = "<group>"; };
 		68EAA788885F92D28359BC2F /* Pods-AlternaFoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFoodTests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFoodTests/Pods-AlternaFoodTests.release.xcconfig"; sourceTree = "<group>"; };
 		732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		736CB73B25654A9B00A51F28 /* AlternaFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlternaFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		545C3ADD2566E5B40095273A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		545C3ADE2566E5BB0095273A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				545C3AE72566E5EB0095273A /* ModelAvulsa.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		736CB73225654A9B00A51F28 = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +144,9 @@
 		736CB73D25654A9B00A51F28 /* AlternaFood */ = {
 			isa = PBXGroup;
 			children = (
+				545C3ADE2566E5BB0095273A /* Model */,
+				545C3ADD2566E5B40095273A /* View */,
 				736CB77B25654B7A00A51F28 /* Controller */,
-				736CB77A25654B7500A51F28 /* View */,
-				736CB77925654B6900A51F28 /* Model */,
 				736CB73E25654A9B00A51F28 /* AppDelegate.swift */,
 				736CB74025654A9B00A51F28 /* SceneDelegate.swift */,
 				736CB74A25654A9C00A51F28 /* Assets.xcassets */,
@@ -153,20 +173,6 @@
 				736CB76525654A9C00A51F28 /* Info.plist */,
 			);
 			path = AlternaFoodUITests;
-			sourceTree = "<group>";
-		};
-		736CB77925654B6900A51F28 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		736CB77A25654B7500A51F28 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		736CB77B25654B7A00A51F28 /* Controller */ = {
@@ -460,9 +466,11 @@
 			files = (
 				736CB74325654A9B00A51F28 /* ViewController.swift in Sources */,
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
+				545C3AE02566E5DA0095273A /* ViewAvulsa.swift in Sources */,
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
 				732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
+				545C3AE82566E5EB0095273A /* ModelAvulsa.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
