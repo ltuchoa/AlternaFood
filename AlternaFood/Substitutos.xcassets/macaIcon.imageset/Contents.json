@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "maçãIcon.pdf",
+      "filename" : "macaIcon.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "maçãIcon@2x.pdf",
+      "filename" : "macaIcon@2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "maçãIcon@3x.pdf",
+      "filename" : "macaIcon@3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }

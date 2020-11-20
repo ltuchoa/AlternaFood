@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "amêndoasIcon.pdf",
+      "filename" : "amendoasIcon.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "amêndoasIcon@2x.pdf",
+      "filename" : "amendoasIcon@2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "amêndoasIcon@3x.pdf",
+      "filename" : "amendoasIcon@3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }
