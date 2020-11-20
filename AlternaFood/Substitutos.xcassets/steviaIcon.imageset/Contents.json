@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "noun_vegetables_1042127.pdf",
+      "filename" : "steviaIcon.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "noun_vegetables_1042127@2x.pdf",
+      "filename" : "steviaIcon@2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "noun_vegetables_1042127@3x.pdf",
+      "filename" : "steviaIcon@3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }
