@@ -20,10 +20,14 @@ class TabBarViewController: UITabBarController {
         receitas.tabBarItem = UITabBarItem(title: "Receitas", image: UIImage(named: "receitas_icon"), tag: 1)
 
         let tabBarList = [alimentos, receitas]
+        setupStyle()
         viewControllers = tabBarList
     }
 
     func setupStyle() {
+        tabBar.tintColor = UIColor.init(named: "actionColor")
+        tabBar.unselectedItemTintColor = UIColor.init(named: "tabColor")
+        tabBar.isTranslucent = false
     }
 
     func removeSeparetor() {
