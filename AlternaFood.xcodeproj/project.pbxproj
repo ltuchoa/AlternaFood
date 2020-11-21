@@ -25,7 +25,6 @@
 		7C446860DB50939D3BB6B2E0 /* Pods_AlternaFood_AlternaFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EE89487B3E025F5A0941A7 /* Pods_AlternaFood_AlternaFoodUITests.framework */; };
 		9B149A0DE202957D64112E3D /* Pods_AlternaFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */; };
 		A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */; };
-		A4A6F45F2567F15A0094F278 /* Substitutos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A6F45E2567F15A0094F278 /* Substitutos.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +74,6 @@
 		762FD369B4931FC03F82714C /* Pods-AlternaFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.release.xcconfig"; sourceTree = "<group>"; };
 		970D70D61FDE500B93A93E17 /* Pods-AlternaFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.debug.xcconfig"; sourceTree = "<group>"; };
 		A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		A4A6F45E2567F15A0094F278 /* Substitutos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Substitutos.xcassets; sourceTree = "<group>"; };
 		DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,7 +160,6 @@
 				736CB74C25654A9C00A51F28 /* LaunchScreen.storyboard */,
 				736CB74F25654A9C00A51F28 /* Info.plist */,
 				736CB74725654A9B00A51F28 /* AlternaFood.xcdatamodeld */,
-				A4A6F45E2567F15A0094F278 /* Substitutos.xcassets */,
 			);
 			path = AlternaFood;
 			sourceTree = "<group>";
@@ -337,7 +334,6 @@
 				73895AE525656BFE00D6EC41 /* .swiftlint.yml in Resources */,
 				736CB77525654B4600A51F28 /* .gitignore in Resources */,
 				736CB74E25654A9C00A51F28 /* LaunchScreen.storyboard in Resources */,
-				A4A6F45F2567F15A0094F278 /* Substitutos.xcassets in Resources */,
 				736CB74B25654A9C00A51F28 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
