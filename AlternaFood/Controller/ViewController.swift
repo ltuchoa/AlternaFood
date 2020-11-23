@@ -11,10 +11,12 @@ import Cosmos
 class ViewController: UIViewController {
 
     let card = CardCollectionViewCell()
-    
+
+    let cdManeger = CDManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.        
+        // Do any additional setup after loading the view.
         view.backgroundColor = .white
         view.addSubview(card)
         card.translatesAutoresizingMaskIntoConstraints = false
@@ -24,6 +26,7 @@ class ViewController: UIViewController {
             card.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.27),
             card.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.37)
         ])
+        
     }
-    
+
 }
