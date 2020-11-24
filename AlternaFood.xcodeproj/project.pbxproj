@@ -13,6 +13,8 @@
 		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
 		562CB05325680AAB00F729FD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CB05225680AAB00F729FD /* CustomCell.swift */; };
 		56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */; };
+		56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */; };
+		56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */; };
 		732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */; };
 		736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB73E25654A9B00A51F28 /* AppDelegate.swift */; };
 		736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74025654A9B00A51F28 /* SceneDelegate.swift */; };
@@ -58,6 +60,8 @@
 		54EFFCC12567E55200996F33 /* Alimentos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Alimentos.xcassets; sourceTree = "<group>"; };
 		562CB05225680AAB00F729FD /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAlimentosViewControllerExtension.swift; sourceTree = "<group>"; };
+		56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewControllerExtension.swift; sourceTree = "<group>"; };
 		68EAA788885F92D28359BC2F /* Pods-AlternaFoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFoodTests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFoodTests/Pods-AlternaFoodTests.release.xcconfig"; sourceTree = "<group>"; };
 		732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		736CB73B25654A9B00A51F28 /* AlternaFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlternaFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +118,6 @@
 		545C3ADD2566E5B40095273A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */,
 				A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */,
 				562CB05225680AAB00F729FD /* CustomCell.swift */,
 				5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */,
@@ -128,6 +131,15 @@
 				545C3AE72566E5EB0095273A /* ModelAvulsa.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		56CBD23E256C9F2600D7F807 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */,
+				56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		736CB73225654A9B00A51F28 = {
@@ -157,7 +169,7 @@
 		736CB73D25654A9B00A51F28 /* AlternaFood */ = {
 			isa = PBXGroup;
 			children = (
-				A4A6F43F2566EFC80094F278 /* Extensions */,
+				56CBD23E256C9F2600D7F807 /* Extensions */,
 				545C3ADE2566E5BB0095273A /* Model */,
 				545C3ADD2566E5B40095273A /* View */,
 				736CB77B25654B7A00A51F28 /* Controller */,
@@ -194,17 +206,11 @@
 		736CB77B25654B7A00A51F28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */,
 				736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */,
 				732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		A4A6F43F2566EFC80094F278 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CEA9897E991FC4F1EC9F8707 /* Pods */ = {
@@ -495,8 +501,10 @@
 				56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */,
 				562CB05325680AAB00F729FD /* CustomCell.swift in Sources */,
+				56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */,
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
 				732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */,
+				56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
 				545C3AE82566E5EB0095273A /* ModelAvulsa.swift in Sources */,
 			);
