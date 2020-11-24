@@ -14,6 +14,8 @@
 		56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */; };
 		56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */; };
 		56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */; };
+		5465699D256BE3AD00298373 /* ReceitaCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */; };
+		546569A2256BE3FD00298373 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546569A1256BE3FD00298373 /* TagView.swift */; };
 		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
 		73260E22256808CC005A1F1F /* Substituto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1C256808CC005A1F1F /* Substituto+CoreDataClass.swift */; };
 		73260E23256808CC005A1F1F /* Substituto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1D256808CC005A1F1F /* Substituto+CoreDataProperties.swift */; };
@@ -66,6 +68,8 @@
 		43B7FDBDB1CC35A282AC38B4 /* Pods-AlternaFood-AlternaFoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewController.swift; sourceTree = "<group>"; };
 		545C3AE72566E5EB0095273A /* ModelAvulsa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAvulsa.swift; sourceTree = "<group>"; };
+		5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaCardTableViewCell.swift; sourceTree = "<group>"; };
+		546569A1256BE3FD00298373 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		54EFFCC12567E55200996F33 /* Alimentos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Alimentos.xcassets; sourceTree = "<group>"; };
 		562CB05225680AAB00F729FD /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				562CB05225680AAB00F729FD /* CustomCell.swift */,
 				5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */,
 
+				5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */,
+				546569A1256BE3FD00298373 /* TagView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -534,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546569A2256BE3FD00298373 /* TagView.swift in Sources */,
 				73260E24256808CC005A1F1F /* Alimento+CoreDataProperties.swift in Sources */,
 				A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */,
 
@@ -545,6 +552,7 @@
 				56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */,
 
 				73260E27256808CC005A1F1F /* Receita+CoreDataProperties.swift in Sources */,
+				5465699D256BE3AD00298373 /* ReceitaCardTableViewCell.swift in Sources */,
 				73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */,
 
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,

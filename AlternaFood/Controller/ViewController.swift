@@ -10,7 +10,7 @@ import Cosmos
 
 class ViewController: UIViewController {
 
-    let card = CardCollectionViewCell()
+    let card = ReceitaCardTableViewCell()
 
     let cdManeger = CDManager()
 
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             card.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             card.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             card.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.27),
-            card.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.37)
+            card.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.83)
         ])
         
     }
