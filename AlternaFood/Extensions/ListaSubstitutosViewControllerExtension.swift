@@ -42,8 +42,8 @@ extension ListaSubstitutosViewController: UICollectionViewDelegate, UICollection
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("User tapped on item \(indexPath.row)")
-//        let viewController = ListaSubstitutosViewController() //só substituir pela controller da descrição
-//        self.navigationController?.pushViewController(viewController, animated: true)
+        print("User tapped on item \(indexPath.row)")
+        let viewController = DescriptionViewController() //só substituir pela controller da descrição
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

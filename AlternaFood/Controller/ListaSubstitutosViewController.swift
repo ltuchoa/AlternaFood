@@ -13,9 +13,18 @@ class ListaSubstitutosViewController: UIViewController {
     var collectionView: UICollectionView?
 
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Substitutos"
+        configNav()
         view.backgroundColor = .systemBackground
         setUpCollectionview()
+    }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
+//    }
+    
+    func configNav() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Substitutos"
+        self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
     }
 }

@@ -18,7 +18,7 @@ class TabBarViewController: UITabBarController {
 
         let receitas = UINavigationController(rootViewController: ListaAlimentosViewController())
         receitas.tabBarItem = UITabBarItem(title: "Receitas", image: UIImage(named: "receitas_icon"), tag: 1)
-
+        
         let tabBarList = [alimentos, receitas]
         setupStyle()
         viewControllers = tabBarList
