@@ -26,7 +26,7 @@ class CardCollectionViewCell: UIView {
         let food = UILabel()
         food.numberOfLines = 0
         food.text = "Larissa só reclama, chata pra caralho"
-        
+
         return food
     }()
 
@@ -41,7 +41,7 @@ class CardCollectionViewCell: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func configBackGroundConstraint() {
         background.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -50,7 +50,7 @@ class CardCollectionViewCell: UIView {
             background.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             background.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
-    
+
     }
     func configIconConstraint() {
         background.addSubview(icon)

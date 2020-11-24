@@ -20,7 +20,11 @@ class DescriptionViewController: UIViewController {
     }()
     
     let descriptionView = DescriptionView()
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -29,10 +33,19 @@ class DescriptionViewController: UIViewController {
         }
         configImageHeader()
         configMaskFoto()
+        configNav()
+      
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+    
+    
+    func configNav() {
+        self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
+
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
     }
     
     func configImageHeader() {
@@ -52,7 +65,8 @@ class DescriptionViewController: UIViewController {
         NSLayoutConstraint.activate([
             maskImage.topAnchor.constraint(equalTo: imageHeader.topAnchor),
             maskImage.bottomAnchor.constraint(equalTo: imageHeader.bottomAnchor),
-            maskImage.leadingAnchor.constraint(equalTo: imageHeader.leadingAnchor)
+            maskImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3268),
+            maskImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
         ])
     }
     

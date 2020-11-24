@@ -23,7 +23,7 @@ class DescriptionView: UIView {
     }
 
     func configView() {
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
         self.layer.cornerRadius = 20
     }
 
