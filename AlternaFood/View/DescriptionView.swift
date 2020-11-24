@@ -84,10 +84,9 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
                 cell.textLabel?.font = UIFont.systemFont(ofSize: 26, weight: .bold)
                 cell.textLabel?.text = "Receitas"
                 return cell
-            case 2:
-                let cell = UITableViewCell()
-                cell.textLabel?.text = "Aqui terá um card"
-                return cell
+//            case 2:
+//                let cell = ReceitaCardTableViewCell()
+//                return cell
             default:
                 return UITableViewCell()
         }

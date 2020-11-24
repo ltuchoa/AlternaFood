@@ -8,7 +8,7 @@
 import UIKit
 import Cosmos
 
-class ReceitaCardTableViewCell: UIView {
+class ReceitaCardCell: UIView {
 
     let name: UILabel = {
         let name = UILabel()

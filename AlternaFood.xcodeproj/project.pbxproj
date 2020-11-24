@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		13DFF3B300110C203C6267FD /* Pods_AlternaFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */; };
 		545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */; };
-		545C3AE82566E5EB0095273A /* ModelAvulsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3AE72566E5EB0095273A /* ModelAvulsa.swift */; };
+		5465699D256BE3AD00298373 /* ReceitaCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5465699C256BE3AD00298373 /* ReceitaCardCell.swift */; };
+		546569A2256BE3FD00298373 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546569A1256BE3FD00298373 /* TagView.swift */; };
+		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
 		562CB05325680AAB00F729FD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CB05225680AAB00F729FD /* CustomCell.swift */; };
 		56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */; };
 		56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */; };
 		56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */; };
-		5465699D256BE3AD00298373 /* ReceitaCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */; };
-		546569A2256BE3FD00298373 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546569A1256BE3FD00298373 /* TagView.swift */; };
-		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
 		73260E22256808CC005A1F1F /* Substituto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1C256808CC005A1F1F /* Substituto+CoreDataClass.swift */; };
 		73260E23256808CC005A1F1F /* Substituto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1D256808CC005A1F1F /* Substituto+CoreDataProperties.swift */; };
 		73260E24256808CC005A1F1F /* Alimento+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1E256808CC005A1F1F /* Alimento+CoreDataProperties.swift */; };
@@ -67,8 +66,7 @@
 		387A051957879E78E8EFAFAE /* Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43B7FDBDB1CC35A282AC38B4 /* Pods-AlternaFood-AlternaFoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewController.swift; sourceTree = "<group>"; };
-		545C3AE72566E5EB0095273A /* ModelAvulsa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAvulsa.swift; sourceTree = "<group>"; };
-		5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaCardTableViewCell.swift; sourceTree = "<group>"; };
+		5465699C256BE3AD00298373 /* ReceitaCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaCardCell.swift; sourceTree = "<group>"; };
 		546569A1256BE3FD00298373 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		54EFFCC12567E55200996F33 /* Alimentos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Alimentos.xcassets; sourceTree = "<group>"; };
 		562CB05225680AAB00F729FD /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -141,14 +139,11 @@
 			isa = PBXGroup;
 			children = (
 				A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */,
-
 				A4A6F4762569A0110094F278 /* DescriptionView.swift */,
 				A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */,
-
 				562CB05225680AAB00F729FD /* CustomCell.swift */,
 				5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */,
-
-				5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */,
+				5465699C256BE3AD00298373 /* ReceitaCardCell.swift */,
 				546569A1256BE3FD00298373 /* TagView.swift */,
 			);
 			path = View;
@@ -163,7 +158,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-
 		56CBD23E256C9F2600D7F807 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +167,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-
 		73260DD22568030B005A1F1F /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +178,6 @@
 				73260E1D256808CC005A1F1F /* Substituto+CoreDataProperties.swift */,
 			);
 			path = CoreDataModel;
-
 			sourceTree = "<group>";
 		};
 		736CB73225654A9B00A51F28 = {
@@ -543,28 +535,22 @@
 				546569A2256BE3FD00298373 /* TagView.swift in Sources */,
 				73260E24256808CC005A1F1F /* Alimento+CoreDataProperties.swift in Sources */,
 				A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */,
-
 				A4A6F484256A2D570094F278 /* DescriptionSubTableViewCell.swift in Sources */,
 				736CB74325654A9B00A51F28 /* ListaAlimentosViewController.swift in Sources */,
 				56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */,
 				562CB05325680AAB00F729FD /* CustomCell.swift in Sources */,
 				56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */,
-
 				73260E27256808CC005A1F1F /* Receita+CoreDataProperties.swift in Sources */,
-				5465699D256BE3AD00298373 /* ReceitaCardTableViewCell.swift in Sources */,
+				5465699D256BE3AD00298373 /* ReceitaCardCell.swift in Sources */,
 				73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */,
-
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
 				73260E23256808CC005A1F1F /* Substituto+CoreDataProperties.swift in Sources */,
-
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
 				73260E22256808CC005A1F1F /* Substituto+CoreDataClass.swift in Sources */,
 				732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */,
-
 				A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */,
 				A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */,
-
 				56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
 				73260E26256808CC005A1F1F /* Alimento+CoreDataClass.swift in Sources */,

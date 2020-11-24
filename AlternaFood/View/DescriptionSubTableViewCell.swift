@@ -32,7 +32,7 @@ class DescriptionSubTableViewCell: UITableViewCell {
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20.0)
         ])
-        }
+    }
 
     func configureInfoLabel(){
         addSubview(infoLabel)
