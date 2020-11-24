@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		13DFF3B300110C203C6267FD /* Pods_AlternaFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */; };
+
 		545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */; };
 		545C3AE82566E5EB0095273A /* ModelAvulsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3AE72566E5EB0095273A /* ModelAvulsa.swift */; };
-		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
 		562CB05325680AAB00F729FD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CB05225680AAB00F729FD /* CustomCell.swift */; };
 		56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */; };
 		56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */; };
 		56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */; };
+		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
+		73260E22256808CC005A1F1F /* Substituto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1C256808CC005A1F1F /* Substituto+CoreDataClass.swift */; };
+		73260E23256808CC005A1F1F /* Substituto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1D256808CC005A1F1F /* Substituto+CoreDataProperties.swift */; };
+		73260E24256808CC005A1F1F /* Alimento+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1E256808CC005A1F1F /* Alimento+CoreDataProperties.swift */; };
+		73260E25256808CC005A1F1F /* Receita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1F256808CC005A1F1F /* Receita+CoreDataClass.swift */; };
+		73260E26256808CC005A1F1F /* Alimento+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E20256808CC005A1F1F /* Alimento+CoreDataClass.swift */; };
+		73260E27256808CC005A1F1F /* Receita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E21256808CC005A1F1F /* Receita+CoreDataProperties.swift */; };
+		73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E3B25680E0D005A1F1F /* CoreDataManager.swift */; };
 		732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */; };
 		736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB73E25654A9B00A51F28 /* AppDelegate.swift */; };
 		736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74025654A9B00A51F28 /* SceneDelegate.swift */; };
@@ -29,7 +37,6 @@
 		7C446860DB50939D3BB6B2E0 /* Pods_AlternaFood_AlternaFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EE89487B3E025F5A0941A7 /* Pods_AlternaFood_AlternaFoodUITests.framework */; };
 		9B149A0DE202957D64112E3D /* Pods_AlternaFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */; };
 		A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */; };
-		A4A6F45F2567F15A0094F278 /* Substitutos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A6F45E2567F15A0094F278 /* Substitutos.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +70,14 @@
 		56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAlimentosViewControllerExtension.swift; sourceTree = "<group>"; };
 		56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewControllerExtension.swift; sourceTree = "<group>"; };
 		68EAA788885F92D28359BC2F /* Pods-AlternaFoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFoodTests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFoodTests/Pods-AlternaFoodTests.release.xcconfig"; sourceTree = "<group>"; };
+		73260E1C256808CC005A1F1F /* Substituto+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Substituto+CoreDataClass.swift"; sourceTree = "<group>"; };
+		73260E1D256808CC005A1F1F /* Substituto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Substituto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		73260E1E256808CC005A1F1F /* Alimento+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alimento+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		73260E1F256808CC005A1F1F /* Receita+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Receita+CoreDataClass.swift"; sourceTree = "<group>"; };
+		73260E20256808CC005A1F1F /* Alimento+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alimento+CoreDataClass.swift"; sourceTree = "<group>"; };
+		73260E21256808CC005A1F1F /* Receita+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Receita+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		73260E2E2568090D005A1F1F /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = SOURCE_ROOT; };
+		73260E3B25680E0D005A1F1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		736CB73B25654A9B00A51F28 /* AlternaFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlternaFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736CB73E25654A9B00A51F28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +98,6 @@
 		762FD369B4931FC03F82714C /* Pods-AlternaFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.release.xcconfig"; sourceTree = "<group>"; };
 		970D70D61FDE500B93A93E17 /* Pods-AlternaFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.debug.xcconfig"; sourceTree = "<group>"; };
 		A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		A4A6F45E2567F15A0094F278 /* Substitutos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Substitutos.xcassets; sourceTree = "<group>"; };
 		DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,7 +142,8 @@
 		545C3ADE2566E5BB0095273A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				545C3AE72566E5EB0095273A /* ModelAvulsa.swift */,
+				73260DD22568030B005A1F1F /* CoreDataModel */,
+				73260E3B25680E0D005A1F1F /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +155,17 @@
 				56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */,
 			);
 			path = Extensions;
+		73260DD22568030B005A1F1F /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				73260E20256808CC005A1F1F /* Alimento+CoreDataClass.swift */,
+				73260E1E256808CC005A1F1F /* Alimento+CoreDataProperties.swift */,
+				73260E1F256808CC005A1F1F /* Receita+CoreDataClass.swift */,
+				73260E21256808CC005A1F1F /* Receita+CoreDataProperties.swift */,
+				73260E1C256808CC005A1F1F /* Substituto+CoreDataClass.swift */,
+				73260E1D256808CC005A1F1F /* Substituto+CoreDataProperties.swift */,
+			);
+			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
 		736CB73225654A9B00A51F28 = {
@@ -180,7 +206,6 @@
 				736CB74C25654A9C00A51F28 /* LaunchScreen.storyboard */,
 				736CB74F25654A9C00A51F28 /* Info.plist */,
 				736CB74725654A9B00A51F28 /* AlternaFood.xcdatamodeld */,
-				A4A6F45E2567F15A0094F278 /* Substitutos.xcassets */,
 			);
 			path = AlternaFood;
 			sourceTree = "<group>";
@@ -349,7 +374,6 @@
 				73895AE525656BFE00D6EC41 /* .swiftlint.yml in Resources */,
 				736CB77525654B4600A51F28 /* .gitignore in Resources */,
 				736CB74E25654A9C00A51F28 /* LaunchScreen.storyboard in Resources */,
-				A4A6F45F2567F15A0094F278 /* Substitutos.xcassets in Resources */,
 				736CB74B25654A9C00A51F28 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,18 +519,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73260E24256808CC005A1F1F /* Alimento+CoreDataProperties.swift in Sources */,
 				A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */,
 				736CB74325654A9B00A51F28 /* ListaAlimentosViewController.swift in Sources */,
-				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
 				56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */,
 				562CB05325680AAB00F729FD /* CustomCell.swift in Sources */,
 				56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */,
+				73260E27256808CC005A1F1F /* Receita+CoreDataProperties.swift in Sources */,
+				73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */,
+				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
+				73260E23256808CC005A1F1F /* Substituto+CoreDataProperties.swift in Sources */,
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
+				73260E22256808CC005A1F1F /* Substituto+CoreDataClass.swift in Sources */,
 				732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */,
 				56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
-				545C3AE82566E5EB0095273A /* ModelAvulsa.swift in Sources */,
+				73260E26256808CC005A1F1F /* Alimento+CoreDataClass.swift in Sources */,
+				73260E25256808CC005A1F1F /* Receita+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
