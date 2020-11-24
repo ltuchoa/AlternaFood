@@ -7,8 +7,8 @@
 
 import UIKit
 import Cosmos
-
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+//swiftlint:disable trailing_whitespace
+class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating {
 
     let card = CardCollectionViewCell()
     var photoGridCollectionView: UICollectionView?
@@ -17,22 +17,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         // Do any additional setup after loading the view.        
         view.backgroundColor = .systemBackground
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
+        self.title = "Alimentos"
+        
         setUpCollectionview()
-//        view.addSubview(card)
-//        card.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            card.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            card.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            card.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.27),
-//            card.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.37)
-//        ])
+        
+        //search config
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        self.navigationItem.searchController = search
     }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        //some code here
+    }
+}
 
+extension ListaAlimentosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func setUpCollectionview() {
 
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: (view.frame.width/2) - 15, height: 250)
+        let layout = CustomCollectionViewFlowLayout()
+        //layout.sectionInset = UIEdgeInsets(top: 30, left: 40, bottom: 100, right: 40)
+//        layout.itemSize = CGSize(width: view.frame.width*0.37, height: view.frame.height*0.27)
 
         photoGridCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
 
@@ -49,17 +56,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        20
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as? CustomCell else {
             return UICollectionViewCell()
         }
-
-        //guard let data = UserDefaults.standard.object(forKey: "\(indexPath.row)") as? Data else { return UICollectionViewCell() }
-
-        //cell.photo.image = UIImage(data: data)
 
         return cell
     }

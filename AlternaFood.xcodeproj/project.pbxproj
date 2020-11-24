@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		13DFF3B300110C203C6267FD /* Pods_AlternaFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */; };
-		545C3AE02566E5DA0095273A /* ViewAvulsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */; };
+		545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */; };
 		545C3AE82566E5EB0095273A /* ModelAvulsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3AE72566E5EB0095273A /* ModelAvulsa.swift */; };
 		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
 		562CB05325680AAB00F729FD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CB05225680AAB00F729FD /* CustomCell.swift */; };
+		56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */; };
 		732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */; };
 		736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB73E25654A9B00A51F28 /* AppDelegate.swift */; };
 		736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74025654A9B00A51F28 /* SceneDelegate.swift */; };
-		736CB74325654A9B00A51F28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74225654A9B00A51F28 /* ViewController.swift */; };
+		736CB74325654A9B00A51F28 /* ListaAlimentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */; };
 		736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74725654A9B00A51F28 /* AlternaFood.xcdatamodeld */; };
 		736CB74B25654A9C00A51F28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736CB74A25654A9C00A51F28 /* Assets.xcassets */; };
 		736CB74E25654A9C00A51F28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736CB74C25654A9C00A51F28 /* LaunchScreen.storyboard */; };
@@ -52,16 +53,17 @@
 		238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		387A051957879E78E8EFAFAE /* Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43B7FDBDB1CC35A282AC38B4 /* Pods-AlternaFood-AlternaFoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; sourceTree = "<group>"; };
-		545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAvulsa.swift; sourceTree = "<group>"; };
+		545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewController.swift; sourceTree = "<group>"; };
 		545C3AE72566E5EB0095273A /* ModelAvulsa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAvulsa.swift; sourceTree = "<group>"; };
 		54EFFCC12567E55200996F33 /* Alimentos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Alimentos.xcassets; sourceTree = "<group>"; };
 		562CB05225680AAB00F729FD /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		68EAA788885F92D28359BC2F /* Pods-AlternaFoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFoodTests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFoodTests/Pods-AlternaFoodTests.release.xcconfig"; sourceTree = "<group>"; };
 		732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		736CB73B25654A9B00A51F28 /* AlternaFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlternaFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736CB73E25654A9B00A51F28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		736CB74025654A9B00A51F28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		736CB74225654A9B00A51F28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAlimentosViewController.swift; sourceTree = "<group>"; };
 		736CB74825654A9B00A51F28 /* AlternaFood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlternaFood.xcdatamodel; sourceTree = "<group>"; };
 		736CB74A25654A9C00A51F28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736CB74D25654A9C00A51F28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,9 +114,10 @@
 		545C3ADD2566E5B40095273A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */,
+				545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */,
 				A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */,
 				562CB05225680AAB00F729FD /* CustomCell.swift */,
+				5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,7 +194,7 @@
 		736CB77B25654B7A00A51F28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				736CB74225654A9B00A51F28 /* ViewController.swift */,
+				736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */,
 				732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */,
 			);
 			path = Controller;
@@ -487,9 +490,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */,
-				736CB74325654A9B00A51F28 /* ViewController.swift in Sources */,
+				736CB74325654A9B00A51F28 /* ListaAlimentosViewController.swift in Sources */,
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
-				545C3AE02566E5DA0095273A /* ViewAvulsa.swift in Sources */,
+				56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */,
+				545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */,
 				562CB05325680AAB00F729FD /* CustomCell.swift in Sources */,
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
 				732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */,
