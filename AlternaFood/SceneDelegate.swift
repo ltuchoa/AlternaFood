@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windownScene.coordinateSpace.bounds)
         window?.windowScene = windownScene
 
-        window?.rootViewController = TabBarViewController() // Aqui colocar a sua controller para desenvolvimento sz
+        window?.rootViewController = DescriptionViewController() // Aqui colocar a sua controller para desenvolvimento sz
         window?.makeKeyAndVisible()
 
 //        guard let _ = (scene as? UIWindowScene) else { return }

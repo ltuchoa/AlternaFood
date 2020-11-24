@@ -25,6 +25,9 @@
 		7C446860DB50939D3BB6B2E0 /* Pods_AlternaFood_AlternaFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EE89487B3E025F5A0941A7 /* Pods_AlternaFood_AlternaFoodUITests.framework */; };
 		9B149A0DE202957D64112E3D /* Pods_AlternaFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */; };
 		A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */; };
+		A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F47125699A790094F278 /* DescriptionViewController.swift */; };
+		A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4762569A0110094F278 /* DescriptionView.swift */; };
+		A4A6F484256A2D570094F278 /* DescriptionSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		762FD369B4931FC03F82714C /* Pods-AlternaFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.release.xcconfig"; sourceTree = "<group>"; };
 		970D70D61FDE500B93A93E17 /* Pods-AlternaFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.debug.xcconfig"; sourceTree = "<group>"; };
 		A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4A6F47125699A790094F278 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		A4A6F4762569A0110094F278 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSubTableViewCell.swift; sourceTree = "<group>"; };
 		DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +116,8 @@
 			children = (
 				545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */,
 				A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */,
+				A4A6F4762569A0110094F278 /* DescriptionView.swift */,
+				A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			children = (
 				736CB74225654A9B00A51F28 /* ViewController.swift */,
 				732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */,
+				A4A6F47125699A790094F278 /* DescriptionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -480,13 +489,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */,
+				A4A6F484256A2D570094F278 /* DescriptionSubTableViewCell.swift in Sources */,
 				736CB74325654A9B00A51F28 /* ViewController.swift in Sources */,
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
 				545C3AE02566E5DA0095273A /* ViewAvulsa.swift in Sources */,
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
 				732B1F9025654E3400FEEC4F /* TabBarViewController.swift in Sources */,
+				A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
 				545C3AE82566E5EB0095273A /* ModelAvulsa.swift in Sources */,
+				A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
