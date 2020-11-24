@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		13DFF3B300110C203C6267FD /* Pods_AlternaFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */; };
 		545C3AE02566E5DA0095273A /* ViewAvulsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */; };
+		5465699D256BE3AD00298373 /* ReceitaCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */; };
+		546569A2256BE3FD00298373 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546569A1256BE3FD00298373 /* TagView.swift */; };
 		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
 		73260E22256808CC005A1F1F /* Substituto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1C256808CC005A1F1F /* Substituto+CoreDataClass.swift */; };
 		73260E23256808CC005A1F1F /* Substituto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E1D256808CC005A1F1F /* Substituto+CoreDataProperties.swift */; };
@@ -58,6 +60,8 @@
 		387A051957879E78E8EFAFAE /* Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43B7FDBDB1CC35A282AC38B4 /* Pods-AlternaFood-AlternaFoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAvulsa.swift; sourceTree = "<group>"; };
+		5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaCardTableViewCell.swift; sourceTree = "<group>"; };
+		546569A1256BE3FD00298373 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		54EFFCC12567E55200996F33 /* Alimentos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Alimentos.xcassets; sourceTree = "<group>"; };
 		68EAA788885F92D28359BC2F /* Pods-AlternaFoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFoodTests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFoodTests/Pods-AlternaFoodTests.release.xcconfig"; sourceTree = "<group>"; };
 		73260E1C256808CC005A1F1F /* Substituto+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Substituto+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 			children = (
 				545C3ADF2566E5DA0095273A /* ViewAvulsa.swift */,
 				A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */,
+				5465699C256BE3AD00298373 /* ReceitaCardTableViewCell.swift */,
+				546569A1256BE3FD00298373 /* TagView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -508,9 +514,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546569A2256BE3FD00298373 /* TagView.swift in Sources */,
 				73260E24256808CC005A1F1F /* Alimento+CoreDataProperties.swift in Sources */,
 				A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */,
 				73260E27256808CC005A1F1F /* Receita+CoreDataProperties.swift in Sources */,
+				5465699D256BE3AD00298373 /* ReceitaCardTableViewCell.swift in Sources */,
 				73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */,
 				73260E2F2568090D005A1F1F /* extensions.swift in Sources */,
 				736CB74325654A9B00A51F28 /* ViewController.swift in Sources */,
