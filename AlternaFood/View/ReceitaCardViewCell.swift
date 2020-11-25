@@ -8,7 +8,7 @@
 import UIKit
 import Cosmos
 
-class ReceitaCardCell: UIView {
+class ReceitaCardViewCell: UIView {
 
     let name: UILabel = {
         let name = UILabel()
@@ -38,7 +38,7 @@ class ReceitaCardCell: UIView {
     
     let modal: UIView = {
         let modal = UIView()
-        modal.backgroundColor = UIColor.white
+        modal.backgroundColor = UIColor.systemBackground
         modal.layer.cornerRadius = 12
         return modal
     }()
@@ -69,9 +69,9 @@ class ReceitaCardCell: UIView {
         rating.settings.filledImage = UIImage(named: "starFilledIcon")
         rating.settings.emptyImage = UIImage(named: "starEmptyIcon")
         
-        rating.text = "(58)"
+        rating.text = "4.5 (58)"
         rating.settings.textMargin = 5
-        rating.settings.textColor = UIColor.black
+//        rating.settings.textColor = UIColor.black
         rating.settings.textFont = UIFont.systemFont(ofSize: 15, weight: .medium)
 
         return rating

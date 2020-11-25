@@ -8,18 +8,9 @@
 import UIKit
 
 class DescriptionViewController: UIViewController {
-
-    let maskImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "maskFoto"))
-        return image
-    }()
-
-    let imageHeader: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "jacaFoto"))
-        return image
-    }()
     
     let descriptionView = DescriptionView()
+    let headerImage = HeaderImageView()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -31,14 +22,11 @@ class DescriptionViewController: UIViewController {
         DispatchQueue.main.async {
             self.configDescriptionView()
         }
-        configImageHeader()
-        configMaskFoto()
         configNav()
+        configHeaderImageView()
       
     }
 
-    
-    
     func configNav() {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
 
@@ -48,25 +36,14 @@ class DescriptionViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
     }
     
-    func configImageHeader() {
-        view.addSubview(imageHeader)
-        imageHeader.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageHeader.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageHeader.topAnchor.constraint(equalTo: view.topAnchor),
-            imageHeader.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3268),
-            imageHeader.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
-        ])
-    }
     
-    func configMaskFoto() {
-        view.addSubview(maskImage)
-        maskImage.translatesAutoresizingMaskIntoConstraints = false
+    func configHeaderImageView() {
+        view.addSubview(headerImage)
+        headerImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            maskImage.topAnchor.constraint(equalTo: imageHeader.topAnchor),
-            maskImage.bottomAnchor.constraint(equalTo: imageHeader.bottomAnchor),
-            maskImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3268),
-            maskImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
+            headerImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            headerImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.32),
+            headerImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
         ])
     }
     

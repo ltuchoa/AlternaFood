@@ -14,16 +14,16 @@ class DescriptionSubTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configureTitleLabel()
-        configureInfoLabel()
-        confiCell()
+        configTitleLabel()
+        configInfoLabel()
+        configCell()
         }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configureTitleLabel() {
+    func configTitleLabel() {
         addSubview(titleLabel)
         titleLabel.font = UIFont.systemFont(ofSize: 26, weight: .bold)
         titleLabel.numberOfLines = 0
@@ -34,7 +34,7 @@ class DescriptionSubTableViewCell: UITableViewCell {
         ])
     }
 
-    func configureInfoLabel(){
+    func configInfoLabel(){
         addSubview(infoLabel)
         infoLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         infoLabel.numberOfLines = 0
@@ -43,12 +43,10 @@ class DescriptionSubTableViewCell: UITableViewCell {
             infoLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10.0),
             infoLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             infoLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.topAnchor.constraint(equalTo: titleLabel.topAnchor),
-            self.bottomAnchor.constraint(equalTo: infoLabel.bottomAnchor)
         ])
     }
     
-    func confiCell(/*type: item, row: int*/) {
+    func configCell(/*type: item, row: int*/) {
         NSLayoutConstraint.activate([
             self.topAnchor.constraint(equalTo: titleLabel.topAnchor),
             self.bottomAnchor.constraint(equalTo: infoLabel.bottomAnchor)
