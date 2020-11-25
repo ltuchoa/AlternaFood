@@ -42,7 +42,7 @@ class DescriptionSubTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             infoLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10.0),
             infoLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            infoLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            infoLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
     }
     

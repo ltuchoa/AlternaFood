@@ -38,6 +38,7 @@
 		9B149A0DE202957D64112E3D /* Pods_AlternaFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */; };
 		A4447558256D4DAD00527955 /* HeaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4447557256D4DAD00527955 /* HeaderImageView.swift */; };
 		A444755D256D51FA00527955 /* ReceitaCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444755C256D51FA00527955 /* ReceitaCardTableViewCell.swift */; };
+		A4447565256E8CC600527955 /* ListaReceitasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4447564256E8CC600527955 /* ListaReceitasViewController.swift */; };
 		A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */; };
 		A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F47125699A790094F278 /* DescriptionViewController.swift */; };
 		A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4762569A0110094F278 /* DescriptionView.swift */; };
@@ -104,6 +105,7 @@
 		970D70D61FDE500B93A93E17 /* Pods-AlternaFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.debug.xcconfig"; sourceTree = "<group>"; };
 		A4447557256D4DAD00527955 /* HeaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageView.swift; sourceTree = "<group>"; };
 		A444755C256D51FA00527955 /* ReceitaCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaCardTableViewCell.swift; sourceTree = "<group>"; };
+		A4447564256E8CC600527955 /* ListaReceitasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReceitasViewController.swift; sourceTree = "<group>"; };
 		A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4A6F47125699A790094F278 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		A4A6F4762569A0110094F278 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */,
 				732B1F8F25654E3400FEEC4F /* TabBarViewController.swift */,
 				A4A6F47125699A790094F278 /* DescriptionViewController.swift */,
+				A4447564256E8CC600527955 /* ListaReceitasViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				A444755D256D51FA00527955 /* ReceitaCardTableViewCell.swift in Sources */,
 				56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */,
+				A4447565256E8CC600527955 /* ListaReceitasViewController.swift in Sources */,
 				562CB05325680AAB00F729FD /* CustomCell.swift in Sources */,
 				56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */,
 				73260E27256808CC005A1F1F /* Receita+CoreDataProperties.swift in Sources */,
