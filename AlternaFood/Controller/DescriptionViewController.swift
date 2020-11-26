@@ -14,10 +14,9 @@ class DescriptionViewController: UIViewController {
     
     var substituto: Substituto?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -28,9 +27,8 @@ class DescriptionViewController: UIViewController {
         configHeaderImageView()
         
         guard let substit = substituto else { return }
-        
         headerImage.imageHeader.image = UIImage(named: substit.pathImageSubstituto ?? "jacaFoto")
-        
+        descriptionView.substituto = substit
     }
 
     func configNav() {
