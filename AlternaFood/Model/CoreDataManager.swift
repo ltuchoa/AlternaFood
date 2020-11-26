@@ -96,4 +96,20 @@ class CDManager {
         return Alimento()
     }
     
+    func requestAlimentoByName(nome: String) -> [Alimento] {
+        let requestAlim = Alimento.fetchRequest() as NSFetchRequest<Alimento>
+        //NSPredicate(format: "SELF CONTAINS %@", "anc")
+        requestAlim.predicate = NSPredicate(format: "nomeAlimento CONTAINS %@", nome)
+        //requestAlim.predicate = NSPredicate(format: "nomeAlimento == %@", nome)
+        
+        do {
+            let alimentos = try viewContext.fetch(requestAlim)
+            return alimentos
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        return [Alimento()]
+    }
+    
 }
