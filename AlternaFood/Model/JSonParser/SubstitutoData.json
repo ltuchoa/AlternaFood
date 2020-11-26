@@ -157,7 +157,7 @@
         "substitutoNome": "Aquafaba",
         "substitutoDescricao": "Aquafaba é um líquido resultante do cozimento de leguminosas como feijão, grão de bico e lentilha.",
         "substitutoFoto": "",
-        "substitutoIcon": "",
+        "substitutoIcon": "graodebicoIcon",
         "substitutoDosAlimentosID": [],
         "substitutoReceitas": []
     },
@@ -211,7 +211,7 @@
         "substitutoNome": "Bicarbonato com vinagre",
         "substitutoDescricao": "",
         "substitutoFoto": "",
-        "substitutoIcon": "",
+        "substitutoIcon": "bicarbonatoIcon",
         "substitutoDosAlimentosID": [],
         "substitutoReceitas": []
     },
@@ -238,7 +238,7 @@
         "substitutoNome": "Levedura Natural",
         "substitutoDescricao": "Sem ingredientes de origem animal, sem glúten, rica em proteínas, fibras, minerais como ferro, zinco, magnésio, cromo, fósforo e cobre, além de vitaminas, especialmente as do complexo B.",
         "substitutoFoto": "",
-        "substitutoIcon": "",
+        "substitutoIcon": "leveduraIcon",
         "substitutoDosAlimentosID": [],
         "substitutoReceitas": []
     },

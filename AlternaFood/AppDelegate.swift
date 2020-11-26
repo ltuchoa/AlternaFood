@@ -12,11 +12,15 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
-//        populateAlimentoCD()
-//        populateSubstitutosCD()
-//        addSubstitutosToAlimentos()
+        if UserDefaults.standard.bool(forKey: "First Launch") == false {
+            populateAlimentoCD()
+            populateSubstitutosCD()
+            addSubstitutosToAlimentos()
+        }
+        UserDefaults.standard.set(true, forKey: "First Launch")
+        
+      
         return true
     }
 

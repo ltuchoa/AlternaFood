@@ -14,9 +14,14 @@ class DescriptionViewController: UIViewController {
     
     var substituto: Substituto?
     
-    override func viewDidAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barStyle = .black
+//    override func viewDidAppear(_ animated: Bool) {
+//        navigationController?.navigationBar.barStyle = .black
+//    }
+//
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return.lightContent
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -62,3 +67,4 @@ class DescriptionViewController: UIViewController {
     }
     
 }
+
