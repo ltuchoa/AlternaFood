@@ -2,7 +2,7 @@
 //  Alimento+CoreDataClass.swift
 //  
 //
-//  Created by Leonardo Gomes Fernandes on 20/11/20.
+//  Created by Leonardo Gomes on 24/11/20.
 //
 //
 

@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "AlternaFood")
+
 //        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
         container.loadPersistentStores(completionHandler: { (_, error) in
 

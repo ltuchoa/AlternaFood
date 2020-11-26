@@ -1,0 +1,344 @@
+[
+    {
+        "substitutoID": "1E747725-524A-43BF-A9D9-E0BA6E578E57",
+        "substitutoNome": "Coco",
+        "substitutoDescricao": "O coco é extremamente nutritivo e muito versátil. Além da conhecida quantidade de vitaminas e minerais, ele possui uma combinação ímpar de ácidos graxos que traz muitos benefícios importantes para nossa saúde.",
+        "substitutoFoto": "cocoFoto",
+        "substitutoIcon": "cocoIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "31095FCC-35FE-4D3B-A08E-C23B090A9637",
+        "substitutoNome": "Amêndoa",
+        "substitutoDescricao": "É um alimento rico em cálcio e magnésio, além de possuir uma boa quantidade de proteína em sua composição. Pode ser utilizado em diversas receitas, e é muito versátil.",
+        "substitutoFoto": "amendoaFoto",
+        "substitutoIcon": "amendoaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "177BD309-4C52-4C16-AF37-554433DBD211",
+        "substitutoNome": "Soja",
+        "substitutoDescricao": "A soja é uma rica fonte de energia e com pouquíssima calorias. Além disso, também é rica em fibras, proteínas e gorduras do bem, ajudando na manutenção do colesterol.",
+        "substitutoFoto": "sojaFoto",
+        "substitutoIcon": "sojaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "82E97C44-43F6-43D5-AA9E-E5E424643DA6",
+        "substitutoNome": "Chia",
+        "substitutoDescricao": "A chia é muito popular entre pessoas que buscam emagrecer, e possui diversos nutrientes em sua composição como fibras, proteínas, cálcio, entre outros. Tudo isso permite que ela traga diversos benefícios para saúde.",
+        "substitutoFoto": "chiaFoto",
+        "substitutoIcon": "chiaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "74213C59-E05F-4E9B-942A-BAF00081F2C5",
+        "substitutoNome": "Arroz",
+        "substitutoDescricao": "O arroz é um alimento popular por ser rico em carboidratos, além disso possui em sua composição amido e vitaminas, sendo importante para saúde na regulação do colesterol e na formação de glóbulos vermelhos.",
+        "substitutoFoto": "arrozFoto",
+        "substitutoIcon": "arrozIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "115ABA88-A2B3-4A23-B1BB-4096BB0B34B1",
+        "substitutoNome": "Jaca",
+        "substitutoDescricao": "É um alimento relativamente rico em caloria e fibras, além de possuir em sua composição vitaminas A, B, C e E, assim como os minerais cálcio, magnésio, ferro, potássio e fósforo.",
+        "substitutoFoto": "jacaFoto",
+        "substitutoIcon": "jacaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "58955A6C-4238-4E84-AE7D-2355DF6B5C57",
+        "substitutoNome": "Amendoim",
+        "substitutoDescricao": "O amendoim é rico em minerais, vitaminas, fibras e gorduras saudáveis.Além disso, também possui compostos antioxidantes, melhorando a proteção contra doenças.",
+        "substitutoFoto": "amendoinFoto",
+        "substitutoIcon": "amendoinIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "C808B8A7-A220-4E1F-8361-91BABFCE9A08",
+        "substitutoNome": "Quinoa",
+        "substitutoDescricao": "A quinoa não possui glúten, é rica em proteínas e contém todos os nove aminoácidos essenciais. Além disso, também é rica em fibras, magnésio, vitaminas do complexo B, ferro, potássio, cálcio, fósforo, vitamina E e vários antioxidantes.",
+        "substitutoFoto": "quinoaFoto",
+        "substitutoIcon": "quinoaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "2B1E7F7D-1B9C-488C-8935-18458BE9434A",
+        "substitutoNome": "Feijão",
+        "substitutoDescricao": "O feijão é possui em sua composição vitaminas B1, B2, B3 e B9, proteínas e minerais. Além de possuir lisina, aminoácido que contribui para o crescimento de crianças e adolescentes.",
+        "substitutoFoto": "feijaoFoto",
+        "substitutoIcon": "feijaoIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "5E2CB09B-022D-45AA-AA56-98B43EB33ACB",
+        "substitutoNome": "Lentilha",
+        "substitutoDescricao": "A lentilha é um alimento versátil que pode até mesmo substituir feijão. Além disso, é uma leguminosa bastante nutritiva, contém proteína, ferro, magnésio, potássio, vitaminas, zinco, fibras e poucas calorias.",
+        "substitutoFoto": "lentilhaFoto",
+        "substitutoIcon": "lentilhaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "F486E26E-D7AA-4ED1-A6A9-202AD93EB058",
+        "substitutoNome": "Abacate",
+        "substitutoDescricao": "O abacate pode ser utilizado em diversas receitas e é rico em calorias e gorduras boas. Além disso, possui fibras, vitaminas do complexo B, K e C, potássio e cobre.",
+        "substitutoFoto": "abacateFoto",
+        "substitutoIcon": "abacateIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "E9E270D7-BF1F-4A1F-9481-F2684BD7C513",
+        "substitutoNome": "Espinafre",
+        "substitutoDescricao": "O espinafre é um alimento extremamente nutritivo, com poucas calorias e muitas vitaminas. Além disso, possui mais proteínas do que outras hortaliças e um alto teor de fibra.",
+        "substitutoFoto": "espinafreFoto",
+        "substitutoIcon": "espinafreIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "CDDA6A1C-5426-4312-8C86-F26CB9CE3C3A",
+        "substitutoNome": "Aveia",
+        "substitutoDescricao": "A aveia é um alimento rico em fibras e muito consumido antes de exercícios físicos. Além disso, possui ferro, cálcio, magnésio, zinco, potássio, fósforo, cobre, manganês, vitaminas, carboidratos e proteínas.",
+        "substitutoFoto": "aveiaFoto",
+        "substitutoIcon": "aveiaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "91B6F7A1-7580-41BC-95AB-B43B883ED5D5",
+        "substitutoNome": "Tofu",
+        "substitutoDescricao": "Tofu é um alimento produzido a partir da soja, sendo uma opção muito saudável que traz uma série de benefícios tais como apresentar baixo nível de calorias e ser uma boa fonte de proteína. Além de ajudar a previnir câncer e osteoporose.",
+        "substitutoFoto": "tofuFoto",
+        "substitutoIcon": "tofuIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "41EE87D2-5204-4988-9BEA-95764B90918E",
+        "substitutoNome": "Banana",
+        "substitutoDescricao": "A banana é rica em amido e carboidratos, e ela acaba tendo baixos níveis de proteínas e gorduras. Além disso, possui em sua composição vitaminas, minerais e compostos antioxidantes.",
+        "substitutoFoto": "bananaFoto",
+        "substitutoIcon": "bananaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "28AF392D-6576-4116-A5DC-0EE9147727B6",
+        "substitutoNome": "Gergelim",
+        "substitutoDescricao": "O gergelim é rico em fibras e gorduras boas, ajudando na regulagem do colesterol. Além disso, também possui em sua composição antioxidantes, lignanos, vitamina E e outros micronutrientes.",
+        "substitutoFoto": "gergilimFoto",
+        "substitutoIcon": "gergilimIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "B8138094-5673-4CC5-89AF-FF60B70412E2",
+        "substitutoNome": "Azeite",
+        "substitutoDescricao": "O azeite é o óleo extraído da azeitona, possuindo gorduras monoinsaturadas, ômega 9, vitaminas, ferro, cálcio, magnésio, potássio e aminoácidos. Além de propriedades antioxidantes que proporcionam vários benefícios à saúde.",
+        "substitutoFoto": "azeiteFoto",
+        "substitutoIcon": "azeiteIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "306CD431-0B69-454A-9FA3-4DDEC0947A8A",
+        "substitutoNome": "Aquafaba",
+        "substitutoDescricao": "Aquafaba é um líquido resultante do cozimento de leguminosas como feijão, grão de bico e lentilha.",
+        "substitutoFoto": "",
+        "substitutoIcon": "",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "3F74EAC2-A22E-4133-9704-4D82EC76AFB9",
+        "substitutoNome": "Linhaça",
+        "substitutoDescricao": "A semente de linhaça é a mais rica fonte vegetal de ômega 3, trazendo benefícios para o coração, intestino e até mesmo prevenindo alguns tipos de câncer e sendo também um grande aliado na perca de gordura. Tudo isso sendo um cereal sem a presença de Glúten.",
+        "substitutoFoto": "linhacaFoto",
+        "substitutoIcon": "linhacaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "F9C1B297-F774-47F5-8569-44BF67DAEF9D",
+        "substitutoNome": "Cana de Açúcar",
+        "substitutoDescricao": "A cana de açúcar é composta por muitas vitaminas e também conta com a ação de antioxidantes. Além de ajudar a garantir mais energia, fortalecer os órgãos, hidratar o corpo e muito mais.",
+        "substitutoFoto": "canaFoto",
+        "substitutoIcon": "canaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "AB676035-A996-48FA-BDCD-E2622FFAEE63",
+        "substitutoNome": "Maçã",
+        "substitutoDescricao": "A maçã traz diversos benefícios pois é rica em vários nutrientes. Tanto a polpa quanto a casca são ricas em vitaminas C, sais minerais como cálcio, fósforo e potássio, além de fibras e um poderoso antioxidante, a quercetina.",
+        "substitutoFoto": "macaFoto",
+        "substitutoIcon": "macaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "20A1F91B-8A54-40B8-8544-AF5525E245BA",
+        "substitutoNome": "Abóboras",
+        "substitutoDescricao": "Abóbora é um alimento extremamente nutritivo e com poucas calorias. Além de ser rica em vitamina A e C, possui fibras, potássio, magnésio, cálcio, vitamina E, ferro e vitaminas B1, B3, B5 e B6.",
+        "substitutoFoto": "aboboraFoto",
+        "substitutoIcon": "aboboraIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "4F80FEA5-3CDF-4FD5-A640-9FFFEC2FB3E7",
+        "substitutoNome": "Grão de Bico",
+        "substitutoDescricao": "Grão de bico é uma ótima fonte de fibras e proteínas, sendo também um alimento com baixo nível glicêmico, ajudando assim a controlar os níveis de açúcar no sangue.",
+        "substitutoFoto": "graodebicoFoto",
+        "substitutoIcon": "graodebicoIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "BD2EA4CF-FB67-402D-B4C3-8B01A2AAFE7D",
+        "substitutoNome": "Bicarbonato com vinagre",
+        "substitutoDescricao": "",
+        "substitutoFoto": "",
+        "substitutoIcon": "",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "6D418E58-B71C-4AE5-A60D-804E23D5FA46",
+        "substitutoNome": "Agave",
+        "substitutoDescricao": "A agave é uma boa fonte de ferro, cálcio e probióticos, ajudando assim na regulação do intestino, sendo também uma boa opção para o controle do colesterol e açúcar no sangue, por fornecer fibras.",
+        "substitutoFoto": "agaveFoto",
+        "substitutoIcon": "agaveIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "80DFA2C6-3A01-4903-8058-57F25C2C04C3",
+        "substitutoNome": "Batata",
+        "substitutoDescricao": "A batata boas propriedades nutricionais, como grande quantidade de água, fibra alimentar, e também é uma importante fonte de carboidratos para o dia a dia. Além disso, contém vitaminas, potássio, cálcio, ferro, magnésio, manganês e zinco.",
+        "substitutoFoto": "batataFoto",
+        "substitutoIcon": "batataIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "80DFB2C6-3A01-4903-8058-57F25C2C04C3",
+        "substitutoNome": "Levedura Natural",
+        "substitutoDescricao": "Sem ingredientes de origem animal, sem glúten, rica em proteínas, fibras, minerais como ferro, zinco, magnésio, cromo, fósforo e cobre, além de vitaminas, especialmente as do complexo B.",
+        "substitutoFoto": "",
+        "substitutoIcon": "",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "A998F9A7-AAD9-452B-AA18-901BE4FF9338",
+        "substitutoNome": "Grão de Sorgo",
+        "substitutoDescricao": "É um cereal rico em ferro, zinco, proteínas e fibras. Ainda é fonte de fibras, ácidos fenólicos, taninos. Também contém compostos fenólicos com alta capacidade antioxidante.",
+        "substitutoFoto": "graodesorgoFoto",
+        "substitutoIcon": "graodesorgoIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "87567E04-03B0-40AF-9447-FC3847A9CB55",
+        "substitutoNome": "Berinjela",
+        "substitutoDescricao": "A berinjela é uma ótima fonte de ferro, além de ser rica em vitaminas como A, B, C, e em proteínas, ademais contém uma grande quantidade de sais minerais como cálcio, potássio e ferro.",
+        "substitutoFoto": "berinjelaFoto",
+        "substitutoIcon": "berinjelaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "274CC05F-2745-4F9E-A251-8ECE61BA3C74",
+        "substitutoNome": "Milho",
+        "substitutoDescricao": "O milho é rico em fibras, proteína, antioxidantes, além de conter fólico. Dessa  forma é um alimento muito benéfico para o coração, ajudando também a prevenir infecções e alguns tipos de câncer.",
+        "substitutoFoto": "milhoFoto",
+        "substitutoIcon": "milhoIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "03D32002-3AE5-44FF-9E3E-D3B5E7DF36AB",
+        "substitutoNome": "Bolacha agua e sal ",
+        "substitutoDescricao": "",
+        "substitutoFoto": "bolachaFoto",
+        "substitutoIcon": "bolachaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "C036880B-E351-4577-B180-168854C5DF3C",
+        "substitutoNome": "Stevia",
+        "substitutoDescricao": "Stevia é uma planta nativa que tem uma grande capacidade adoçante, superior em cerca de 300 vezes ao açúcar. Por ser natural, o adoçante não faz mal para a saúde, podendo ser utilizado para substituir o açúcar.",
+        "substitutoFoto": "",
+        "substitutoIcon": "",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "CCB3D4B5-6BAC-4437-9255-48BF2FA16C46",
+        "substitutoNome": "Demerara",
+        "substitutoDescricao": "O açúcar demerara é uma fonte de magnésio, cálcio e fósforo, ajudando assim a regular o metabolismo, melhorando a absorção de proteínas e carboidratos, auxiliando também na manutenção dos ossos.",
+        "substitutoFoto": "",
+        "substitutoIcon": "",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "EC55E4AC-E68C-48F6-939D-3383A0B6CF88",
+        "substitutoNome": "Cenoura",
+        "substitutoDescricao": "A cenoura é uma boa fonte de sais minerais, como ferro e cálcio, vitaminas K, A, C, E, do complexo B, além de manganês, potássio e fibras. Possui como destaque a sua riqueza em vitamina A.",
+        "substitutoFoto": "cenouraFoto",
+        "substitutoIcon": "cenouraIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "EE74CE61-0559-424C-B8C4-40813BB76680",
+        "substitutoNome": "Pupunha",
+        "substitutoDescricao": "A pupunha é uma excelente fonte de fibra alimentar, proteína e alguns minerais, tais como ferro, zinco, cobre, manganês, magnésio, cálcio, fósforo e potássio. ",
+        "substitutoFoto": "pupunhaFoto",
+        "substitutoIcon": "pupunhaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "DC3B2F91-E6C5-43DF-B188-6C8EDA9C0756",
+        "substitutoNome": "Abobrinha",
+        "substitutoDescricao": "A abobrinha se destaca por conter os carotenoides, a vitamina E, A, C e minerais como selênio, zinco, cobre e manganês. Além disso, é rica em fibras e potássio.",
+        "substitutoFoto": "abobrinhaFoto",
+        "substitutoIcon": "abobrinhaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "749EBDB7-7AA5-43C9-972D-34E62DCB45B4",
+        "substitutoNome": "Castanha",
+        "substitutoDescricao": "Alimento muito bom para ajudar a regular o colesterol, pois possui uma quantidade boa de gorduras boas, além de de possuir magnésio, fósforo e zinco em sua composição.",
+        "substitutoFoto": "castanhaFoto",
+        "substitutoIcon": "castanhaIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+    {
+        "substitutoID": "EE1D55E2-1F91-493A-B389-0067A6864B07",
+        "substitutoNome": "Melado De Cana",
+        "substitutoDescricao": "A cana de açúcar é composta por muitas vitaminas e também conta com a ação de antioxidantes. Além de ajudar a garantir mais energia, fortalecer os órgãos, hidratar o corpo e muito mais.",
+        "substitutoFoto": "canaFoto",
+        "substitutoIcon": "canadeacucarIcon",
+        "substitutoDosAlimentosID": [],
+        "substitutoReceitas": []
+    },
+]

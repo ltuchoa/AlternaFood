@@ -2,8 +2,8 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Alimento" representedClassName="Alimento" syncable="YES">
         <attribute name="idAlimento" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="imageAlimento" optional="YES" attributeType="Binary"/>
         <attribute name="nomeAlimento" optional="YES" attributeType="String"/>
+        <attribute name="pathImageAlimento" optional="YES" attributeType="String"/>
         <relationship name="substitutosAlimento" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Substituto" inverseName="alimentoSubstituto" inverseEntity="Substituto"/>
     </entity>
     <entity name="Receita" representedClassName="Receita" syncable="YES">
@@ -19,14 +19,15 @@
     <entity name="Substituto" representedClassName="Substituto" syncable="YES">
         <attribute name="descricaoSubstituto" optional="YES" attributeType="String"/>
         <attribute name="idSubstituto" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="imageSubstituto" optional="YES" attributeType="Binary"/>
         <attribute name="nomeSubstituto" optional="YES" attributeType="String"/>
+        <attribute name="pathIconSubstituto" optional="YES" attributeType="String"/>
+        <attribute name="pathImageSubstituto" optional="YES" attributeType="String"/>
         <relationship name="alimentoSubstituto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Alimento" inverseName="substitutosAlimento" inverseEntity="Alimento"/>
         <relationship name="receitasSubstituto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Receita" inverseName="substitutoReceita" inverseEntity="Receita"/>
     </entity>
     <elements>
-        <element name="Receita" positionX="206.6932373046875" positionY="-48.64559936523438" width="128" height="163"/>
-        <element name="Substituto" positionX="-44.59564208984375" positionY="-18.8197021484375" width="128" height="133"/>
         <element name="Alimento" positionX="-304.216552734375" positionY="-3.8572998046875" width="128" height="103"/>
+        <element name="Receita" positionX="206.6932373046875" positionY="-48.64559936523438" width="128" height="163"/>
+        <element name="Substituto" positionX="-44.59564208984375" positionY="-18.8197021484375" width="128" height="148"/>
     </elements>
 </model>
