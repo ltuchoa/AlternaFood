@@ -2,7 +2,7 @@
 //  Alimento+CoreDataProperties.swift
 //  
 //
-//  Created by Leonardo Gomes Fernandes on 20/11/20.
+//  Created by Leonardo Gomes on 24/11/20.
 //
 //
 
@@ -16,9 +16,14 @@ extension Alimento {
     }
 
     @NSManaged public var idAlimento: UUID?
+    @NSManaged public var pathImageAlimento: String?
     @NSManaged public var nomeAlimento: String?
-    @NSManaged public var imageAlimento: Data?
     @NSManaged public var substitutosAlimento: NSSet?
+    
+    public var listaSubstitutos: [Substituto] {
+        let set = substitutosAlimento as? Set<Substituto> ?? []
+        return Array(set)
+    }
 
 }
 

@@ -11,7 +11,6 @@ class ReceitaCardTableViewCell: UITableViewCell {
     
     var card = ReceitaCardViewCell()
 
-
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViewConstraint()
@@ -29,7 +28,6 @@ class ReceitaCardTableViewCell: UITableViewCell {
         ])
     }
     
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

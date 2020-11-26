@@ -2,7 +2,7 @@
 //  Substituto+CoreDataProperties.swift
 //  
 //
-//  Created by Leonardo Gomes Fernandes on 20/11/20.
+//  Created by Leonardo Gomes on 24/11/20.
 //
 //
 
@@ -15,10 +15,11 @@ extension Substituto {
         return NSFetchRequest<Substituto>(entityName: "Substituto")
     }
 
-    @NSManaged public var idSubstituto: UUID?
-    @NSManaged public var nomeSubstituto: String?
-    @NSManaged public var imageSubstituto: Data?
     @NSManaged public var descricaoSubstituto: String?
+    @NSManaged public var idSubstituto: UUID?
+    @NSManaged public var pathImageSubstituto: String?
+    @NSManaged public var nomeSubstituto: String?
+    @NSManaged public var pathIconSubstituto: String?
     @NSManaged public var alimentoSubstituto: NSSet?
     @NSManaged public var receitasSubstituto: NSSet?
 

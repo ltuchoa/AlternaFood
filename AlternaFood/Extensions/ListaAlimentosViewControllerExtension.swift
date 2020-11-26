@@ -30,20 +30,24 @@ extension ListaAlimentosViewController: UICollectionViewDelegate, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        20
+        alimentos.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as? CustomCell else {
             return UICollectionViewCell()
         }
+        
+        cell.card.name.text = alimentos[indexPath.row].nomeAlimento ?? "Aliemnto"
+        cell.card.icon.image = UIImage(named: alimentos[indexPath.row].pathImageAlimento ?? "receitas_icon")
 
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("User tapped on item \(indexPath.row)")
-        let viewController = ListaSubstitutosViewController() 
+        let viewController = ListaSubstitutosViewController()
+        viewController.substitutos = alimentos[indexPath.row].listaSubstitutos
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

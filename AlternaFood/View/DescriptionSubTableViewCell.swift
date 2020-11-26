@@ -34,7 +34,7 @@ class DescriptionSubTableViewCell: UITableViewCell {
         ])
     }
 
-    func configInfoLabel(){
+    func configInfoLabel() {
         addSubview(infoLabel)
         infoLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         infoLabel.numberOfLines = 0

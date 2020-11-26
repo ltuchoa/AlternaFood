@@ -12,6 +12,9 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating {
 
     let card = CardCollectionViewCell()
     var collectionView: UICollectionView?
+    
+    let cdManeger = CDManager()
+    var alimentos: [Alimento] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,11 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating {
         self.title = "Alimentos"
         
         setUpCollectionview()
+        setCollectionViewDelegates()
+        
+        alimentos = cdManeger.listaAlimentos()
+        
+        print(alimentos.count)
         
         //search config
         let search = UISearchController(searchResultsController: nil)

@@ -11,6 +11,8 @@ import UIKit
 class ListaSubstitutosViewController: UIViewController {
 
     var collectionView: UICollectionView?
+    
+    var substitutos: [Substituto] = []
 
     override func viewDidLoad() {
         configNav()
