@@ -26,7 +26,7 @@ class CardCollectionViewCell: UIView {
         let food = UILabel()
         food.numberOfLines = 0
         food.text = "Larissa só reclama, chata pra caralho"
-
+        food.textAlignment = .center
         return food
     }()
 

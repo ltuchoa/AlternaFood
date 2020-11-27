@@ -11,6 +11,8 @@ class DescriptionView: UIView {
 
     let tableView = UITableView()
 
+    var substituto: Substituto?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configView()
@@ -64,9 +66,12 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let subst = substituto else { return UITableViewCell()}
+        
         switch indexPath.section {
         case 0:
             let cell = DescriptionSubTableViewCell()
+            cell.setLabelDescripton(subst: subst)
 //                cell.configCell(type: item, row: indexPath.row)
             return cell
         case 1:

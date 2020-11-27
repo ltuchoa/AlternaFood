@@ -16,6 +16,7 @@ class HeaderImageView: UIView {
 
     let imageHeader: UIImageView = {
         let image = UIImageView(image: UIImage(named: "jacaFoto"))
+        image.contentMode = .scaleAspectFill
         return image
     }()
     

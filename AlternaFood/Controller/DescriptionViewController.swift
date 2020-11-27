@@ -12,8 +12,14 @@ class DescriptionViewController: UIViewController {
     let descriptionView = DescriptionView()
     let headerImage = HeaderImageView()
     
+    var substituto: Substituto?
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        navigationController?.navigationBar.barStyle = .black
+//    }
+//
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+        return.lightContent
     }
     
     override func viewDidLoad() {
@@ -24,7 +30,10 @@ class DescriptionViewController: UIViewController {
         }
         configNav()
         configHeaderImageView()
-      
+        
+        guard let substit = substituto else { return }
+        headerImage.imageHeader.image = UIImage(named: substit.pathImageSubstituto ?? "jacaFoto")
+        descriptionView.substituto = substit
     }
 
     func configNav() {
@@ -35,7 +44,6 @@ class DescriptionViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
     }
-    
     
     func configHeaderImageView() {
         view.addSubview(headerImage)
@@ -58,6 +66,5 @@ class DescriptionViewController: UIViewController {
         ])
     }
     
-
 }
 

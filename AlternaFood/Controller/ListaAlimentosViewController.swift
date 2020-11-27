@@ -8,10 +8,13 @@
 import UIKit
 import Cosmos
 //swiftlint:disable trailing_whitespace
-class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating {
+class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, UISearchControllerDelegate {
 
     let card = CardCollectionViewCell()
     var collectionView: UICollectionView?
+    
+    let cdManeger = CDManager()
+    var alimentos: [Alimento] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +25,35 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating {
         self.title = "Alimentos"
         
         setUpCollectionview()
+        setCollectionViewDelegates()
         
-        //search config
+        alimentos = cdManeger.listaAlimentos()
+        
+        print(alimentos.count)
+        
+        setUpSearchBar()
+        
+    }
+    
+    func setUpSearchBar() {
         let search = UISearchController(searchResultsController: nil)
+        UISearchBar.appearance().tintColor = UIColor.init(named: "actionColor")
+        search.searchBar.setValue("Cancelar", forKey: "cancelButtonText")
         search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
         self.navigationItem.searchController = search
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        //some code here
+        guard let nomeSearch = searchController.searchBar.text else { return }
+
+        if !nomeSearch.isEmpty {
+            alimentos = cdManeger.requestAlimentoByName(nome: nomeSearch)
+            collectionView?.reloadData()
+        } else {
+            alimentos = cdManeger.listaAlimentos()
+            collectionView?.reloadData()
+        }
+        
     }
 }

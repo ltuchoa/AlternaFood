@@ -12,6 +12,8 @@ class DescriptionSubTableViewCell: UITableViewCell {
     let titleLabel = UILabel()
     let infoLabel = UILabel()
 
+    var substituto: Substituto?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configTitleLabel()
@@ -34,7 +36,7 @@ class DescriptionSubTableViewCell: UITableViewCell {
         ])
     }
 
-    func configInfoLabel(){
+    func configInfoLabel() {
         addSubview(infoLabel)
         infoLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         infoLabel.numberOfLines = 0
@@ -51,8 +53,12 @@ class DescriptionSubTableViewCell: UITableViewCell {
             self.topAnchor.constraint(equalTo: titleLabel.topAnchor),
             self.bottomAnchor.constraint(equalTo: infoLabel.bottomAnchor)
         ])
-        titleLabel.text = "Jaca"
-        infoLabel.text = "É um alimento relativamente rico em caloria e fibras, além de possuir em sua composição vitaminas A, B, C e E, assim como os minerais cálcio, magnésio, ferro, potássio e fósforo."
+    }
+    
+    func setLabelDescripton(subst: Substituto) {
+        
+        titleLabel.text = subst.nomeSubstituto ?? "Substituto"
+        infoLabel.text = subst.descricaoSubstituto ?? "Descrição do Substituto"
     }
     
 }
