@@ -21,7 +21,7 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         setupSearchBar()
         setupViewConstraints()
     }
-
+    
     func setupSearchBar() {
         let search = UISearchController(searchResultsController: nil)
         UISearchBar.appearance().tintColor = UIColor.init(named: "actionColor")
@@ -39,7 +39,7 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         self.view.addSubview(lista)
         self.lista.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.lista.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            self.lista.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 8),
             self.lista.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.lista.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             self.lista.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
