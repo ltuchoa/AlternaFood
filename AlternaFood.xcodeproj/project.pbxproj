@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13DFF3B300110C203C6267FD /* Pods_AlternaFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */; };
+		542A059125750FEE003ED2CC /* ListaReceitasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542A059025750FEE003ED2CC /* ListaReceitasView.swift */; };
+		542A059625752052003ED2CC /* ListaReceitasViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542A059525752052003ED2CC /* ListaReceitasViewExtension.swift */; };
 		545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */; };
 		5465699D256BE3AD00298373 /* ReceitaCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5465699C256BE3AD00298373 /* ReceitaCardViewCell.swift */; };
 		546569A2256BE3FD00298373 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546569A1256BE3FD00298373 /* TagView.swift */; };
@@ -73,6 +75,8 @@
 		238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		387A051957879E78E8EFAFAE /* Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43B7FDBDB1CC35A282AC38B4 /* Pods-AlternaFood-AlternaFoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; sourceTree = "<group>"; };
+		542A059025750FEE003ED2CC /* ListaReceitasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReceitasView.swift; sourceTree = "<group>"; };
+		542A059525752052003ED2CC /* ListaReceitasViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReceitasViewExtension.swift; sourceTree = "<group>"; };
 		545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewController.swift; sourceTree = "<group>"; };
 		5465699C256BE3AD00298373 /* ReceitaCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaCardViewCell.swift; sourceTree = "<group>"; };
 		546569A1256BE3FD00298373 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				546569A1256BE3FD00298373 /* TagView.swift */,
 				A4447557256D4DAD00527955 /* HeaderImageView.swift */,
 				A444755C256D51FA00527955 /* ReceitaCardTableViewCell.swift */,
+				542A059025750FEE003ED2CC /* ListaReceitasView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			children = (
 				56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */,
 				56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */,
+				542A059525752052003ED2CC /* ListaReceitasViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				A4447565256E8CC600527955 /* ListaReceitasViewController.swift in Sources */,
 				562CB05325680AAB00F729FD /* CustomCell.swift in Sources */,
 				56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */,
+				542A059125750FEE003ED2CC /* ListaReceitasView.swift in Sources */,
 				5465699D256BE3AD00298373 /* ReceitaCardViewCell.swift in Sources */,
 				A789CB77256F481B001FCDC3 /* Substituto+CoreDataProperties.swift in Sources */,
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
@@ -591,6 +598,7 @@
 				A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */,
 				56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */,
 				A776FE82256CA76400DF9691 /* JsonParser.swift in Sources */,
+				542A059625752052003ED2CC /* ListaReceitasViewExtension.swift in Sources */,
 				A776FE8A256CA7CE00DF9691 /* ModelJson.swift in Sources */,
 				73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
