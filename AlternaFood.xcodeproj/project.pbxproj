@@ -23,7 +23,6 @@
 		736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74725654A9B00A51F28 /* AlternaFood.xcdatamodeld */; };
 		736CB74B25654A9C00A51F28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736CB74A25654A9C00A51F28 /* Assets.xcassets */; };
 		736CB74E25654A9C00A51F28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736CB74C25654A9C00A51F28 /* LaunchScreen.storyboard */; };
-		736CB75925654A9C00A51F28 /* AlternaFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB75825654A9C00A51F28 /* AlternaFoodTests.swift */; };
 		736CB76425654A9C00A51F28 /* AlternaFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB76325654A9C00A51F28 /* AlternaFoodUITests.swift */; };
 		736CB77525654B4600A51F28 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 736CB77425654B4600A51F28 /* .gitignore */; };
 		73895AE525656BFE00D6EC41 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 73895AE425656BFE00D6EC41 /* .swiftlint.yml */; };
@@ -36,6 +35,8 @@
 		A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F47125699A790094F278 /* DescriptionViewController.swift */; };
 		A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4762569A0110094F278 /* DescriptionView.swift */; };
 		A4A6F484256A2D570094F278 /* DescriptionSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */; };
+		A71734CF25712580004DF61F /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71734CE25712580004DF61F /* CoreDataManagerTests.swift */; };
+		A71734E8257133D0004DF61F /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71734E7257133D0004DF61F /* JsonParserTests.swift */; };
 		A776FE82256CA76400DF9691 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776FE81256CA76400DF9691 /* JsonParser.swift */; };
 		A776FE8A256CA7CE00DF9691 /* ModelJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776FE89256CA7CE00DF9691 /* ModelJson.swift */; };
 		A776FE8F256CAEA300DF9691 /* AlimentoData.json in Resources */ = {isa = PBXBuildFile; fileRef = A776FE8E256CAEA300DF9691 /* AlimentoData.json */; };
@@ -91,7 +92,6 @@
 		736CB74D25654A9C00A51F28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		736CB74F25654A9C00A51F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736CB75425654A9C00A51F28 /* AlternaFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlternaFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		736CB75825654A9C00A51F28 /* AlternaFoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternaFoodTests.swift; sourceTree = "<group>"; };
 		736CB75A25654A9C00A51F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736CB75F25654A9C00A51F28 /* AlternaFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlternaFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		736CB76325654A9C00A51F28 /* AlternaFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternaFoodUITests.swift; sourceTree = "<group>"; };
@@ -107,6 +107,8 @@
 		A4A6F47125699A790094F278 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		A4A6F4762569A0110094F278 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSubTableViewCell.swift; sourceTree = "<group>"; };
+		A71734CE25712580004DF61F /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
+		A71734E7257133D0004DF61F /* JsonParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 		A776FE81256CA76400DF9691 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		A776FE89256CA7CE00DF9691 /* ModelJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelJson.swift; sourceTree = "<group>"; };
 		A776FE8E256CAEA300DF9691 /* AlimentoData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AlimentoData.json; sourceTree = "<group>"; };
@@ -242,8 +244,9 @@
 		736CB75725654A9C00A51F28 /* AlternaFoodTests */ = {
 			isa = PBXGroup;
 			children = (
-				736CB75825654A9C00A51F28 /* AlternaFoodTests.swift */,
 				736CB75A25654A9C00A51F28 /* Info.plist */,
+				A71734CE25712580004DF61F /* CoreDataManagerTests.swift */,
+				A71734E7257133D0004DF61F /* JsonParserTests.swift */,
 			);
 			path = AlternaFoodTests;
 			sourceTree = "<group>";
@@ -598,7 +601,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				736CB75925654A9C00A51F28 /* AlternaFoodTests.swift in Sources */,
+				A71734E8257133D0004DF61F /* JsonParserTests.swift in Sources */,
+				A71734CF25712580004DF61F /* CoreDataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,14 +764,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.leo.gomes.AlternaFood;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leo.TeamLit.AlternaFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -781,14 +787,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.leo.gomes.AlternaFood;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leo.TeamLit.AlternaFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -802,7 +810,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFoodTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -825,7 +833,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFoodTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -847,7 +855,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFoodUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -868,7 +876,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFoodUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

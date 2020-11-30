@@ -13,30 +13,29 @@ class CDManager {
 
     let viewContext = ((UIApplication.shared.delegate as? AppDelegate) ?? AppDelegate()).persistentContainer.viewContext
     
-    func saveContext() {
+    func saveContext() -> Bool {
+        
         do {
             try viewContext.save()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+            return false
         }
+        
+        return true
     }
 
-    func saveAlimento(uuidAlimento: String, nomeAlimento: String, pathImageAlimento: String ) {
+    func saveAlimento(uuidAlimento: String, nomeAlimento: String, pathImageAlimento: String ) -> Bool {
 
         let alimento = Alimento(context: self.viewContext)
         alimento.idAlimento = UUID(uuidString: uuidAlimento)
         alimento.nomeAlimento = nomeAlimento
         alimento.pathImageAlimento = pathImageAlimento
 
-        do {
-            try viewContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-
+        return saveContext()
     }
 
-    func saveSubstituto(uuidSubstituto: String, nomeSubstituto: String, descricaoSubstituto: String, pathImage: String, pathIcon: String) {
+    func saveSubstituto(uuidSubstituto: String, nomeSubstituto: String, descricaoSubstituto: String, pathImage: String, pathIcon: String) -> Bool {
         
         let substituto = Substituto(context: self.viewContext)
         substituto.idSubstituto = UUID(uuidString: uuidSubstituto)
@@ -45,12 +44,7 @@ class CDManager {
         substituto.pathImageSubstituto = pathImage
         substituto.pathIconSubstituto = pathIcon
         
-        do {
-            try viewContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-
+       return saveContext()
     }
 
     func listaAlimentos() -> [Alimento] {

@@ -13,14 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        let jsonParser = JsonParser()
+        
         if UserDefaults.standard.bool(forKey: "First Launch") == false {
-            populateAlimentoCD()
-            populateSubstitutosCD()
-            addSubstitutosToAlimentos()
+            if !jsonParser.populateAlimentoCD() ||
+                !jsonParser.populateSubstitutosCD() ||
+                !jsonParser.addSubstitutosToAlimentos() {
+                return false
+            }
         }
         UserDefaults.standard.set(true, forKey: "First Launch")
         
-      
         return true
     }
 
