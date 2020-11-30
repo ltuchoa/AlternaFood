@@ -32,11 +32,6 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
         print(alimentos.count)
         
         setUpSearchBar()
-        
-        for _ in 0...26 {
-            print(UUID())
-        }
-        
     }
     
     func setUpSearchBar() {

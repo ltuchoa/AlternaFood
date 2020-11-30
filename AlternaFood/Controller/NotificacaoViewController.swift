@@ -8,9 +8,9 @@
 import UIKit
 
 enum Message: String, CaseIterable {
-    case text1 = "Larissa chata pra krl, mds reclama demaaaaaiiiis!!!!"
-//    case text2 = "Que tal conhecer um novo substituto?"
-//    case text3 = "Vamos conhecer mais uma receita saudável hoje?"
+//    case text1 = "Larissa chata pra krl, mds reclama demaaaaaiiiis!!!!"
+    case text1 = "Que tal conhecer um novo substituto?"
+    case text2 = "Vamos conhecer mais uma receita hoje?"
 }
 
 class NotificacaoViewController: UIViewController {
@@ -28,7 +28,7 @@ class NotificacaoViewController: UIViewController {
         content.body = Message.allCases.randomElement()!.rawValue
         content.sound = .default
               
-        let date = Date().addingTimeInterval(5) //43200 segundos = 12 horas
+        let date = Date().addingTimeInterval(43200) //43200 segundos = 12 horas
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
