@@ -23,6 +23,20 @@ class CustomCell: UICollectionViewCell {
         card.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
 
+    override var isHighlighted: Bool {
+        didSet {
+            if isHighlighted {
+                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                    self.transform = CGAffineTransform(scaleX: 0.90, y: 0.90)
+                }, completion: nil)
+            } else {
+                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                    self.transform = CGAffineTransform(scaleX: 1, y: 1)
+                }, completion: nil)
+            }
+        }
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
