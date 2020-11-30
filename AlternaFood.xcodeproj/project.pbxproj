@@ -263,11 +263,11 @@
 		736CB77B25654B7A00A51F28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */,
 				A789CB94256F48DE001FCDC3 /* TabBarViewController.swift */,
-				736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */,
 				A4A6F47125699A790094F278 /* DescriptionViewController.swift */,
 				A4447564256E8CC600527955 /* ListaReceitasViewController.swift */,
+				736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */,
+				545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

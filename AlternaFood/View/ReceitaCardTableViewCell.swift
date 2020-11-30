@@ -14,8 +14,8 @@ class ReceitaCardTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViewConstraint()
-       
     }
+    
     func setupViewConstraint() {
         addSubview(card)
         card.translatesAutoresizingMaskIntoConstraints = false

@@ -41,7 +41,8 @@ class DescriptionView: UIView {
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         tableView.separatorStyle = .none
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
+        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
     }
@@ -60,8 +61,10 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
             return 1
         case 1:
             return 1
+        case 2:
+            return 10
         default:
-            return 1
+            return 0
         }
     }
 
@@ -85,5 +88,14 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
         default:
             return UITableViewCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        
+        print(indexPath.row)
+        print(indexPath.section)
+        
     }
 }
