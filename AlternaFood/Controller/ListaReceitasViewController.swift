@@ -7,34 +7,43 @@
 
 import UIKit
 
-class ListaReceitasViewController: UIViewController {
+class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
 
-    let label = UILabel()
+    let lista = ListaReceitasView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        configLabel()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
+        self.title = "Receitas"
+
+        setupSearchBar()
+        setupViewConstraints()
     }
     
-    func configLabel() {
-        view.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
+    func setupSearchBar() {
+        let search = UISearchController(searchResultsController: nil)
+        UISearchBar.appearance().tintColor = UIColor.init(named: "actionColor")
+        search.searchBar.setValue("Cancelar", forKey: "cancelButtonText")
+        search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
+        self.navigationItem.searchController = search
+    }
+
+    func updateSearchResults(for searchController: UISearchController) {
+        // To be done when CloudKit is ready.
+    }
+
+    func setupViewConstraints() {
+        self.view.addSubview(lista)
+        self.lista.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            self.lista.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            self.lista.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.lista.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            self.lista.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
-        label.text = "Isso é tudo pessoal!!!🖖"
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
