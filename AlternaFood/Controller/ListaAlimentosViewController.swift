@@ -33,6 +33,10 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
         
         setUpSearchBar()
         
+        for _ in 0...26 {
+            print(UUID())
+        }
+        
     }
     
     func setUpSearchBar() {
