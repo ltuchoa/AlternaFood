@@ -25,6 +25,7 @@ class DescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        descriptionView.rootViewController = self.navigationController
         DispatchQueue.main.async {
             self.configDescriptionView()
         }

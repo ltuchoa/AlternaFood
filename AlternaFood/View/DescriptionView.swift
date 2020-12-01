@@ -13,6 +13,8 @@ class DescriptionView: UIView {
 
     var substituto: Substituto?
     
+    var rootViewController: UINavigationController?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configView()
@@ -75,12 +77,14 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = DescriptionSubTableViewCell()
             cell.setLabelDescripton(subst: subst)
+            cell.selectionStyle = .none
 //                cell.configCell(type: item, row: indexPath.row)
             return cell
         case 1:
             let cell = UITableViewCell()
             cell.textLabel?.font = UIFont.systemFont(ofSize: 26, weight: .bold)
             cell.textLabel?.text = "Receita"
+            cell.selectionStyle = .none
             return cell
         case 2:
             let cell = ReceitaCardTableViewCell()
@@ -91,11 +95,11 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        
-        print(indexPath.row)
-        print(indexPath.section)
-        
+
+        print("Section: \(indexPath.row) - Row: \(indexPath.section)")
+        if indexPath.section == 2 {
+            let viewController = DescricaoReceitaViewController()
+            rootViewController?.pushViewController(viewController, animated: true)
+        }
     }
 }
