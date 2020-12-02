@@ -22,9 +22,10 @@ class CardCollectionViewCell: UIView {
     }()
 
     let name: UILabel = {
-
         let food = UILabel()
+        food.textColor = .black
         food.numberOfLines = 0
+        food.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         food.text = "Larissa só reclama, chata pra caralho"
         food.textAlignment = .center
         return food
