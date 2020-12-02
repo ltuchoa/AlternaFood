@@ -6,11 +6,23 @@
 //
 
 import UIKit
+import UserNotifications
 
-enum Message: String, CaseIterable {
+enum MessageReceita: String, CaseIterable {
 //    case text1 = "Larissa chata pra krl, mds reclama demaaaaaiiiis!!!!"
-    case text1 = "Que tal conhecer um novo substituto?"
-    case text2 = "Vamos conhecer mais uma receita hoje?"
+    case text1 = "Que tal conhecer novos substitutos de carne?"
+    case text2 = "Que tal conhecer novos substitutos de leite?"
+    case text3 = "Que tal conhecer novos substitutos de manteiga?"
+   
+}
+
+enum MessageSubstituto: String, CaseIterable {
+    case text1 = "Vamos conhecer mais uma receita hoje?"
+}
+
+enum Title: String, CaseIterable {
+    case text1 = "Substituto"
+    case text2 = "Novas Receitas"
 }
 
 class NotificacaoViewController: UIViewController {
@@ -24,13 +36,25 @@ class NotificacaoViewController: UIViewController {
         let center = UNUserNotificationCenter.current()
               
         let content = UNMutableNotificationContent()
-        content.title = "Novas Receitas"
-        content.body = Message.allCases.randomElement()!.rawValue
+        content.title = Title.allCases.randomElement()!.rawValue
+        content.body = {
+            switch content.title {
+            case Title.text1.rawValue:
+                let text = MessageReceita.allCases.randomElement()!.rawValue
+                return text
+            case Title.text2.rawValue:
+                let text = MessageSubstituto.allCases.randomElement()!.rawValue
+                return text
+            default:
+                let text = "erro"
+                return text
+            }
+        }()
         content.sound = .default
               
-        let date = Date().addingTimeInterval(43200) //43200 segundos = 12 horas
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+//        let date = Date().addingTimeInterval(43200) //43200 segundos = 12 horas
+//        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
 //        Add image
         guard let path = Bundle.main.path(forResource: "Icon", ofType: "png") else {return}
@@ -45,7 +69,7 @@ class NotificacaoViewController: UIViewController {
         
         // -------- Create the request ------------
         let uuidString = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true))
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
               
         // -------- Register the request -----------
