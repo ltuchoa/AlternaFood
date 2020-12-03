@@ -69,7 +69,7 @@ class NotificacaoViewController: UIViewController {
         
         // -------- Create the request ------------
         let uuidString = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true))
+        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: UNTimeIntervalNotificationTrigger(timeInterval: 43200, repeats: true))
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
               
         // -------- Register the request -----------

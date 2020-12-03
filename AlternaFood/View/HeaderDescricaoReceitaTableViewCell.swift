@@ -27,35 +27,38 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     
     let rating: CosmosView = {
         let rating = CosmosView()
-        rating.rating = 4
+        rating.rating = 4.6
         
         rating.settings.totalStars = 5
-        rating.settings.updateOnTouch = false
-        rating.settings.fillMode = .full
+        rating.settings.updateOnTouch = true
+        rating.settings.fillMode = .precise
         rating.settings.filledColor = UIColor.init(named: "actionColor")!
-        rating.settings.starSize = 17
+        rating.settings.starSize = 24
         rating.settings.starMargin = 5
         rating.settings.filledBorderColor = UIColor.init(named: "actionColor")!
         rating.settings.filledImage = UIImage(named: "starFilledIcon")
         rating.settings.emptyImage = UIImage(named: "starEmptyIcon")
         
-        rating.text = "4.5 (58)"
+        rating.text = "4.6 (58)"
         rating.settings.textMargin = 5
 //        rating.settings.textColor = UIColor.black
-        rating.settings.textFont = UIFont.systemFont(ofSize: 15, weight: .medium)
+        rating.settings.textFont = UIFont.systemFont(ofSize: 20, weight: .medium)
 
         return rating
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+//        configCell()
         setLabelText()
         configTitleLabel()
-//        configButton()
+        configButton()
         setupRatingConstraints()
         setupTagTime()
         setupTagPorcao()
-        configCell()
+//        backgroundColor = .red
+//        self.isUserInteractionEnabled = false
+//        self.contentView.bringSubviewToFront(rating)
     }
     
     required init?(coder: NSCoder) {
@@ -64,13 +67,15 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     
     func configCell() {
         NSLayoutConstraint.activate([
-            self.topAnchor.constraint(equalTo: titleLabel.topAnchor),
-            self.bottomAnchor.constraint(equalTo: tagPorcao.bottomAnchor, constant: 10)
+//            self.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+//            self.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
+            self.heightAnchor.constraint(equalToConstant: 300)
         ])
     }
     
     func configButton() {
-        addSubview(savedButton)
+//        contentView.isUserInteractionEnabled = false
+        contentView.addSubview(savedButton)
         savedButton.tintColor = UIColor.init(named: "actionColor")
         savedButton.frame = CGRect(x: 0, y: 0, width: 60, height: 80)
         savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
@@ -80,45 +85,46 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         savedButton.addTarget(self, action: #selector(saveTapped), for: .touchUpInside)
         savedButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            savedButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            savedButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
+            savedButton.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
+            savedButton.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -20)
         ])
         
     }
     
     func configTitleLabel() {
-        addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
         titleLabel.font = UIFont.systemFont(ofSize: 26, weight: .bold)
         titleLabel.numberOfLines = 0
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
+            titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20)
         ])
     }
     
     func setupRatingConstraints() {
-        addSubview(rating)
+        contentView.addSubview(rating)
         rating.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             rating.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
-            rating.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
+            rating.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20)
         ])
     }
 
     func setupTagTime() {
-        addSubview(tagTempo)
+        contentView.addSubview(tagTempo)
         tagTempo.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tagTempo.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
-            tagTempo.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            tagTempo.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20),
+            tagTempo.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0),
             tagTempo.widthAnchor.constraint(greaterThanOrEqualToConstant: 82),
             tagTempo.heightAnchor.constraint(greaterThanOrEqualToConstant: 24)
         ])
     }
     
     func setupTagPorcao() {
-        addSubview(tagPorcao)
+        contentView.addSubview(tagPorcao)
         tagPorcao.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tagPorcao.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
