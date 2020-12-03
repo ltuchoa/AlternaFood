@@ -10,9 +10,8 @@ import UIKit
 class DescricaoReceitaView: UIView {
     
     //
-    let ingredientes = ["200g e farinha de trigo", "Amendoas a gosto", "Açúcar a gosto", "500 ml de Leite e Amêndoas" , "Amendoas a gosto", "Açúcar a gosto", "Amendoas a gosto", "Açúcar a gosto", "Amendoas a gosto", "Açúcar a gosto"]
-    let preparo = ["Misture tudo no liquidificador", "Unte a forma com farinha", "Coloque na forma e Vrau", "Unte a forma com farinha", "Unte a forma com farinha", "Unte a forma com farinha"]
-    //
+    let ingredientes = ["700ml de água morna ou quente", "50g de polpa de coco seco"]
+    let preparo = ["Corte a polpa do coco em pequenos pedaços.", "Adicione a poupa e os 700ml de água morna ou quente em um liquidificador. ", "Bata bem por alguns minutos, até que a poupa tenha se desmanchado.", "Coe o leite com um coador ou utilizando um pano, esprema bem para extrair todo o leite.(O resíduo que sobra pode ser utilizado em outras receitas).", "Armazene na geladeira em um pode com tampa(de preferência esterilizado), por até 4 dia ."]    //
     
     let tableView = UITableView()
     
@@ -57,7 +56,6 @@ class DescricaoReceitaView: UIView {
 }
 
 extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
-    
     
     
     func numberOfSections(in tableView: UITableView) -> Int {

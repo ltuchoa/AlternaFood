@@ -64,7 +64,7 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
         case 1:
             return 1
         case 2:
-            return 10
+            return 1
         default:
             return 0
         }

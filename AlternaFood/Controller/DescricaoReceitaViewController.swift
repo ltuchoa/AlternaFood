@@ -21,7 +21,7 @@ class DescricaoReceitaViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "exclamationmark.square"), style: .plain, target: self, action: #selector(reportReceita))
-        
+        headerImage.imageHeader.image = UIImage(named: "leiteDeCocoFoto")
         configHeaderImageView()
         configDescricaoReceitaView()
 

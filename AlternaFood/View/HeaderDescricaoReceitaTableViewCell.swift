@@ -135,7 +135,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     }
     
     func setLabelText() {
-        titleLabel.text = "Bolo Vegano"
+        titleLabel.text = "Leite de Coco"
     }
     
     @objc func saveTapped() {

@@ -13,13 +13,13 @@ class ReceitaCardViewCell: UIView {
     let name: UILabel = {
         let name = UILabel()
         name.tintColor = UIColor.black
-        name.text = "Teste"
+        name.text = "Leite de Coco"
         name.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         return name
     }()
     
     let image: UIImageView = {
-        let img = UIImageView(image: UIImage(named: "emptyStateCardFoto") ?? UIImage(named: "emptyStateCardFoto")) 
+        let img = UIImageView(image: UIImage(named: "leiteDeCocoFoto") ?? UIImage(named: "emptyStateCardFoto"))
         img.clipsToBounds = true
         img.layer.cornerRadius = 12
         img.contentMode = .scaleAspectFill
