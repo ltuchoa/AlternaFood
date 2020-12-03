@@ -15,6 +15,7 @@ class DescriptionViewController: UIViewController {
     var substituto: Substituto?
     
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
         navigationController?.navigationBar.barStyle = .black
     }
 
@@ -23,19 +24,14 @@ class DescriptionViewController: UIViewController {
         view.backgroundColor = .white
         descriptionView.rootViewController = self.navigationController
         DispatchQueue.main.async {
+            self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
             self.configDescriptionView()
         }
-        configNav()
         configHeaderImageView()
         
         guard let substit = substituto else { return }
         headerImage.imageHeader.image = UIImage(named: substit.pathImageSubstituto ?? "emptyStateFoto") ?? UIImage(named: "emptyStateFoto")
         descriptionView.substituto = substit
-    }
-  
-    func configNav() {
-        self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {
