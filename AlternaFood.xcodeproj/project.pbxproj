@@ -36,6 +36,7 @@
 		73895AE525656BFE00D6EC41 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 73895AE425656BFE00D6EC41 /* .swiftlint.yml */; };
 		7C446860DB50939D3BB6B2E0 /* Pods_AlternaFood_AlternaFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EE89487B3E025F5A0941A7 /* Pods_AlternaFood_AlternaFoodUITests.framework */; };
 		9B149A0DE202957D64112E3D /* Pods_AlternaFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */; };
+		A42A671A25792C9A0070DADB /* ReceitaData.json in Resources */ = {isa = PBXBuildFile; fileRef = A42A671925792C9A0070DADB /* ReceitaData.json */; };
 		A4447558256D4DAD00527955 /* HeaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4447557256D4DAD00527955 /* HeaderImageView.swift */; };
 		A444755D256D51FA00527955 /* ReceitaCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444755C256D51FA00527955 /* ReceitaCardTableViewCell.swift */; };
 		A4447565256E8CC600527955 /* ListaReceitasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4447564256E8CC600527955 /* ListaReceitasViewController.swift */; };
@@ -119,6 +120,7 @@
 		73895AE425656BFE00D6EC41 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		762FD369B4931FC03F82714C /* Pods-AlternaFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.release.xcconfig"; sourceTree = "<group>"; };
 		970D70D61FDE500B93A93E17 /* Pods-AlternaFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.debug.xcconfig"; sourceTree = "<group>"; };
+		A42A671925792C9A0070DADB /* ReceitaData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ReceitaData.json; sourceTree = "<group>"; };
 		A4447557256D4DAD00527955 /* HeaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageView.swift; sourceTree = "<group>"; };
 		A444755C256D51FA00527955 /* ReceitaCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaCardTableViewCell.swift; sourceTree = "<group>"; };
 		A4447564256E8CC600527955 /* ListaReceitasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReceitasViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				A776FE89256CA7CE00DF9691 /* ModelJson.swift */,
 				A776FE8E256CAEA300DF9691 /* AlimentoData.json */,
 				A776FEB7256D4E3100DF9691 /* SubstitutoData.json */,
+				A42A671925792C9A0070DADB /* ReceitaData.json */,
 			);
 			path = JSonParser;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			files = (
 				54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */,
 				A776FEB8256D4E3100DF9691 /* SubstitutoData.json in Resources */,
+				A42A671A25792C9A0070DADB /* ReceitaData.json in Resources */,
 				73895AE525656BFE00D6EC41 /* .swiftlint.yml in Resources */,
 				A776FE8F256CAEA300DF9691 /* AlimentoData.json in Resources */,
 				736CB77525654B4600A51F28 /* .gitignore in Resources */,
