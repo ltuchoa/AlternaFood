@@ -19,7 +19,7 @@ class ReceitaCardViewCell: UIView {
     }()
     
     let image: UIImageView = {
-        let img = UIImageView(image: UIImage(named: "aboboraFoto"))
+        let img = UIImageView(image: UIImage(named: "emptyStateCardFoto") ?? UIImage(named: "emptyStateCardFoto")) 
         img.clipsToBounds = true
         img.layer.cornerRadius = 12
         img.contentMode = .scaleAspectFill

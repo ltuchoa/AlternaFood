@@ -29,10 +29,10 @@ class DescriptionViewController: UIViewController {
         configHeaderImageView()
         
         guard let substit = substituto else { return }
-        headerImage.imageHeader.image = UIImage(named: substit.pathImageSubstituto ?? "jacaFoto")
+        headerImage.imageHeader.image = UIImage(named: substit.pathImageSubstituto ?? "emptyStateFoto") ?? UIImage(named: "emptyStateFoto")
         descriptionView.substituto = substit
     }
-
+  
     func configNav() {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
 
