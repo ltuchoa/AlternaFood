@@ -23,8 +23,8 @@ class ReceitaCardTableViewCell: UITableViewCell {
             card.topAnchor.constraint(equalTo: self.topAnchor, constant: 10.0),
             card.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             card.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            card.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            self.heightAnchor.constraint(equalToConstant: 180)
+            card.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
+            self.heightAnchor.constraint(equalToConstant: 185)
         ])
     }
     

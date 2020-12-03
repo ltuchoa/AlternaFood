@@ -14,13 +14,10 @@ class DescriptionViewController: UIViewController {
     
     var substituto: Substituto?
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        navigationController?.navigationBar.barStyle = .black
-//    }
-//
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return.lightContent
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +41,7 @@ class DescriptionViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
+        navigationController?.navigationBar.barStyle = .default
     }
     
     func configHeaderImageView() {

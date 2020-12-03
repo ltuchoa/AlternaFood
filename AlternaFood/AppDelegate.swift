@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -23,6 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         UserDefaults.standard.set(true, forKey: "First Launch")
+        
+        UNUserNotificationCenter.current()
+        .requestAuthorization(options: [.alert, .sound]) {(granted, _ ) in
+            if granted {
+                print("User gave permissions for local notifications")
+            }
+        }
+
+        UNUserNotificationCenter.current().delegate = self
+        
+        let notification = NotificacaoViewController()
+        notification.schenduleNotification()
         
         return true
     }

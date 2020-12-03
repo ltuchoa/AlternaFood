@@ -32,7 +32,6 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
         print(alimentos.count)
         
         setUpSearchBar()
-        
     }
     
     func setUpSearchBar() {

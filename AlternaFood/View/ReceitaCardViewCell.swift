@@ -38,7 +38,7 @@ class ReceitaCardViewCell: UIView {
     
     let modal: UIView = {
         let modal = UIView()
-        modal.backgroundColor = UIColor.systemBackground
+        modal.backgroundColor = UIColor.init(named: "cardReceitaColor")
         modal.layer.cornerRadius = 12
         return modal
     }()
