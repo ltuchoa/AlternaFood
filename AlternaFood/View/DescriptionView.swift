@@ -13,6 +13,8 @@ class DescriptionView: UIView {
 
     var substituto: Substituto?
     
+    var rootViewController: UINavigationController?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configView()
@@ -41,7 +43,8 @@ class DescriptionView: UIView {
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         tableView.separatorStyle = .none
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
+        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
     }
@@ -60,8 +63,10 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
             return 1
         case 1:
             return 1
+        case 2:
+            return 10
         default:
-            return 1
+            return 0
         }
     }
 
@@ -72,18 +77,29 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = DescriptionSubTableViewCell()
             cell.setLabelDescripton(subst: subst)
+            cell.selectionStyle = .none
 //                cell.configCell(type: item, row: indexPath.row)
             return cell
         case 1:
             let cell = UITableViewCell()
             cell.textLabel?.font = UIFont.systemFont(ofSize: 26, weight: .bold)
             cell.textLabel?.text = "Receita"
+            cell.selectionStyle = .none
             return cell
         case 2:
             let cell = ReceitaCardTableViewCell()
             return cell
         default:
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        print("Section: \(indexPath.row) - Row: \(indexPath.section)")
+        if indexPath.section == 2 {
+            let viewController = DescricaoReceitaViewController()
+            rootViewController?.pushViewController(viewController, animated: true)
         }
     }
 }
