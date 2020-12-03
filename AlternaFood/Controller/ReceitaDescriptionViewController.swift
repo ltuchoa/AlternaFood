@@ -1,28 +1,30 @@
 //
-//  DescriptionViewController.swift
+//  ReceitaDescriptionViewController.swift
 //  AlternaFood
 //
-//  Created by Paulo Uchôa on 21/11/20.
+//  Created by Leonardo Gomes Fernandes on 30/11/20.
 //
 
 import UIKit
 
-class DescriptionViewController: UIViewController {
-    
+class ReceitaDescriptionViewController: UIViewController {
+
     let descriptionView = DescriptionView()
     let headerImage = HeaderImageView()
     
     var substituto: Substituto?
     
-    override func viewDidAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barStyle = .black
+//    override func viewDidAppear(_ animated: Bool) {
+//        navigationController?.navigationBar.barStyle = .black
+//    }
+//
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return.lightContent
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        descriptionView.rootViewController = self.navigationController
         DispatchQueue.main.async {
             self.configDescriptionView()
         }
@@ -41,7 +43,6 @@ class DescriptionViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
-        navigationController?.navigationBar.barStyle = .default
     }
     
     func configHeaderImageView() {
@@ -64,5 +65,5 @@ class DescriptionViewController: UIViewController {
             descriptionView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1.0)
         ])
     }
-    
+
 }

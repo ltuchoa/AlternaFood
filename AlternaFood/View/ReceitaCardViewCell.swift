@@ -38,7 +38,7 @@ class ReceitaCardViewCell: UIView {
     
     let modal: UIView = {
         let modal = UIView()
-        modal.backgroundColor = UIColor.systemBackground
+        modal.backgroundColor = UIColor.init(named: "cardReceitaColor")
         modal.layer.cornerRadius = 12
         return modal
     }()
@@ -151,7 +151,7 @@ class ReceitaCardViewCell: UIView {
             tagTempo.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
             tagTempo.leadingAnchor.constraint(equalTo: modal.leadingAnchor, constant: 15),
             tagTempo.heightAnchor.constraint(equalToConstant: 24),
-            tagTempo.widthAnchor.constraint(equalToConstant: 81)
+            tagTempo.widthAnchor.constraint(equalToConstant: 82)
         ])
     }
     
@@ -162,7 +162,7 @@ class ReceitaCardViewCell: UIView {
             tagPessoas.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
             tagPessoas.leadingAnchor.constraint(equalTo: tagTempo.trailingAnchor, constant: 8),
             tagPessoas.heightAnchor.constraint(equalToConstant: 24),
-            tagPessoas.widthAnchor.constraint(equalToConstant: 105)
+            tagPessoas.widthAnchor.constraint(equalToConstant: 112)
         ])
     }
 }
