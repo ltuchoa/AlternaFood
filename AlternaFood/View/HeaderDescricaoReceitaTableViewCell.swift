@@ -51,7 +51,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLabelText()
         configTitleLabel()
-        configButton()
+//        configButton()
         setupRatingConstraints()
         setupTagTime()
         setupTagPorcao()
@@ -77,7 +77,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         savedButton.imageView?.contentMode = .scaleAspectFit
         savedButton.imageEdgeInsets = UIEdgeInsets.init(top: 30, left: 25, bottom: 25, right: 25)
         savedButton.sizeToFit()
-        savedButton.addTarget(self, action: #selector(saveTapped), for: .allTouchEvents)
+        savedButton.addTarget(self, action: #selector(saveTapped), for: .touchUpInside)
         savedButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             savedButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),

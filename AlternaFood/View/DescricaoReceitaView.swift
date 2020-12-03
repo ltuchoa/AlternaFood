@@ -10,11 +10,16 @@ import UIKit
 class DescricaoReceitaView: UIView {
     
     //
-    let ingredientes = ["200g e farinha de trigo", "Amendoas a gosto", "Açúcar a gosto", "500 ml de Leite e Amêndoas"]
-    let preparo = ["Misture tudo no liquidificador", "Unte a forma com farinha", "Coloque na forma e Vrau"]
+    let ingredientes = ["200g e farinha de trigo", "Amendoas a gosto", "Açúcar a gosto", "500 ml de Leite e Amêndoas" , "Amendoas a gosto", "Açúcar a gosto", "Amendoas a gosto", "Açúcar a gosto", "Amendoas a gosto", "Açúcar a gosto"]
+    let preparo = ["Misture tudo no liquidificador", "Unte a forma com farinha", "Coloque na forma e Vrau", "Unte a forma com farinha", "Unte a forma com farinha", "Unte a forma com farinha"]
     //
     
     let tableView = UITableView()
+    
+    let savedButton = UIButton()
+    let viewButton = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    
+    var saved: Bool = false
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,6 +58,8 @@ class DescricaoReceitaView: UIView {
 
 extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
@@ -78,6 +85,9 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = HeaderDescricaoReceitaTableViewCell()
+            configSavedButton()
+            cell.accessoryView = viewButton
+            
             return cell
         case 1:
             let cell = UITableViewCell()
@@ -105,6 +115,34 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             return UITableViewCell()
+        }
+    }
+    
+    func configSavedButton() {
+        viewButton.addSubview(savedButton)
+        savedButton.tintColor = UIColor.init(named: "actionColor")
+        savedButton.frame = CGRect(x: 0, y: 0, width: 60, height: 80)
+        savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
+        savedButton.imageView?.contentMode = .scaleAspectFit
+        savedButton.imageEdgeInsets = UIEdgeInsets.init(top: 35, left: 25, bottom: 30, right: 25)
+        savedButton.sizeToFit()
+        savedButton.addTarget(self, action: #selector(saveTapped), for: .touchUpInside)
+        savedButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            savedButton.topAnchor.constraint(equalTo: viewButton.topAnchor, constant: 10),
+            savedButton.trailingAnchor.constraint(equalTo: viewButton.trailingAnchor, constant: -10)
+        ])
+    }
+
+    @objc func saveTapped() {
+        print("Foi tapeado")
+        
+        if saved == false {
+            savedButton.setImage(UIImage.init(named: "bookmark.fill"), for: .normal)
+            saved = true
+        } else {
+            savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
+            saved = false
         }
     }
 
