@@ -85,8 +85,8 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = HeaderDescricaoReceitaTableViewCell()
-            configSavedButton()
-            cell.accessoryView = viewButton
+//            configSavedButton()
+//            cell.accessoryView = viewButton
             
             return cell
         case 1:

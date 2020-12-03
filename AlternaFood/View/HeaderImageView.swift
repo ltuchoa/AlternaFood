@@ -15,7 +15,7 @@ class HeaderImageView: UIView {
     }()
 
     let imageHeader: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "empytStateFoto")) 
+        let image = UIImageView(image: UIImage(named: "emptyStateFoto")) 
         image.contentMode = .scaleAspectFill
         return image
     }()

@@ -12,12 +12,9 @@ class DescricaoReceitaViewController: UIViewController {
     let headerImage = HeaderImageView()
     let descricaoReceitaView = DescricaoReceitaView()
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
+        navigationController?.navigationBar.barStyle = .black
     }
     
     override func viewDidLoad() {
@@ -32,6 +29,7 @@ class DescricaoReceitaViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
+        navigationController?.navigationBar.barStyle = .default
     }
     
     func configHeaderImageView() {

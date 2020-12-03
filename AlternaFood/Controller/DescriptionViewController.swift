@@ -18,7 +18,6 @@ class DescriptionViewController: UIViewController {
         navigationController?.navigationBar.barStyle = .black
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
