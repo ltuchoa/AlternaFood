@@ -13,6 +13,12 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
     
     let cdManager = CDManager()
     
+    override func viewWillAppear(_ animated: Bool) {
+//        self.navigationController?.navigationBar.tintColor = UIColor.black
+//        navigationController?.navigationBar.barStyle = .black
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         lista.rootViewController = self.navigationController
