@@ -11,13 +11,19 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
 
     let lista = ListaReceitasView()
     
+    let cdManager = CDManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        lista.rootViewController = self.navigationController
         view.backgroundColor = .systemBackground
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         self.title = "Receitas"
 
+        let listaDeReceitas = cdManager.listaReceitas()
+        lista.listaReceitas = listaDeReceitas
+        
         setupSearchBar()
         setupViewConstraints()
     }

@@ -10,9 +10,16 @@ import UIKit
 class ReceitaCardTableViewCell: UITableViewCell {
     
     var card = ReceitaCardViewCell()
+    
+    var receitaTable: Receita? {
+        didSet {
+            card.receita = receitaTable
+        }
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         setupViewConstraint()
     }
     

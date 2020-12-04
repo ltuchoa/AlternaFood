@@ -4,6 +4,7 @@
 //
 //  Created by Leonardo Gomes Fernandes on 20/11/20.
 //
+//swiftlint:disable function_parameter_count
 
 import Foundation
 import CoreData
@@ -106,4 +107,33 @@ class CDManager {
         return [Alimento()]
     }
     
+    func saveReceita(idAReceita: String, nomeReceita: String, porcoes: String, tempo: String, ingredientes: [String], preparo: [String], pathImage: String, idAlimentoFrom: String) -> Bool {
+        
+        let receita = Receita(context: self.viewContext)
+        receita.idReceita = UUID(uuidString: idAReceita)
+        receita.nomeReceita = nomeReceita
+        receita.porcaoReceita = porcoes
+        receita.tempoPreparoReceita = tempo
+        receita.ingredientesReceita = ingredientes
+        receita.preparoReceita = preparo
+        receita.imageReceita = pathImage
+        receita.idAlimentoFrom = UUID(uuidString: idAlimentoFrom)
+     
+        return saveContext()
+    }
+    
+    func listaReceitas() -> [Receita] {
+        
+        var receitas: [Receita] = []
+        
+        do {
+            let request = Receita.fetchRequest() as NSFetchRequest<Receita>
+            
+            receitas = try viewContext.fetch(request)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        return receitas
+    }
 }

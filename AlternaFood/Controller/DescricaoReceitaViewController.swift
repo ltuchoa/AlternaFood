@@ -12,6 +12,17 @@ class DescricaoReceitaViewController: UIViewController {
     let headerImage = HeaderImageView()
     let descricaoReceitaView = DescricaoReceitaView()
     
+    var receita: Receita? {
+        didSet {
+            if receita?.imageReceita! == ""{
+                headerImage.imageHeader.image = UIImage(named: "emptyStateCardFoto")
+            } else {
+                headerImage.imageHeader.image = UIImage(named: receita?.imageReceita ?? "emptyStateCardFoto")
+            }
+            descricaoReceitaView.receita = receita
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
         navigationController?.navigationBar.barStyle = .black
@@ -20,7 +31,7 @@ class DescricaoReceitaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "exclamationmark.square"), style: .plain, target: self, action: #selector(reportReceita))
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "exclamationmark.square"), style: .plain, target: self, action: #selector(reportReceita))
         
         configHeaderImageView()
         configDescricaoReceitaView()
