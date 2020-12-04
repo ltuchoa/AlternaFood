@@ -9,7 +9,7 @@ import UIKit
 import Cosmos
 
 class ReceitaCardViewCell: UIView {
-
+    
     let name: UILabel = {
         let name = UILabel()
         name.tintColor = UIColor.black
@@ -76,6 +76,20 @@ class ReceitaCardViewCell: UIView {
 
         return rating
     }()
+    
+    var receita: Receita? {
+        didSet {
+//            print("A receita -"+receita!.nomeReceita!)
+            name.text = receita!.nomeReceita ?? "Receita"
+            tagPessoas.name.text = receita!.porcaoReceita ?? "- Porções"
+            tagTempo.name.text = receita!.tempoPreparoReceita ?? "- Mim"
+            if receita?.imageReceita! == "" {
+                image.image = UIImage(named: "emptyStateCardFoto")
+            } else {
+                image.image = UIImage(named: receita?.imageReceita ?? "emptyStateCardFoto")
+            }
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -151,12 +165,13 @@ class ReceitaCardViewCell: UIView {
             tagTempo.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
             tagTempo.leadingAnchor.constraint(equalTo: modal.leadingAnchor, constant: 15),
             tagTempo.heightAnchor.constraint(equalToConstant: 24),
-            tagTempo.widthAnchor.constraint(equalToConstant: 82)
+            tagTempo.widthAnchor.constraint(equalToConstant: 112)
         ])
     }
     
     func setupTagPessoasConstraints() {
         modal.addSubview(tagPessoas)
+        tagPessoas.name.text = receita?.porcaoReceita! ?? "Porções"
         tagPessoas.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tagPessoas.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),

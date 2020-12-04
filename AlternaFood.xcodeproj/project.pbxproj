@@ -34,6 +34,8 @@
 		736CB76425654A9C00A51F28 /* AlternaFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB76325654A9C00A51F28 /* AlternaFoodUITests.swift */; };
 		736CB77525654B4600A51F28 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 736CB77425654B4600A51F28 /* .gitignore */; };
 		73895AE525656BFE00D6EC41 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 73895AE425656BFE00D6EC41 /* .swiftlint.yml */; };
+		73FE72BE257984AD00031F04 /* Receita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE72BD257984AD00031F04 /* Receita+CoreDataProperties.swift */; };
+		73FE72BF257984AD00031F04 /* Receita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE72BC257984AD00031F04 /* Receita+CoreDataClass.swift */; };
 		7C446860DB50939D3BB6B2E0 /* Pods_AlternaFood_AlternaFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EE89487B3E025F5A0941A7 /* Pods_AlternaFood_AlternaFoodUITests.framework */; };
 		9B149A0DE202957D64112E3D /* Pods_AlternaFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */; };
 		A42A671A25792C9A0070DADB /* ReceitaData.json in Resources */ = {isa = PBXBuildFile; fileRef = A42A671925792C9A0070DADB /* ReceitaData.json */; };
@@ -55,9 +57,7 @@
 		A789CB76256F481B001FCDC3 /* Alimento+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789CB70256F481B001FCDC3 /* Alimento+CoreDataClass.swift */; };
 		A789CB77256F481B001FCDC3 /* Substituto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789CB71256F481B001FCDC3 /* Substituto+CoreDataProperties.swift */; };
 		A789CB78256F481B001FCDC3 /* Alimento+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789CB72256F481B001FCDC3 /* Alimento+CoreDataProperties.swift */; };
-		A789CB79256F481B001FCDC3 /* Receita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789CB73256F481B001FCDC3 /* Receita+CoreDataProperties.swift */; };
 		A789CB7A256F481B001FCDC3 /* Substituto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789CB74256F481B001FCDC3 /* Substituto+CoreDataClass.swift */; };
-		A789CB7B256F481B001FCDC3 /* Receita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789CB75256F481B001FCDC3 /* Receita+CoreDataClass.swift */; };
 		A789CB95256F48DE001FCDC3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A789CB94256F48DE001FCDC3 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +118,8 @@
 		736CB76525654A9C00A51F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736CB77425654B4600A51F28 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		73895AE425656BFE00D6EC41 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		73FE72BC257984AD00031F04 /* Receita+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Receita+CoreDataClass.swift"; path = "/Users/leonardogomes/Desktop/AlternaFood/AlternaFood/Model/CoreDataModel/Receita+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		73FE72BD257984AD00031F04 /* Receita+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Receita+CoreDataProperties.swift"; path = "/Users/leonardogomes/Desktop/AlternaFood/AlternaFood/Model/CoreDataModel/Receita+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		762FD369B4931FC03F82714C /* Pods-AlternaFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.release.xcconfig"; sourceTree = "<group>"; };
 		970D70D61FDE500B93A93E17 /* Pods-AlternaFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.debug.xcconfig"; sourceTree = "<group>"; };
 		A42A671925792C9A0070DADB /* ReceitaData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ReceitaData.json; sourceTree = "<group>"; };
@@ -139,9 +141,7 @@
 		A789CB70256F481B001FCDC3 /* Alimento+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alimento+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A789CB71256F481B001FCDC3 /* Substituto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Substituto+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A789CB72256F481B001FCDC3 /* Alimento+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alimento+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A789CB73256F481B001FCDC3 /* Receita+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Receita+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A789CB74256F481B001FCDC3 /* Substituto+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Substituto+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A789CB75256F481B001FCDC3 /* Receita+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Receita+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A789CB94256F48DE001FCDC3 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -222,8 +222,8 @@
 			children = (
 				A789CB70256F481B001FCDC3 /* Alimento+CoreDataClass.swift */,
 				A789CB72256F481B001FCDC3 /* Alimento+CoreDataProperties.swift */,
-				A789CB75256F481B001FCDC3 /* Receita+CoreDataClass.swift */,
-				A789CB73256F481B001FCDC3 /* Receita+CoreDataProperties.swift */,
+				73FE72BC257984AD00031F04 /* Receita+CoreDataClass.swift */,
+				73FE72BD257984AD00031F04 /* Receita+CoreDataProperties.swift */,
 				A789CB74256F481B001FCDC3 /* Substituto+CoreDataClass.swift */,
 				A789CB71256F481B001FCDC3 /* Substituto+CoreDataProperties.swift */,
 			);
@@ -622,7 +622,6 @@
 				A444755D256D51FA00527955 /* ReceitaCardTableViewCell.swift in Sources */,
 				56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */,
-				A789CB79256F481B001FCDC3 /* Receita+CoreDataProperties.swift in Sources */,
 				5635E2602578F648005A8DAD /* CloudKitManager.swift in Sources */,
 				A789CB7A256F481B001FCDC3 /* Substituto+CoreDataClass.swift in Sources */,
 				A4447565256E8CC600527955 /* ListaReceitasViewController.swift in Sources */,
@@ -635,8 +634,8 @@
 				A789CB77256F481B001FCDC3 /* Substituto+CoreDataProperties.swift in Sources */,
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
 				A789CB76256F481B001FCDC3 /* Alimento+CoreDataClass.swift in Sources */,
-				A789CB7B256F481B001FCDC3 /* Receita+CoreDataClass.swift in Sources */,
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
+				73FE72BE257984AD00031F04 /* Receita+CoreDataProperties.swift in Sources */,
 				A4447558256D4DAD00527955 /* HeaderImageView.swift in Sources */,
 				A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */,
 				A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */,
@@ -648,6 +647,7 @@
 				730B88022575D0C000FAD42D /* HeaderDescricaoReceitaTableViewCell.swift in Sources */,
 				73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
+				73FE72BF257984AD00031F04 /* Receita+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,8 +819,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AlternaFood/AlternaFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -828,7 +828,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TeamLit.AlternaFood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leo.TeamLit.AlternaFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -843,8 +843,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AlternaFood/AlternaFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -852,7 +852,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TeamLit.AlternaFood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leo.TeamLit.AlternaFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

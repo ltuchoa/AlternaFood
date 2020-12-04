@@ -25,11 +25,14 @@ struct JSSubstituto: Codable {
 }
 
 struct JSReceita: Codable {
-    let receitaID: String
-    let receitaNome: String
-    let receitaFoto: String
-    let receitaTempo: String
-    let receitaPorcao: Int
-    let receitaIngredientes: [String]
-    let receitaPreparo: [String]
+    let idAlimento: String
+    let idSubstituto: String
+    let idReceita: String
+    let nome: String
+    let porcoes: String
+    let tempo: String
+    let ingredientes: [String]
+    let preparo: [String]
+    let pathFoto: String
+    
 }

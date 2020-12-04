@@ -9,15 +9,9 @@ import UIKit
 
 class DescricaoReceitaView: UIView {
     
-    //
-    let ingredientes = ["200g e farinha de trigo", "Amendoas a gosto", "Açúcar a gosto", "500 ml de Leite e Amêndoas" , "Amendoas a gosto", "Açúcar a gosto", "Amendoas a gosto", "Açúcar a gosto", "Amendoas a gosto", "Açúcar a gosto"]
-    let preparo = ["Misture tudo no liquidificador", "Unte a forma com farinha", "Coloque na forma e Vrau", "Unte a forma com farinha", "Unte a forma com farinha", "Unte a forma com farinha"]
-    //
+    var receita: Receita?
     
     let tableView = UITableView()
-    
-    let savedButton = UIButton()
-    let viewButton = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
     
     var saved: Bool = false
 
@@ -58,8 +52,6 @@ class DescricaoReceitaView: UIView {
 
 extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
     
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
@@ -71,11 +63,11 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
         case 1:
             return 1
         case 2:
-            return ingredientes.count
+            return (receita?.ingredientesReceita!.count) ?? 0
         case 3:
             return 1
         case 4:
-            return preparo.count
+            return (receita?.preparoReceita!.count) ?? 0
         default:
             return 0
         }
@@ -85,6 +77,9 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = HeaderDescricaoReceitaTableViewCell()
+            let nome = receita?.nomeReceita
+            cell.setLabelText(name: nome)
+//            cell.textLabel?.text = nome
 //            configSavedButton()
 //            cell.accessoryView = viewButton
             
@@ -98,7 +93,9 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
         case 2:
             let cell = UITableViewCell()
             cell.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-            cell.textLabel?.text = "- \(ingredientes[indexPath.row])"
+            cell.textLabel?.numberOfLines = 0
+            let ingrediente = receita?.ingredientesReceita![indexPath.row]
+            cell.textLabel?.text = "- \(ingrediente!))"
             cell.selectionStyle = .none
             return cell
         case 3:
@@ -110,39 +107,13 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
         case 4:
             let cell = UITableViewCell()
             cell.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-            cell.textLabel?.text = "- \(preparo[indexPath.row])"
+            cell.textLabel?.numberOfLines = 0
+            let umPreparo = receita?.preparoReceita![indexPath.row]
+            cell.textLabel?.text = "- \(umPreparo!)"
             cell.selectionStyle = .none
             return cell
         default:
             return UITableViewCell()
-        }
-    }
-    
-    func configSavedButton() {
-        viewButton.addSubview(savedButton)
-        savedButton.tintColor = UIColor.init(named: "actionColor")
-        savedButton.frame = CGRect(x: 0, y: 0, width: 60, height: 80)
-        savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
-        savedButton.imageView?.contentMode = .scaleAspectFit
-        savedButton.imageEdgeInsets = UIEdgeInsets.init(top: 35, left: 25, bottom: 30, right: 25)
-        savedButton.sizeToFit()
-        savedButton.addTarget(self, action: #selector(saveTapped), for: .touchUpInside)
-        savedButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            savedButton.topAnchor.constraint(equalTo: viewButton.topAnchor, constant: 10),
-            savedButton.trailingAnchor.constraint(equalTo: viewButton.trailingAnchor, constant: -10)
-        ])
-    }
-
-    @objc func saveTapped() {
-        print("Foi tapeado")
-        
-        if saved == false {
-            savedButton.setImage(UIImage.init(named: "bookmark.fill"), for: .normal)
-            saved = true
-        } else {
-            savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
-            saved = false
         }
     }
 

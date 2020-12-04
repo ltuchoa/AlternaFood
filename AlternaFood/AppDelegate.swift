@@ -14,11 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let jsonParser = JsonParser()
-        
+
         if UserDefaults.standard.bool(forKey: "First Launch") == false {
             if !jsonParser.populateAlimentoCD() ||
                 !jsonParser.populateSubstitutosCD() ||
-                !jsonParser.addSubstitutosToAlimentos() {
+                !jsonParser.addSubstitutosToAlimentos() ||
+                !jsonParser.populateReceitasCD() {
                 return false
             }
         }

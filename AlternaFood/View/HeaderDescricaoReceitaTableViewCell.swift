@@ -12,6 +12,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     
     let titleLabel = UILabel()
     let savedButton = UIButton()
+    var saved: Bool = false
     
     let tagTempo: TagView = {
         let tag = TagView()
@@ -50,9 +51,8 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 //        configCell()
-        setLabelText()
-        configTitleLabel()
         configButton()
+        configTitleLabel()
         setupRatingConstraints()
         setupTagTime()
         setupTagPorcao()
@@ -118,7 +118,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
             tagTempo.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
             tagTempo.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20),
             tagTempo.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0),
-            tagTempo.widthAnchor.constraint(greaterThanOrEqualToConstant: 82),
+            tagTempo.widthAnchor.constraint(greaterThanOrEqualToConstant: 112),
             tagTempo.heightAnchor.constraint(greaterThanOrEqualToConstant: 24)
         ])
     }
@@ -134,12 +134,18 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         ])
     }
     
-    func setLabelText() {
-        titleLabel.text = "Bolo Vegano"
+    func setLabelText(name: String?) {
+        titleLabel.text = name ?? "Receita"
     }
     
     @objc func saveTapped() {
-        print("Save tapped")
+        if saved == false {
+            savedButton.setImage(UIImage.init(named: "bookmark.fill"), for: .normal)
+            saved = true
+        } else {
+            savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
+            saved = false
+        }
     }
     
 }
