@@ -21,6 +21,7 @@ class ReceitaCardTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupViewConstraint()
+        selectionStyle = .none
     }
     
     func setupViewConstraint() {
@@ -37,25 +38,6 @@ class ReceitaCardTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let animationOptions: UIView.AnimationOptions = [.allowUserInteraction]
-        UIView.animate(withDuration: 0.2,
-                       delay: 0,
-                       usingSpringWithDamping: 1,
-                       initialSpringVelocity: 0,
-                       options: animationOptions, animations: {
-                        self.transform = .init(scaleX: 0.9, y: 0.9)
-                       }, completion: { _ in
-                        UIView.animate(withDuration: 0.2,
-                                       delay: 0,
-                                       usingSpringWithDamping: 1,
-                                       initialSpringVelocity: 0,
-                                       options: animationOptions, animations: {
-                                        self.transform = .identity
-                                       }, completion: nil)
-                       })
     }
 
 }

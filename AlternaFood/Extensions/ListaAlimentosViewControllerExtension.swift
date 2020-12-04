@@ -45,9 +45,32 @@ extension ListaAlimentosViewController: UICollectionViewDelegate, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let cell = collectionView.cellForItem(at: indexPath) ?? UICollectionViewCell()
+        animateCell(cell: cell)
+
         print("User tapped on item \(indexPath.row)")
         let viewController = ListaSubstitutosViewController()
         viewController.substitutos = alimentos[indexPath.row].listaSubstitutos
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func animateCell(cell: UICollectionViewCell) {
+        let animationOptions: UIView.AnimationOptions = [.allowUserInteraction]
+        UIView.animate(withDuration: 0.2,
+                       delay: 0,
+                       usingSpringWithDamping: 1,
+                       initialSpringVelocity: 0,
+                       options: animationOptions, animations: {
+                        cell.transform = .init(scaleX: 0.9, y: 0.9)
+                       }, completion: { _ in
+                        UIView.animate(withDuration: 0.2,
+                                       delay: 0,
+                                       usingSpringWithDamping: 1,
+                                       initialSpringVelocity: 0,
+                                       options: animationOptions, animations: {
+                                        cell.transform = .identity
+                                       }, completion: nil)
+                       })
     }
 }
