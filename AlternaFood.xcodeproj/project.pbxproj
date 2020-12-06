@@ -13,6 +13,8 @@
 		545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */; };
 		5465699D256BE3AD00298373 /* ReceitaCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5465699C256BE3AD00298373 /* ReceitaCardViewCell.swift */; };
 		546569A2256BE3FD00298373 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546569A1256BE3FD00298373 /* TagView.swift */; };
+		54B073F7257A7C42007AF717 /* Receita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B073F5257A7C42007AF717 /* Receita+CoreDataProperties.swift */; };
+		54B073F8257A7C42007AF717 /* Receita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B073F6257A7C42007AF717 /* Receita+CoreDataClass.swift */; };
 		54EFFCC22567E55200996F33 /* Alimentos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EFFCC12567E55200996F33 /* Alimentos.xcassets */; };
 		56064C71257665B500E75E1B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56064C70257665B500E75E1B /* CloudKit.framework */; };
 		562CB05325680AAB00F729FD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CB05225680AAB00F729FD /* CustomCell.swift */; };
@@ -34,8 +36,6 @@
 		736CB76425654A9C00A51F28 /* AlternaFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB76325654A9C00A51F28 /* AlternaFoodUITests.swift */; };
 		736CB77525654B4600A51F28 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 736CB77425654B4600A51F28 /* .gitignore */; };
 		73895AE525656BFE00D6EC41 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 73895AE425656BFE00D6EC41 /* .swiftlint.yml */; };
-		73FE72BE257984AD00031F04 /* Receita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE72BD257984AD00031F04 /* Receita+CoreDataProperties.swift */; };
-		73FE72BF257984AD00031F04 /* Receita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE72BC257984AD00031F04 /* Receita+CoreDataClass.swift */; };
 		7C446860DB50939D3BB6B2E0 /* Pods_AlternaFood_AlternaFoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EE89487B3E025F5A0941A7 /* Pods_AlternaFood_AlternaFoodUITests.framework */; };
 		9B149A0DE202957D64112E3D /* Pods_AlternaFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */; };
 		A42A671A25792C9A0070DADB /* ReceitaData.json in Resources */ = {isa = PBXBuildFile; fileRef = A42A671925792C9A0070DADB /* ReceitaData.json */; };
@@ -89,6 +89,8 @@
 		545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewController.swift; sourceTree = "<group>"; };
 		5465699C256BE3AD00298373 /* ReceitaCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaCardViewCell.swift; sourceTree = "<group>"; };
 		546569A1256BE3FD00298373 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		54B073F5257A7C42007AF717 /* Receita+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Receita+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		54B073F6257A7C42007AF717 /* Receita+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Receita+CoreDataClass.swift"; sourceTree = "<group>"; };
 		54EFFCC12567E55200996F33 /* Alimentos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Alimentos.xcassets; sourceTree = "<group>"; };
 		56064C6C2576659900E75E1B /* AlternaFood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlternaFood.entitlements; sourceTree = "<group>"; };
 		56064C70257665B500E75E1B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -118,8 +120,6 @@
 		736CB76525654A9C00A51F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736CB77425654B4600A51F28 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		73895AE425656BFE00D6EC41 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		73FE72BC257984AD00031F04 /* Receita+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Receita+CoreDataClass.swift"; path = "/Users/leonardogomes/Desktop/AlternaFood/AlternaFood/Model/CoreDataModel/Receita+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		73FE72BD257984AD00031F04 /* Receita+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Receita+CoreDataProperties.swift"; path = "/Users/leonardogomes/Desktop/AlternaFood/AlternaFood/Model/CoreDataModel/Receita+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		762FD369B4931FC03F82714C /* Pods-AlternaFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.release.xcconfig"; sourceTree = "<group>"; };
 		970D70D61FDE500B93A93E17 /* Pods-AlternaFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood/Pods-AlternaFood.debug.xcconfig"; sourceTree = "<group>"; };
 		A42A671925792C9A0070DADB /* ReceitaData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ReceitaData.json; sourceTree = "<group>"; };
@@ -222,8 +222,8 @@
 			children = (
 				A789CB70256F481B001FCDC3 /* Alimento+CoreDataClass.swift */,
 				A789CB72256F481B001FCDC3 /* Alimento+CoreDataProperties.swift */,
-				73FE72BC257984AD00031F04 /* Receita+CoreDataClass.swift */,
-				73FE72BD257984AD00031F04 /* Receita+CoreDataProperties.swift */,
+				54B073F6257A7C42007AF717 /* Receita+CoreDataClass.swift */,
+				54B073F5257A7C42007AF717 /* Receita+CoreDataProperties.swift */,
 				A789CB74256F481B001FCDC3 /* Substituto+CoreDataClass.swift */,
 				A789CB71256F481B001FCDC3 /* Substituto+CoreDataProperties.swift */,
 			);
@@ -635,7 +635,7 @@
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
 				A789CB76256F481B001FCDC3 /* Alimento+CoreDataClass.swift in Sources */,
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
-				73FE72BE257984AD00031F04 /* Receita+CoreDataProperties.swift in Sources */,
+				54B073F7257A7C42007AF717 /* Receita+CoreDataProperties.swift in Sources */,
 				A4447558256D4DAD00527955 /* HeaderImageView.swift in Sources */,
 				A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */,
 				A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */,
@@ -647,7 +647,7 @@
 				730B88022575D0C000FAD42D /* HeaderDescricaoReceitaTableViewCell.swift in Sources */,
 				73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
-				73FE72BF257984AD00031F04 /* Receita+CoreDataClass.swift in Sources */,
+				54B073F8257A7C42007AF717 /* Receita+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
