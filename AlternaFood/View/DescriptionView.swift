@@ -15,6 +15,11 @@ class DescriptionView: UIView {
     
     var rootViewController: UINavigationController?
     
+    
+    let cdManager = CDManager()
+    
+    var receita: Receita?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configView()
@@ -64,7 +69,7 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
         case 1:
             return 1
         case 2:
-            return 10
+            return 1
         default:
             return 0
         }
@@ -88,6 +93,8 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 2:
             let cell = ReceitaCardTableViewCell()
+            let listaReceitas = cdManager.listaReceitas()
+            cell.receitaTable = listaReceitas[0]
             return cell
         default:
             return UITableViewCell()
@@ -99,6 +106,8 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
         print("Section: \(indexPath.row) - Row: \(indexPath.section)")
         if indexPath.section == 2 {
             let viewController = DescricaoReceitaViewController()
+            let listaReceitas = cdManager.listaReceitas()
+            viewController.receita = listaReceitas[0]
             rootViewController?.pushViewController(viewController, animated: true)
         }
     }

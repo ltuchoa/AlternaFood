@@ -28,6 +28,32 @@ class CKManager {
         }
     }
     
+    func deleteRecipeToCloud(uuid: UUID) {
+        
+    }
+    
+    func getIdRecord(uuid: UUID) {
+        var recordFind: CKRecord.ID?
+        let query = CKQuery(recordType: "Recipe", predicate: NSPredicate(value: true))
+        privateDatabase.perform(query, inZoneWith: nil) { (records, _) in
+            guard let records = records else { return }
+            for record in records {
+//                print(record)
+                guard let content = record.value(forKey: "content") else { return }
+                if content as? String == uuid.debugDescription {
+                    
+                    //recordFind = record
+                    recordFind = record.recordID
+                    //print(record.recordID)
+                }
+//                print(content)
+            }
+        
+        }
+        print(recordFind)
+        //return recordFind
+    }
+    
     func queryRecipeDatabase() {
         let query = CKQuery(recordType: "Recipe", predicate: NSPredicate(value: true))
         privateDatabase.perform(query, inZoneWith: nil) { (records, _) in

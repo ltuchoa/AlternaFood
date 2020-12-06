@@ -13,6 +13,7 @@ class JsonParser {
     
     var alimentoJson = "AlimentoData"
     var substitutoJson = "SubstitutoData"
+    var receitasJson = "ReceitaData"
     
     func parsingAlimentos() -> [JSAlimento] {
         
@@ -113,4 +114,34 @@ class JsonParser {
         return true
     }
     
+    func parsingReceitas() -> [JSReceita] {
+        let decoder = JSONDecoder()
+        var receitas: [JSReceita] = []
+        
+        do {
+            if let bundlePath = Bundle.main.path(forResource: receitasJson, ofType: "json"),
+               let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                
+                receitas = try! decoder.decode([JSReceita].self, from: jsonData)
+                return receitas
+            }
+        } catch {
+            print(error)
+        }
+        return receitas
+    }
+    
+    func populateReceitasCD() -> Bool {
+        let cdManeger = CDManager()
+        
+        let receitas: [JSReceita] = self.parsingReceitas()
+        
+        for receita in receitas {
+            if !cdManeger.saveReceita(idAReceita: receita.idReceita,
+                                      nomeReceita: receita.nome, porcoes: receita.porcoes, tempo: receita.tempo, ingredientes: receita.ingredientes, preparo: receita.preparo, pathImage: receita.pathFoto, idAlimentoFrom: receita.idAlimento) {
+                return false
+            }
+        }
+        return true
+    }
 }

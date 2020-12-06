@@ -9,6 +9,8 @@ import UIKit
 
 class ListaReceitasView: UIView {
 
+    var rootViewController: UINavigationController?
+    
     let segmented: UISegmentedControl = {
         let segmentItems = ["Todas", "Salvas"]
         let control = UISegmentedControl(items: segmentItems)
@@ -20,9 +22,16 @@ class ListaReceitasView: UIView {
     let tableView: UITableView = {
         let table = UITableView()
         table.separatorStyle = .none
-        table.allowsSelection = false
+        table.allowsSelection = true
         return table
     }()
+    
+    var listaReceitas: [Receita] = [] {
+        didSet {
+            tableView.reloadData()
+            print(listaReceitas.count)
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,7 +45,7 @@ class ListaReceitasView: UIView {
     }
 
     @objc func segmentControl(_ segmentedControl: UISegmentedControl) {
-        switch (segmentedControl.selectedSegmentIndex) {
+        switch(segmentedControl.selectedSegmentIndex) {
         case 0:
             // First segment tapped
             break

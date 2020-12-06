@@ -46,8 +46,26 @@ extension ListaSubstitutosViewController: UICollectionViewDelegate, UICollection
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("User tapped on item \(indexPath.row)")
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                                cell.transform = CGAffineTransform(scaleX: 0.90, y: 0.90)
+                            }, completion: nil)
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                                cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+                            }, completion: nil)
+        }
         let viewController = DescriptionViewController() //só substituir pela controller da descrição
         viewController.substituto = substitutos[indexPath.row]
+        
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            UIView.animate(withDuration: 0.2, animations: {
+                        cell.layoutIfNeeded() })
+            
+            }
+        
     }
 }
