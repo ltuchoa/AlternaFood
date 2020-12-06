@@ -14,6 +14,16 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     let savedButton = UIButton()
     var saved: Bool = false
     
+    let ckManager = CKManager()
+    
+    var receita: Receita? {
+        didSet {
+            titleLabel.text = receita?.nomeReceita!
+            tagTempo.name.text = receita?.tempoPreparoReceita!
+            tagPorcao.name.text = receita?.porcaoReceita!
+        }
+    }
+    
     let tagTempo: TagView = {
         let tag = TagView()
         tag.name.text = "30 min"
@@ -41,7 +51,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         rating.settings.emptyImage = UIImage(named: "starEmptyIcon")
         
         rating.text = "4.6 (58)"
-        rating.settings.textMargin = 5
+        rating.settings.textMargin = 8  
 //        rating.settings.textColor = UIColor.black
         rating.settings.textFont = UIFont.systemFont(ofSize: 20, weight: .medium)
 
@@ -98,6 +108,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: self.savedButton.leadingAnchor, constant: -10),
             titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20)
         ])
     }
@@ -106,7 +117,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         contentView.addSubview(rating)
         rating.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            rating.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            rating.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             rating.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20)
         ])
     }
@@ -115,7 +126,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         contentView.addSubview(tagTempo)
         tagTempo.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tagTempo.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
+            tagTempo.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 12),
             tagTempo.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20),
             tagTempo.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0),
             tagTempo.widthAnchor.constraint(greaterThanOrEqualToConstant: 112),
@@ -127,7 +138,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         contentView.addSubview(tagPorcao)
         tagPorcao.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tagPorcao.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
+            tagPorcao.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 12),
             tagPorcao.leadingAnchor.constraint(equalTo: tagTempo.trailingAnchor, constant: 8),
             tagPorcao.widthAnchor.constraint(greaterThanOrEqualToConstant: 112),
             tagPorcao.heightAnchor.constraint(greaterThanOrEqualToConstant: 24)
@@ -142,7 +153,13 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         if saved == false {
             savedButton.setImage(UIImage.init(named: "bookmark.fill"), for: .normal)
             saved = true
+            guard let uuid = receita?.idReceita else {return}
+            ckManager.saveRecipeToCloud(uuid: uuid)
         } else {
+            guard let uuid = receita?.idReceita else {return}
+            print("AQUi rapaz")
+            ckManager.getIdRecord(uuid: uuid)
+            
             savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
             saved = false
         }

@@ -77,8 +77,7 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = HeaderDescricaoReceitaTableViewCell()
-            let nome = receita?.nomeReceita
-            cell.setLabelText(name: nome)
+            cell.receita = receita
 //            cell.textLabel?.text = nome
 //            configSavedButton()
 //            cell.accessoryView = viewButton
@@ -95,7 +94,7 @@ extension DescricaoReceitaView: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: .regular)
             cell.textLabel?.numberOfLines = 0
             let ingrediente = receita?.ingredientesReceita![indexPath.row]
-            cell.textLabel?.text = "- \(ingrediente!))"
+            cell.textLabel?.text = "- \(ingrediente!)"
             cell.selectionStyle = .none
             return cell
         case 3:

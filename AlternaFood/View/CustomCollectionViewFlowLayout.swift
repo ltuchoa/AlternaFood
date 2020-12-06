@@ -12,7 +12,7 @@ import UIKit
 
 class CustomCollectionViewFlowLayout: UICollectionViewLayout {
     // Adjust this as you need
-    fileprivate var offset: CGFloat = 22
+    fileprivate var offset: CGFloat = 0
     
     //    Properties for configuring the layout: the number of columns and the cell padding.
     fileprivate var numberOfColumns = 2
