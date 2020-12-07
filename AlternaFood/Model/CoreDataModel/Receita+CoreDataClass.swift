@@ -2,7 +2,7 @@
 //  Receita+CoreDataClass.swift
 //  
 //
-//  Created by Leonardo Gomes Fernandes on 03/12/20.
+//  Created by Leonardo Gomes Fernandes on 06/12/20.
 //
 //
 

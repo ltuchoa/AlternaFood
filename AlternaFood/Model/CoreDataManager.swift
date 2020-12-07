@@ -91,6 +91,20 @@ class CDManager {
         return Alimento()
     }
     
+    func requestSubstitutoByID(uuid: String) -> Substituto {
+        let requestSubst = Substituto.fetchRequest() as NSFetchRequest<Substituto>
+        requestSubst.predicate = NSPredicate(format: "idSubstituto == %@", uuid)
+        
+        do {
+            let substitutos = try viewContext.fetch(requestSubst)
+            return substitutos[0]
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        return Substituto()
+    }
+    
     func requestAlimentoByName(nome: String) -> [Alimento] {
         let requestAlim = Alimento.fetchRequest() as NSFetchRequest<Alimento>
         //NSPredicate(format: "SELF CONTAINS %@", "anc")
@@ -107,7 +121,23 @@ class CDManager {
         return [Alimento()]
     }
     
-    func saveReceita(idAReceita: String, nomeReceita: String, porcoes: String, tempo: String, ingredientes: [String], preparo: [String], pathImage: String, idAlimentoFrom: String) -> Bool {
+    func requestReceitaByName(nome: String) -> [Receita] {
+        let requestRecei = Receita.fetchRequest() as NSFetchRequest<Receita>
+        //NSPredicate(format: "SELF CONTAINS %@", "anc")
+        requestRecei.predicate = NSPredicate(format: "nomeReceita CONTAINS %@", nome)
+        //requestAlim.predicate = NSPredicate(format: "nomeAlimento == %@", nome)
+        
+        do {
+            let receitas = try viewContext.fetch(requestRecei)
+            return receitas
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        return [Receita()]
+    }
+    
+    func saveReceita(idAReceita: String, nomeReceita: String, porcoes: String, tempo: String, ingredientes: [String], preparo: [String], pathImage: String, idAlimentoFrom: String, idSubstituto: String) -> Bool {
         
         let receita = Receita(context: self.viewContext)
         receita.idReceita = UUID(uuidString: idAReceita)
@@ -118,6 +148,7 @@ class CDManager {
         receita.preparoReceita = preparo
         receita.imageReceita = pathImage
         receita.idAlimentoFrom = UUID(uuidString: idAlimentoFrom)
+        receita.idSubstituto = UUID(uuidString: idSubstituto)
      
         return saveContext()
     }

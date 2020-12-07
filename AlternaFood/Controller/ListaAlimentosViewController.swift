@@ -15,8 +15,7 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
     
     let cdManeger = CDManager()
     var alimentos: [Alimento] = []
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.        

@@ -12,6 +12,7 @@ class ListaSubstitutosViewController: UIViewController {
 
     var collectionView: UICollectionView?
     
+    var idAlimento: UUID?
     var substitutos: [Substituto] = []
 
     override func viewDidLoad() {

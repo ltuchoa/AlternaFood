@@ -9,6 +9,7 @@
     <entity name="Receita" representedClassName="Receita" syncable="YES">
         <attribute name="idAlimentoFrom" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="idReceita" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="idSubstituto" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="imageReceita" optional="YES" attributeType="String"/>
         <attribute name="ingredientesReceita" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
         <attribute name="nomeReceita" optional="YES" attributeType="String"/>
@@ -28,7 +29,7 @@
     </entity>
     <elements>
         <element name="Alimento" positionX="-304.216552734375" positionY="-3.8572998046875" width="128" height="103"/>
-        <element name="Receita" positionX="206.6932373046875" positionY="-48.64559936523438" width="128" height="164"/>
+        <element name="Receita" positionX="206.6932373046875" positionY="-48.64559936523438" width="128" height="179"/>
         <element name="Substituto" positionX="-44.59564208984375" positionY="-18.8197021484375" width="128" height="148"/>
     </elements>
 </model>
