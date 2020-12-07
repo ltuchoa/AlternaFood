@@ -59,6 +59,7 @@ extension ListaSubstitutosViewController: UICollectionViewDelegate, UICollection
                             }, completion: nil)
         }
         let viewController = DescriptionViewController() //só substituir pela controller da descrição
+        viewController.descriptionView.idAlimento = idAlimento
         viewController.substituto = substitutos[indexPath.row]
         
         self.navigationController?.pushViewController(viewController, animated: true)

@@ -18,7 +18,6 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
 //        navigationController?.navigationBar.barStyle = .black
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         lista.rootViewController = self.navigationController
@@ -44,7 +43,15 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
     }
 
     func updateSearchResults(for searchController: UISearchController) {
-        // To be done when CloudKit is ready.
+        guard let nomeSearch = searchController.searchBar.text else { return }
+        
+        if !nomeSearch.isEmpty {
+            lista.listaReceitas = cdManager.requestReceitaByName(nome: nomeSearch)
+            lista.tableView.reloadData()
+        } else {
+            lista.listaReceitas = cdManager.listaReceitas()
+            lista.tableView.reloadData()
+        }
     }
 
     func setupViewConstraints() {

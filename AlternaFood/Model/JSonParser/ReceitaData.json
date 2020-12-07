@@ -1,8 +1,8 @@
 [
 
     {
-        "idAlimento": "",
-        "idSubstituto":"",
+        "idAlimento": "08E4FD6C-5612-4945-825F-7F366EF46E22",
+        "idSubstituto":"1E747725-524A-43BF-A9D9-E0BA6E578E57",
         "idReceita": "3F5BF6A4-2D1F-44E0-B346-CA41340C33DF",
         "nome": "Leite de Coco",
         "porcoes": "1 Litro",
@@ -12,8 +12,8 @@
         "pathFoto": "leiteDeCocoFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "08E4FD6C-5612-4945-825F-7F366EF46E22",
+        "idSubstituto": "749EBDB7-7AA5-43C9-972D-34E62DCB45B4",
         "idReceita": "74C86300-EA9F-430D-8CA9-274F48A417EA",
         "nome": "Leite de Castanha de Caju ",
         "porcoes": " 1 Litro",
@@ -23,8 +23,8 @@
         "pathFoto": "leiteDeCastanhaFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "08E4FD6C-5612-4945-825F-7F366EF46E22",
+        "idSubstituto": "31095FCC-35FE-4D3B-A08E-C23B090A9637",
         "idReceita": "0DC75A91-0B27-4920-81A4-1F3CBFBE92EB",
         "nome": "Leite de Amêndoa Tradicional",
         "porcoes": "1 litro",
@@ -34,8 +34,8 @@
         "pathFoto": "leiteDeAmendoaFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "08E4FD6C-5612-4945-825F-7F366EF46E22",
+        "idSubstituto": "177BD309-4C52-4C16-AF37-554433DBD211",
         "idReceita": "607D5781-4316-4929-B82A-8721C7A9ED36",
         "nome": "Leite de Soja",
         "porcoes": "1 litro",
@@ -45,8 +45,8 @@
         "pathFoto": "leiteDeSojaFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "08E4FD6C-5612-4945-825F-7F366EF46E22",
+        "idSubstituto": "82E97C44-43F6-43D5-AA9E-E5E424643DA6",
         "idReceita": "19BB708A-9F4C-4D22-86D7-95F8547F5B52",
         "nome": "Leite de Chia",
         "porcoes": "1 litro",
@@ -56,8 +56,8 @@
         "pathFoto": "leiteDeChiaFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "08E4FD6C-5612-4945-825F-7F366EF46E22",
+        "idSubstituto": "74213C59-E05F-4E9B-942A-BAF00081F2C5",
         "idReceita": "01DC7A99-3620-4BE5-9E9E-CBB336C789FD",
         "nome": "Leite de Arroz",
         "porcoes": "1 litro",
@@ -67,8 +67,8 @@
         "pathFoto": "leiteDeArrozFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "FA03E911-89A8-4F66-9100-E1B271C77CE0",
+        "idSubstituto": "115ABA88-A2B3-4A23-B1BB-4096BB0B34B1",
         "idReceita": "CDFEF297-EBB6-49A0-9895-6BCC0C5706A6",
         "nome": "Carne de Jaca",
         "porcoes": "",
@@ -78,8 +78,8 @@
         "pathFoto": "carneDeJacaFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "A7F10846-5F08-4A79-B2C8-CC5844FF8A7B",
+        "idSubstituto": "80DFA2C6-3A01-4903-8058-57F25C2C04C3",
         "idReceita": "A5280BD5-1148-466D-8346-43DFC52D4581",
         "nome": "Queijo Cremoso de Batata",
         "porcoes": "4 Porções",
@@ -89,8 +89,8 @@
         "pathFoto": "queijoDeBatataFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "A7F10846-5F08-4A79-B2C8-CC5844FF8A7B",
+        "idSubstituto": "749EBDB7-7AA5-43C9-972D-34E62DCB45B4",
         "idReceita": "0A918BE9-8DE3-4D18-A25D-A26643F201BD",
         "nome": "Queijo de Castanha de Caju",
         "porcoes": "1 Porções",
@@ -101,7 +101,7 @@
     },
     {
         "idAlimento": "",
-        "idSubstituto": "",
+        "idSubstituto": "AB676035-A996-48FA-BDCD-E2622FFAEE63",
         "idReceita": "1774614E-5E60-4EAB-97C0-29F96FFD7B67",
         "nome": "Purê de Maçã",
         "porcoes": "12 Porções",
@@ -112,7 +112,7 @@
     },
     {
         "idAlimento": "",
-        "idSubstituto": "",
+        "idSubstituto": "41EE87D2-5204-4988-9BEA-95764B90918E",
         "idReceita": "29BA1EB2-713B-4831-8058-9090ACC50D2B",
         "nome": "Purê de Banana-da-Terra",
         "porcoes": "2 Porções",
@@ -123,7 +123,7 @@
     },
     {
         "idAlimento": "",
-        "idSubstituto": "",
+        "idSubstituto": "20A1F91B-8A54-40B8-8544-AF5525E245BA",
         "idReceita": "22FB90E5-FE08-403E-9D10-B5C156FCDC03",
         "nome": "Purê de Abóbora",
         "porcoes": "6 Porções ",
@@ -133,8 +133,8 @@
         "pathFoto": "pureDeMacaFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "07BA6D10-9FE4-456A-937D-66C126F5F676",
+        "idSubstituto": "F486E26E-D7AA-4ED1-A6A9-202AD93EB058",
         "idReceita": "493F5A5E-DA16-43E2-A983-88112C464A8F",
         "nome": "Manteiga de Abacate",
         "porcoes": "12 Porções",
@@ -144,8 +144,8 @@
         "pathFoto": ""
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "D0AFF497-92C3-4FF5-A944-BFAAD6E724AC",
+        "idSubstituto": "CDDA6A1C-5426-4312-8C86-F26CB9CE3C3A",
         "idReceita": "588A1AEF-9DC1-4719-8228-CC8641169AF1",
         "nome": "Creme de Leite de Aveia",
         "porcoes": "600 ml ",
@@ -155,8 +155,8 @@
         "pathFoto": ""
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "D0AFF497-92C3-4FF5-A944-BFAAD6E724AC",
+        "idSubstituto": "1E747725-524A-43BF-A9D9-E0BA6E578E57",
         "idReceita": "C49D480E-00C4-46C0-AAB4-161341698B37",
         "nome": "Creme de Leite de Coco",
         "porcoes": "200g",
@@ -166,8 +166,8 @@
         "pathFoto": "cremeDeLeiteDeCocoFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "D0AFF497-92C3-4FF5-A944-BFAAD6E724AC",
+        "idSubstituto": "74213C59-E05F-4E9B-942A-BAF00081F2C5",
         "idReceita": "30131C11-41F8-4A1A-A875-FE19DEE7EF48",
         "nome": "Creme de Leite de Arroz",
         "porcoes": "",
@@ -177,8 +177,8 @@
         "pathFoto": ""
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "D0AFF497-92C3-4FF5-A944-BFAAD6E724AC",
+        "idSubstituto": "177BD309-4C52-4C16-AF37-554433DBD211",
         "idReceita": "51F574F0-8BF7-4ABB-AE48-3015765D4E2E",
         "nome": "Creme de Leite de Soja",
         "porcoes": "",
@@ -188,8 +188,8 @@
         "pathFoto": "cremeDeLeiteDeSojaFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "D0AFF497-92C3-4FF5-A944-BFAAD6E724AC",
+        "idSubstituto": "91B6F7A1-7580-41BC-95AB-B43B883ED5D5",
         "idReceita": "C54488FC-BB92-48B9-94A5-C45D5900F135",
         "nome": "Creme de Leite de Tofu",
         "porcoes": "",
@@ -200,7 +200,7 @@
     },
     {
         "idAlimento": "",
-        "idSubstituto": "",
+        "idSubstituto": "4F80FEA5-3CDF-4FD5-A640-9FFFEC2FB3E7",
         "idReceita": "7E667BED-6353-45F2-87D3-03F8654A2128",
         "nome": "Farinha de Grão de Bico",
         "porcoes": "4 Porções",
@@ -210,8 +210,8 @@
         "pathFoto": ""
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "677AC7D7-D64C-48AD-B924-9666E6DA8CBB",
+        "idSubstituto": "3F74EAC2-A22E-4133-9704-4D82EC76AFB9",
         "idReceita": "97555C22-E101-41C0-8DC9-A05D190E00EC",
         "nome": "Ovo de Linhaça",
         "porcoes": "12 Porções",
@@ -221,8 +221,8 @@
         "pathFoto": ""
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "D0AFF497-92C3-4FF5-A944-BFAAD6E724AC",
+        "idSubstituto": "31095FCC-35FE-4D3B-A08E-C23B090A9637",
         "idReceita": "66402D00-02B4-41A5-8261-7586A30DF51E",
         "nome": "Creme de Amêndoas",
         "porcoes": "",
@@ -232,8 +232,8 @@
         "pathFoto": "cremeDeAmendoaFoto"
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "D0AFF497-92C3-4FF5-A944-BFAAD6E724AC",
+        "idSubstituto": "91B6F7A1-7580-41BC-95AB-B43B883ED5D5",
         "idReceita": "7C7A3A95-6DE4-46EE-B7D0-8F0E649C64BA",
         "nome": "Mousse de Chocolate",
         "porcoes": "2 Porções",
@@ -265,8 +265,8 @@
         "pathFoto": ""
     },
     {
-        "idAlimento": "",
-        "idSubstituto": "",
+        "idAlimento": "FA03E911-89A8-4F66-9100-E1B271C77CE0",
+        "idSubstituto": "4F80FEA5-3CDF-4FD5-A640-9FFFEC2FB3E7",
         "idReceita": "F2D9D4BB-1BA6-4C31-AE2B-2C296448907C",
         "nome": "\"Frango\" Empanado",
         "porcoes": "8 Porções",
