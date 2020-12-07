@@ -14,10 +14,8 @@ class CKManager {
     let publicDatabase = CKContainer.default().publicCloudDatabase
     
     func saveRecipeToCloud(uuid: UUID) {
-        //print(uuid.debugDescription)
         let recipe = CKRecord(recordType: "Recipe")
         recipe.setValue(uuid.debugDescription, forKey: "content")
-        //recipe.setValue(4, forKey: "NotaGeral")
         
         privateDatabase.save(recipe) { (record, error) in
             if let error = error {
@@ -28,30 +26,29 @@ class CKManager {
         }
     }
     
-    func deleteRecipeToCloud(uuid: UUID) {
-        
-    }
-    
-    func getIdRecord(uuid: UUID) {
-        var recordFind: CKRecord.ID?
+    func unsaveRecipe(uuid: UUID) {
         let query = CKQuery(recordType: "Recipe", predicate: NSPredicate(value: true))
         privateDatabase.perform(query, inZoneWith: nil) { (records, _) in
             guard let records = records else { return }
             for record in records {
-//                print(record)
                 guard let content = record.value(forKey: "content") else { return }
                 if content as? String == uuid.debugDescription {
-                    
-                    //recordFind = record
-                    recordFind = record.recordID
-                    //print(record.recordID)
+                    self.deleteRecipeFromDatabase(recordID: record.recordID)
                 }
-//                print(content)
             }
         
         }
-        print(recordFind)
-        //return recordFind
+    }
+    
+    func deleteRecipeFromDatabase(recordID: CKRecord.ID) {
+        privateDatabase.delete(withRecordID: recordID) { (record, error) in
+            if let error = error {
+                print(error)
+            }
+            if let record = record {
+                print(record)
+            }
+        }
     }
     
     func queryRecipeDatabase() {
