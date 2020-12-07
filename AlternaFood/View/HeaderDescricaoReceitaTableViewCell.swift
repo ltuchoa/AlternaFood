@@ -158,7 +158,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         } else {
             guard let uuid = receita?.idReceita else {return}
             print("AQUi rapaz")
-            ckManager.getIdRecord(uuid: uuid)
+            ckManager.unsaveRecipe(uuid: uuid)
             
             savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
             saved = false

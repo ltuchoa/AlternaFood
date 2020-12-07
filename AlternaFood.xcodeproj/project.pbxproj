@@ -27,6 +27,8 @@
 		730B87FD2575ACC900FAD42D /* DescricaoReceitaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B87FC2575ACC900FAD42D /* DescricaoReceitaView.swift */; };
 		730B88022575D0C000FAD42D /* HeaderDescricaoReceitaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B88012575D0C000FAD42D /* HeaderDescricaoReceitaTableViewCell.swift */; };
 		73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73260E3B25680E0D005A1F1F /* CoreDataManager.swift */; };
+		735C06A6257D7EC400D59D1C /* Receita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735C06A4257D7EC400D59D1C /* Receita+CoreDataClass.swift */; };
+		735C06A7257D7EC400D59D1C /* Receita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735C06A5257D7EC400D59D1C /* Receita+CoreDataProperties.swift */; };
 		736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB73E25654A9B00A51F28 /* AppDelegate.swift */; };
 		736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74025654A9B00A51F28 /* SceneDelegate.swift */; };
 		736CB74325654A9B00A51F28 /* ListaAlimentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */; };
@@ -105,6 +107,8 @@
 		730B87FC2575ACC900FAD42D /* DescricaoReceitaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoReceitaView.swift; sourceTree = "<group>"; };
 		730B88012575D0C000FAD42D /* HeaderDescricaoReceitaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDescricaoReceitaTableViewCell.swift; sourceTree = "<group>"; };
 		73260E3B25680E0D005A1F1F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		735C06A4257D7EC400D59D1C /* Receita+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Receita+CoreDataClass.swift"; path = "/Users/leonardogomes/Desktop/AlternaFood/AlternaFood/Model/CoreDataModel/Receita+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		735C06A5257D7EC400D59D1C /* Receita+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Receita+CoreDataProperties.swift"; path = "/Users/leonardogomes/Desktop/AlternaFood/AlternaFood/Model/CoreDataModel/Receita+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		736CB73B25654A9B00A51F28 /* AlternaFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlternaFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736CB73E25654A9B00A51F28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		736CB74025654A9B00A51F28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -819,8 +823,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AlternaFood/AlternaFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -843,8 +847,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AlternaFood/AlternaFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 2KUGC5CZ6Z;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 38KM4K4A3R;
 				INFOPLIST_FILE = AlternaFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -4,24 +4,28 @@
 //
 //  Created by Paulo Uchôa on 21/11/20.
 //
+//swiftlint:disable force_cast
 
 import UIKit
 
 class DescriptionView: UIView {
 
     let tableView = UITableView()
-
-    var substituto: Substituto?
-    
     var rootViewController: UINavigationController?
-    
-    
     let cdManager = CDManager()
     
-    var receita: Receita?
+    var substituto: Substituto? {
+        didSet {
+            getListaReceitas()
+        }
+    }
+    var idAlimento: UUID?
+//    var receita: Receita?
+    var listaReceitas: [Receita] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         configView()
         configTable()
 
@@ -53,6 +57,16 @@ class DescriptionView: UIView {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
     }
+    
+    func getListaReceitas() {
+
+        guard let subst = substituto else { return }
+        let receitas = subst.receitasSubstituto?.allObjects as! [Receita]
+        for receita in receitas where receita.idAlimentoFrom == idAlimento {
+            
+            listaReceitas.append(receita)
+        }
+    }
 
 }
 
@@ -69,7 +83,7 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
         case 1:
             return 1
         case 2:
-            return 1
+            return listaReceitas.count
         default:
             return 0
         }
@@ -93,8 +107,7 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 2:
             let cell = ReceitaCardTableViewCell()
-            let listaReceitas = cdManager.listaReceitas()
-            cell.receitaTable = listaReceitas[0]
+            cell.receitaTable = listaReceitas[indexPath.row]
             return cell
         default:
             return UITableViewCell()
@@ -102,13 +115,33 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         print("Section: \(indexPath.row) - Row: \(indexPath.section)")
         if indexPath.section == 2 {
+            let cell = tableView.cellForRow(at: indexPath) ?? UITableViewCell()
+            animateCell(cell: cell)
+            
             let viewController = DescricaoReceitaViewController()
-            let listaReceitas = cdManager.listaReceitas()
-            viewController.receita = listaReceitas[0]
+            viewController.receita = listaReceitas[indexPath.row]
             rootViewController?.pushViewController(viewController, animated: true)
         }
+    }
+
+    func animateCell(cell: UITableViewCell) {
+        let animationOptions: UIView.AnimationOptions = [.allowUserInteraction]
+        UIView.animate(withDuration: 0.2,
+                       delay: 0,
+                       usingSpringWithDamping: 1,
+                       initialSpringVelocity: 0,
+                       options: animationOptions, animations: {
+                        cell.transform = .init(scaleX: 0.9, y: 0.9)
+                       }, completion: { _ in
+                        UIView.animate(withDuration: 0.2,
+                                       delay: 0,
+                                       usingSpringWithDamping: 1,
+                                       initialSpringVelocity: 0,
+                                       options: animationOptions, animations: {
+                                        cell.transform = .identity
+                                       }, completion: nil)
+                       })
     }
 }

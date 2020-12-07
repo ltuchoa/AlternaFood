@@ -19,10 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if !jsonParser.populateAlimentoCD() ||
                 !jsonParser.populateSubstitutosCD() ||
                 !jsonParser.addSubstitutosToAlimentos() ||
-                !jsonParser.populateReceitasCD() {
+                !jsonParser.populateReceitasCD() ||
+                !jsonParser.populateSubstitutosReceitasCD() {
                 return false
             }
         }
+        
         UserDefaults.standard.set(true, forKey: "First Launch")
         
         UNUserNotificationCenter.current()

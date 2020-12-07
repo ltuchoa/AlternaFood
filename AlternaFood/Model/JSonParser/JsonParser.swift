@@ -138,10 +138,34 @@ class JsonParser {
         
         for receita in receitas {
             if !cdManeger.saveReceita(idAReceita: receita.idReceita,
-                                      nomeReceita: receita.nome, porcoes: receita.porcoes, tempo: receita.tempo, ingredientes: receita.ingredientes, preparo: receita.preparo, pathImage: receita.pathFoto, idAlimentoFrom: receita.idAlimento) {
+                                      nomeReceita: receita.nome,
+                                      porcoes: receita.porcoes,
+                                      tempo: receita.tempo,
+                                      ingredientes: receita.ingredientes,
+                                      preparo: receita.preparo,
+                                      pathImage: receita.pathFoto,
+                                      idAlimentoFrom: receita.idAlimento,
+                                      idSubstituto: receita.idSubstituto) {
                 return false
             }
         }
         return true
+    }
+    
+    func populateSubstitutosReceitasCD() -> Bool {
+        let cdManager = CDManager()
+        var status: Bool = false
+        let listaReceitas = cdManager.listaReceitas()
+        
+        for receita in listaReceitas {
+            if let idSubstituto = receita.idSubstituto?.uuidString {
+                let substituto = cdManager.requestSubstitutoByID(uuid: idSubstituto)
+                print("Receita: \(String(describing: receita.nomeReceita!)) - Substituto: \(String(describing: substituto.nomeSubstituto!)) ")
+                substituto.addToReceitasSubstituto(receita)
+                status = cdManager.saveContext()
+            }
+        }
+        
+        return status
     }
 }

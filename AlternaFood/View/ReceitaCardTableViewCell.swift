@@ -21,6 +21,7 @@ class ReceitaCardTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupViewConstraint()
+        selectionStyle = .none
     }
     
     func setupViewConstraint() {
