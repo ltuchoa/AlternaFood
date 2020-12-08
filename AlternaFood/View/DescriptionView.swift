@@ -101,10 +101,12 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = UITableViewCell()
-            if !listaReceitas.isEmpty {
-                cell.textLabel?.font = UIFont.systemFont(ofSize: 26, weight: .bold)
-                cell.textLabel?.text = "Receita"
-                cell.selectionStyle = .none
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 26, weight: .bold)
+            cell.textLabel?.text = "Receita"
+            cell.selectionStyle = .none
+            if listaReceitas.isEmpty {
+                tableView.setEmptyView(title: "", message: "Nenhuma receita disponivel")
+                tableView.isScrollEnabled = false
             }
             return cell
         case 2:

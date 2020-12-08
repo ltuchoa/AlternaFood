@@ -20,6 +20,7 @@
 		56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */; };
 		56B356C9257E6A47003F6671 /* Receita+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B356C7257E6A47003F6671 /* Receita+CoreDataProperties.swift */; };
 		56B356CA257E6A47003F6671 /* Receita+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B356C8257E6A47003F6671 /* Receita+CoreDataClass.swift */; };
+		56B356CF257FAE34003F6671 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B356CE257FAE33003F6671 /* TableViewExtension.swift */; };
 		56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */; };
 		56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */; };
 		730B87F025759DF700FAD42D /* DescricaoReceitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B87EF25759DF700FAD42D /* DescricaoReceitaViewController.swift */; };
@@ -97,6 +98,7 @@
 		5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		56B356C7257E6A47003F6671 /* Receita+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Receita+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		56B356C8257E6A47003F6671 /* Receita+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Receita+CoreDataClass.swift"; sourceTree = "<group>"; };
+		56B356CE257FAE33003F6671 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		56CBD23F256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaAlimentosViewControllerExtension.swift; sourceTree = "<group>"; };
 		56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewControllerExtension.swift; sourceTree = "<group>"; };
 		68EAA788885F92D28359BC2F /* Pods-AlternaFoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFoodTests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFoodTests/Pods-AlternaFoodTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				56CBD252256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift */,
 				730B87F72575A0F100FAD42D /* UINavigationControllerExtension.swift */,
 				542A059525752052003ED2CC /* ListaReceitasViewExtension.swift */,
+				56B356CE257FAE33003F6671 /* TableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 			files = (
 				A789CB78256F481B001FCDC3 /* Alimento+CoreDataProperties.swift in Sources */,
 				546569A2256BE3FD00298373 /* TagView.swift in Sources */,
+				56B356CF257FAE34003F6671 /* TableViewExtension.swift in Sources */,
 				A4A6F45A2566F5AB0094F278 /* CardCollectionViewCell.swift in Sources */,
 				A4A6F484256A2D570094F278 /* DescriptionSubTableViewCell.swift in Sources */,
 				A789CB95256F48DE001FCDC3 /* TabBarViewController.swift in Sources */,
