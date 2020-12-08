@@ -44,13 +44,13 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         rating.settings.updateOnTouch = true
         rating.settings.fillMode = .precise
         rating.settings.filledColor = UIColor.init(named: "actionColor")!
-        rating.settings.starSize = 24
+        rating.settings.starSize = 0
         rating.settings.starMargin = 5
         rating.settings.filledBorderColor = UIColor.init(named: "actionColor")!
         rating.settings.filledImage = UIImage(named: "starFilledIcon")
         rating.settings.emptyImage = UIImage(named: "starEmptyIcon")
         
-        rating.text = "4.6 (58)"
+        //rating.text = "4.6 (58)"
         rating.settings.textMargin = 8  
 //        rating.settings.textColor = UIColor.black
         rating.settings.textFont = UIFont.systemFont(ofSize: 20, weight: .medium)
@@ -116,7 +116,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: self.savedButton.leadingAnchor, constant: -10),
+            titleLabel.trailingAnchor.constraint(equalTo: self.savedButton.leadingAnchor, constant: -20),
             titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20)
         ])
     }

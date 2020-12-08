@@ -58,6 +58,11 @@ class ListaReceitasView: UIView {
             for receita in listaReceitas where receita.isSaved == true {
                 listaTableReceita.append(receita)
             }
+            if listaTableReceita.isEmpty {
+                tableView.setEmptyView(message: "Você ainda não possui nenhuma receita salva!")
+            } else {
+                tableView.restore()
+            }
         default:
             break
         }
@@ -73,12 +78,16 @@ class ListaReceitasView: UIView {
         default:
             break
         }
+        tableView.reloadData()
     }
     
     func scopeSaved() {
         listaTableReceita = []
         for receita in listaReceitas where receita.isSaved == true {
             listaTableReceita.append(receita)
+        }
+        if !listaTableReceita.isEmpty {
+            tableView.restore()
         }
         tableView.reloadData()
     }

@@ -42,6 +42,7 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         default:
             break
         }
+
     }
     
     func setupSearchBar() {

@@ -104,6 +104,10 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.font = UIFont.systemFont(ofSize: 26, weight: .bold)
             cell.textLabel?.text = "Receita"
             cell.selectionStyle = .none
+            if listaReceitas.isEmpty {
+                tableView.setEmptyViewReceita(message: "Nenhuma receita disponível.")
+                tableView.isScrollEnabled = false
+            }
             return cell
         case 2:
             let cell = ReceitaCardTableViewCell()
