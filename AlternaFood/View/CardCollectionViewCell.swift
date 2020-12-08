@@ -18,6 +18,7 @@ class CardCollectionViewCell: UIView {
 
     let icon: UIImageView = {
         let image = UIImageView(image: UIImage(named: "receitas_icon"))
+        image.contentMode = .scaleAspectFit
         return image
     }()
 
@@ -25,9 +26,12 @@ class CardCollectionViewCell: UIView {
         let food = UILabel()
         food.textColor = .black
         food.numberOfLines = 0
-        food.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        food.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         food.text = "Larissa só reclama, chata pra caralho"
         food.textAlignment = .center
+        food.minimumScaleFactor = 0.7
+        food.adjustsFontSizeToFitWidth = true
+        food.sizeToFit()
         return food
     }()
 
@@ -58,7 +62,9 @@ class CardCollectionViewCell: UIView {
         icon.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             icon.topAnchor.constraint(equalTo: background.topAnchor, constant: 40),
-            icon.centerXAnchor.constraint(equalTo: background.centerXAnchor)
+            icon.centerXAnchor.constraint(equalTo: background.centerXAnchor),
+            icon.widthAnchor.constraint(equalTo: background.widthAnchor, multiplier: 0.41),
+            icon.heightAnchor.constraint(equalTo: background.heightAnchor, multiplier: 0.28)
         ])
 
     }
@@ -67,9 +73,10 @@ class CardCollectionViewCell: UIView {
         background.addSubview(name)
         name.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            name.bottomAnchor.constraint(equalTo: background.bottomAnchor, constant: -20),
+            name.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 15),
+            name.bottomAnchor.constraint(equalTo: background.bottomAnchor),
             name.centerXAnchor.constraint(equalTo: background.centerXAnchor),
-            name.leadingAnchor.constraint(equalTo: background.leadingAnchor, constant: 20)
+            name.leadingAnchor.constraint(equalTo: background.leadingAnchor, constant: 10)
         ])
     }
 }

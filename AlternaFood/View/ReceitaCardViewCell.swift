@@ -55,27 +55,27 @@ class ReceitaCardViewCell: UIView {
         return tag
     }()
     
-    let rating: CosmosView = {
-        let rating = CosmosView()
-        rating.rating = 1
-        
-        rating.settings.totalStars = 1
-        rating.settings.updateOnTouch = false
-        rating.settings.fillMode = .full
-        rating.settings.filledColor = UIColor.init(named: "actionColor")!
-        rating.settings.starSize = 17
-        rating.settings.starMargin = 5
-        rating.settings.filledBorderColor = UIColor.init(named: "actionColor")!
-        rating.settings.filledImage = UIImage(named: "starFilledIcon")
-        rating.settings.emptyImage = UIImage(named: "starEmptyIcon")
-        
-        rating.text = "4.5 (58)"
-        rating.settings.textMargin = 5
-//        rating.settings.textColor = UIColor.black
-        rating.settings.textFont = UIFont.systemFont(ofSize: 15, weight: .medium)
-
-        return rating
-    }()
+//    let rating: CosmosView = {
+//        let rating = CosmosView()
+//        rating.rating = 1
+//
+//        rating.settings.totalStars = 1
+//        rating.settings.updateOnTouch = false
+//        rating.settings.fillMode = .full
+//        rating.settings.filledColor = UIColor.init(named: "actionColor")!
+//        rating.settings.starSize = 17
+//        rating.settings.starMargin = 5
+//        rating.settings.filledBorderColor = UIColor.init(named: "actionColor")!
+//        rating.settings.filledImage = UIImage(named: "starFilledIcon")
+//        rating.settings.emptyImage = UIImage(named: "starEmptyIcon")
+//
+//        rating.text = "4.5 (58)"
+//        rating.settings.textMargin = 5
+////        rating.settings.textColor = UIColor.black
+//        rating.settings.textFont = UIFont.systemFont(ofSize: 15, weight: .medium)
+//
+//        return rating
+//    }()
     
     var receita: Receita? {
         didSet {
@@ -98,7 +98,7 @@ class ReceitaCardViewCell: UIView {
         setupImageConstraints()
         setupModalConstraints()
         setupNameConstraints()
-        setupRatingConstraints()
+        //setupRatingConstraints()
         setupTagTempoConstraints()
         setupTagPessoasConstraints()
     }
@@ -135,7 +135,7 @@ class ReceitaCardViewCell: UIView {
             modal.bottomAnchor.constraint(equalTo: background.bottomAnchor),
             modal.leadingAnchor.constraint(equalTo: background.leadingAnchor),
             modal.trailingAnchor.constraint(equalTo: background.trailingAnchor),
-            modal.heightAnchor.constraint(equalToConstant: 102)
+            modal.heightAnchor.constraint(equalToConstant: 86)
         ])
     }
     
@@ -143,26 +143,26 @@ class ReceitaCardViewCell: UIView {
         modal.addSubview(name)
         name.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            name.topAnchor.constraint(equalTo: modal.topAnchor, constant: 10),
+            name.topAnchor.constraint(equalTo: modal.topAnchor, constant: 15),
             name.leadingAnchor.constraint(equalTo: modal.leadingAnchor, constant: 15),
             name.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
     
-    func setupRatingConstraints() {
-        modal.addSubview(rating)
-        rating.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            rating.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 5),
-            rating.leadingAnchor.constraint(equalTo: modal.leadingAnchor, constant: 15)
-        ])
-    }
+//    func setupRatingConstraints() {
+//        modal.addSubview(rating)
+//        rating.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            rating.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 5),
+//            rating.leadingAnchor.constraint(equalTo: modal.leadingAnchor, constant: 15)
+//        ])
+//    }
     
     func setupTagTempoConstraints() {
         modal.addSubview(tagTempo)
         tagTempo.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tagTempo.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
+            tagTempo.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 10),
             tagTempo.leadingAnchor.constraint(equalTo: modal.leadingAnchor, constant: 15),
             tagTempo.heightAnchor.constraint(equalToConstant: 24),
             tagTempo.widthAnchor.constraint(equalToConstant: 112)
@@ -174,7 +174,7 @@ class ReceitaCardViewCell: UIView {
         tagPessoas.name.text = receita?.porcaoReceita! ?? "Porções"
         tagPessoas.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tagPessoas.topAnchor.constraint(equalTo: rating.bottomAnchor, constant: 10),
+            tagPessoas.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 10),
             tagPessoas.leadingAnchor.constraint(equalTo: tagTempo.trailingAnchor, constant: 8),
             tagPessoas.heightAnchor.constraint(equalToConstant: 24),
             tagPessoas.widthAnchor.constraint(equalToConstant: 112)
