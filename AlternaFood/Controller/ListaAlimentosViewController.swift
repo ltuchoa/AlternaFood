@@ -24,6 +24,9 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         self.title = "Alimentos"
         
+        let alimentosToOrder = cdManeger.listaAlimentos()
+        alimentos = alimentosToOrder.sorted(by: { $0.nomeAlimento! < $1.nomeAlimento! })
+        
         setUpCollectionview()
         setCollectionViewDelegates()
         

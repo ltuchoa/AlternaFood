@@ -50,6 +50,7 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         UISearchBar.appearance().tintColor = UIColor.init(named: "actionColor")
         search.searchBar.setValue("Cancelar", forKey: "cancelButtonText")
         search.searchResultsUpdater = self
+        search.searchBar.placeholder = "Pesquisa"
         search.obscuresBackgroundDuringPresentation = false
         self.navigationItem.searchController = search
     }

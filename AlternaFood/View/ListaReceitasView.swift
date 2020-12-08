@@ -54,6 +54,9 @@ class ListaReceitasView: UIView {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             listaTableReceita = listaReceitas
+            if listaTableReceita.isEmpty {
+                tableView.restore()
+            }
         case 1:
             for receita in listaReceitas where receita.isSaved == true {
                 listaTableReceita.append(receita)

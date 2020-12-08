@@ -52,7 +52,8 @@ extension ListaAlimentosViewController: UICollectionViewDelegate, UICollectionVi
         print("User tapped on item \(indexPath.row)")
         let viewController = ListaSubstitutosViewController()
         viewController.idAlimento = alimentos[indexPath.row].idAlimento
-        viewController.substitutos = alimentos[indexPath.row].listaSubstitutos
+        let substitutosOrder = alimentos[indexPath.row].listaSubstitutos
+        viewController.substitutos = substitutosOrder.sorted(by: { $0.nomeSubstituto! < $1.nomeSubstituto! })
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
