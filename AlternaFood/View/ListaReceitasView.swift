@@ -11,10 +11,10 @@ class ListaReceitasView: UIView {
 
     var rootViewController: UINavigationController?
     
-    let segmented: UISegmentedControl = {
+    lazy var segmented: UISegmentedControl = {
         let segmentItems = ["Todas", "Salvas"]
         let control = UISegmentedControl(items: segmentItems)
-        control.addTarget(self, action: #selector(segmentControl(_:)), for: .valueChanged)
+        control.addTarget(self, action: #selector(segmentControl(_:)), for: .allEvents)
         control.selectedSegmentIndex = 0
         return control
     }()
@@ -26,13 +26,16 @@ class ListaReceitasView: UIView {
         return table
     }()
     
+    var listaTableReceita: [Receita] = []
+
     var listaReceitas: [Receita] = [] {
         didSet {
+            listaTableReceita = listaReceitas
             tableView.reloadData()
             print(listaReceitas.count)
         }
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .systemBackground
@@ -45,18 +48,47 @@ class ListaReceitasView: UIView {
     }
 
     @objc func segmentControl(_ segmentedControl: UISegmentedControl) {
-        switch(segmentedControl.selectedSegmentIndex) {
+        
+        listaTableReceita = []
+        
+        switch segmentedControl.selectedSegmentIndex {
         case 0:
-            // First segment tapped
-            break
+            listaTableReceita = listaReceitas
         case 1:
-            // Second segment tapped
+            for receita in listaReceitas where receita.isSaved == true {
+                listaTableReceita.append(receita)
+            }
+        default:
             break
+        }
+        tableView.reloadData()
+    }
+
+    func scopeSearch() {
+        switch segmented.selectedSegmentIndex {
+        case 0:
+            scopeAll()
+        case 1:
+            scopeSaved()
         default:
             break
         }
     }
-
+    
+    func scopeSaved() {
+        listaTableReceita = []
+        for receita in listaReceitas where receita.isSaved == true {
+            listaTableReceita.append(receita)
+        }
+        tableView.reloadData()
+    }
+    
+    func scopeAll() {
+        listaTableReceita = []
+        listaTableReceita = listaReceitas
+        tableView.reloadData()
+    }
+    
     func setupSegmentedConstraints() {
         addSubview(segmented)
         segmented.translatesAutoresizingMaskIntoConstraints = false

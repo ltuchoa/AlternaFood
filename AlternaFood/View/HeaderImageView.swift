@@ -10,7 +10,7 @@ import UIKit
 class HeaderImageView: UIView {
     
     let maskImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "maskFoto"))
+        let image = UIImageView(image: UIImage(named: "maskImage"))
         return image
     }()
 

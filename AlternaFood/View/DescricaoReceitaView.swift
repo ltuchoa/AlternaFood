@@ -13,8 +13,6 @@ class DescricaoReceitaView: UIView {
     
     let tableView = UITableView()
     
-    var saved: Bool = false
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         configView()

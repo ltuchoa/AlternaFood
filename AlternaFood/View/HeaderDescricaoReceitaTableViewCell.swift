@@ -12,9 +12,9 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     
     let titleLabel = UILabel()
     let savedButton = UIButton()
-    var saved: Bool = false
+    var saved: Bool?
     
-    let ckManager = CKManager()
+    let cdManager = CDManager()
     
     var receita: Receita? {
         didSet {
@@ -61,6 +61,9 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 //        configCell()
+        DispatchQueue.main.async {
+            self.updateSavedSate()
+        }
         configButton()
         configTitleLabel()
         setupRatingConstraints()
@@ -73,6 +76,11 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateSavedSate() {
+        saved = receita?.isSaved
+        updateCloudButton()
     }
     
     func configCell() {
@@ -150,19 +158,28 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     }
     
     @objc func saveTapped() {
+        
         if saved == false {
-            savedButton.setImage(UIImage.init(named: "bookmark.fill"), for: .normal)
             saved = true
-            guard let uuid = receita?.idReceita else {return}
-            ckManager.saveRecipeToCloud(uuid: uuid)
+            print("SAVED")
         } else {
-            guard let uuid = receita?.idReceita else {return}
-            print("AQUi rapaz")
-            ckManager.unsaveRecipe(uuid: uuid)
-            
-            savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
             saved = false
+            print("UNSAVE")
         }
+        
+        receita?.isSaved = saved!
+        _ = cdManager.saveContext()
+        updateCloudButton()
+    }
+    
+    func updateCloudButton() {
+        
+        if saved == true {
+            savedButton.setImage(UIImage.init(named: "bookmark.fill"), for: .normal)
+        } else {
+            savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
+        }
+    
     }
     
 }

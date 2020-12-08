@@ -38,6 +38,7 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
     func setUpSearchBar() {
         let search = UISearchController(searchResultsController: nil)
         UISearchBar.appearance().tintColor = UIColor.init(named: "actionColor")
+        search.searchBar.placeholder = "Pesquisa"
         search.searchBar.setValue("Cancelar", forKey: "cancelButtonText")
         search.searchResultsUpdater = self
         search.obscuresBackgroundDuringPresentation = false

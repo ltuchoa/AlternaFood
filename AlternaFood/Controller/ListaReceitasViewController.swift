@@ -33,6 +33,17 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         setupViewConstraints()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        switch lista.segmented.selectedSegmentIndex {
+        case 0:
+            lista.scopeAll()
+        case 1:
+            lista.scopeSaved()
+        default:
+            break
+        }
+    }
+    
     func setupSearchBar() {
         let search = UISearchController(searchResultsController: nil)
         UISearchBar.appearance().tintColor = UIColor.init(named: "actionColor")
@@ -45,15 +56,17 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let nomeSearch = searchController.searchBar.text else { return }
         
+        lista.tableView.reloadData()
+        
         if !nomeSearch.isEmpty {
             lista.listaReceitas = cdManager.requestReceitaByName(nome: nomeSearch)
-            lista.tableView.reloadData()
+            lista.scopeSearch()
         } else {
             lista.listaReceitas = cdManager.listaReceitas()
-            lista.tableView.reloadData()
+            lista.scopeSearch()
         }
     }
-
+    
     func setupViewConstraints() {
         self.view.addSubview(lista)
         self.lista.translatesAutoresizingMaskIntoConstraints = false

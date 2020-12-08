@@ -40,6 +40,22 @@ class CKManager {
         }
     }
     
+    func isSavedRecipe(uuid: UUID) -> Bool {
+        var result: Bool = false
+        let query = CKQuery(recordType: "Recipe", predicate: NSPredicate(value: true))
+        privateDatabase.perform(query, inZoneWith: nil) { (records, _) in
+            guard let records = records else { return }
+            for record in records {
+                guard let content = record.value(forKey: "content") else { return }
+                if content as? String == uuid.debugDescription {
+                    result = true
+                }
+            }
+        
+        }
+        return result
+    }
+    
     func deleteRecipeFromDatabase(recordID: CKRecord.ID) {
         privateDatabase.delete(withRecordID: recordID) { (record, error) in
             if let error = error {
