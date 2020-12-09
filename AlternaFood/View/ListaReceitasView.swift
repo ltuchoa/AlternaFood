@@ -98,6 +98,9 @@ class ListaReceitasView: UIView {
     func scopeAll() {
         listaTableReceita = []
         listaTableReceita = listaReceitas
+        if listaReceitas.isEmpty {
+            tableView.restore()
+        }
         tableView.reloadData()
     }
     
