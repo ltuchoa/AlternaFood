@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 extension ListaSubstitutosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func setUpCollectionview() {
@@ -62,7 +63,8 @@ extension ListaSubstitutosViewController: UICollectionViewDelegate, UICollection
         viewController.descriptionView.idAlimento = idAlimento
         viewController.substituto = substitutos[indexPath.row]
         
-        self.navigationController?.pushViewController(viewController, animated: true)
+//        self.navigationController?.pushViewController(viewController, animated: true)
+        showHero(viewController, navigationAnimationType: .pull(direction: .left))
     }
 
     func animateCell(cell: UICollectionViewCell) {

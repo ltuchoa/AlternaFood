@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class ListaSubstitutosViewController: UIViewController {
     
@@ -15,6 +16,14 @@ class ListaSubstitutosViewController: UIViewController {
     var idAlimento: UUID?
     var nomeAlimento: String?
     var substitutos: [Substituto] = []
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.enableHero()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.disableHero()
+    }
     
     override func viewDidLoad() {
         configNav()

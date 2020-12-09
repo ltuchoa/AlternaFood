@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 extension ListaAlimentosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func setUpCollectionview() {
@@ -56,7 +57,7 @@ extension ListaAlimentosViewController: UICollectionViewDelegate, UICollectionVi
         navigationItem.backBarButtonItem = UIBarButtonItem(title: alimentos[indexPath.row].nomeAlimento, style: .plain, target: self, action: #selector(popToPrevious))
         let substitutosOrder = alimentos[indexPath.row].listaSubstitutos
         viewController.substitutos = substitutosOrder.sorted(by: { $0.nomeSubstituto! < $1.nomeSubstituto! })
-        self.navigationController?.pushViewController(viewController, animated: true)
+        showHero(viewController, navigationAnimationType: .pull(direction: .left))
     }
 
     func animateCell(cell: UICollectionViewCell) {

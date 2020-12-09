@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 class DescricaoReceitaViewController: UIViewController {
 
@@ -27,6 +28,13 @@ class DescricaoReceitaViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
         navigationController?.navigationBar.barStyle = .black
+        self.enableHero()
+
+        self.headerImage.hero.id = "cellReceita"
+        self.descricaoReceitaView.hero.id = "bottomCellReceita"
+
+        self.headerImage.hero.modifiers = [.translate(y:200), .duration(0.32), .useOptimizedSnapshot]
+        self.descricaoReceitaView.hero.modifiers = [.fade, .duration(0.1)]
     }
     
     override func viewDidLoad() {
@@ -42,6 +50,7 @@ class DescricaoReceitaViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
         navigationController?.navigationBar.barStyle = .default
+        self.disableHero()
     }
     
     func configHeaderImageView() {

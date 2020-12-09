@@ -8,6 +8,7 @@ target 'AlternaFood' do
   # Pods for AlternaFood
     pod 'Cosmos'
     pod 'TinyConstraints'
+    pod 'Hero'
     
   target 'AlternaFoodTests' do
     inherit! :search_paths

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 class DescriptionViewController: UIViewController {
     
@@ -13,6 +14,10 @@ class DescriptionViewController: UIViewController {
     let headerImage = HeaderImageView()
     
     var substituto: Substituto?
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.enableHero()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
@@ -37,6 +42,7 @@ class DescriptionViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
         navigationController?.navigationBar.barStyle = .default
+        self.disableHero()
     }
     
     func configHeaderImageView() {

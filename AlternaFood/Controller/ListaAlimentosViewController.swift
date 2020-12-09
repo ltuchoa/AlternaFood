@@ -7,6 +7,7 @@
 
 import UIKit
 import Cosmos
+import Hero
 //swiftlint:disable trailing_whitespace
 class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, UISearchControllerDelegate {
 
@@ -15,6 +16,14 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
     
     let cdManeger = CDManager()
     var alimentos: [Alimento] = []
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.enableHero()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.disableHero()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

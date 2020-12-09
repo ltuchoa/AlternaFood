@@ -7,6 +7,7 @@
 //swiftlint:disable force_cast
 
 import UIKit
+import Hero
 
 class DescriptionView: UIView {
 
@@ -123,9 +124,12 @@ extension DescriptionView: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 2 {
             let cell = tableView.cellForRow(at: indexPath) ?? UITableViewCell()
             animateCell(cell: cell)
+
+            cell.hero.id = "cellReceita"
             
             let viewController = DescricaoReceitaViewController()
             viewController.receita = listaReceitas[indexPath.row]
+            rootViewController?.showHero(viewController, navigationAnimationType: .fade)
             rootViewController?.pushViewController(viewController, animated: true)
         }
     }

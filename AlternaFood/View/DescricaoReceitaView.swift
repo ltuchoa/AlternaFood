@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 class DescricaoReceitaView: UIView {
     
@@ -17,7 +18,8 @@ class DescricaoReceitaView: UIView {
         super.init(frame: frame)
         configView()
         configTableView()
-        
+        self.tableView.hero.id = "bottomCellReceita"
+        self.tableView.hero.modifiers = [.fade, .duration(0.1)]
     }
     
     required init?(coder: NSCoder) {
