@@ -30,6 +30,8 @@ class ListaReceitasView: UIView {
 
     var listaReceitas: [Receita] = [] {
         didSet {
+            let receitaToOrder = listaReceitas.sorted(by: { $0.nomeReceita! < $1.nomeReceita! })
+            listaReceitas = receitaToOrder
             listaTableReceita = listaReceitas
             tableView.reloadData()
             print(listaReceitas.count)

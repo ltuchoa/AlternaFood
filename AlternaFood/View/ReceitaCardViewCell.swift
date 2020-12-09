@@ -71,7 +71,7 @@ class ReceitaCardViewCell: UIView {
 //
 //        rating.text = "4.5 (58)"
 //        rating.settings.textMargin = 5
-////        rating.settings.textColor = UIColor.black
+//        rating.settings.textColor = UIColor.black
 //        rating.settings.textFont = UIFont.systemFont(ofSize: 15, weight: .medium)
 //
 //        return rating

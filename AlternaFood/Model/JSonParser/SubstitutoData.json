@@ -156,7 +156,7 @@
         "substitutoID": "306CD431-0B69-454A-9FA3-4DDEC0947A8A",
         "substitutoNome": "Aquafaba",
         "substitutoDescricao": "Aquafaba é um líquido resultante do cozimento de leguminosas como feijão, grão de bico e lentilha.",
-        "substitutoFoto": "",
+        "substitutoFoto": "emptyStateFoto",
         "substitutoIcon": "graodebicoIcon",
         "substitutoDosAlimentosID": [],
         "substitutoReceitas": []

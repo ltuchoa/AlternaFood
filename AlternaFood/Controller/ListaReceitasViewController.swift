@@ -14,8 +14,8 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
     let cdManager = CDManager()
     
     override func viewWillAppear(_ animated: Bool) {
-//        self.navigationController?.navigationBar.tintColor = UIColor.black
-//        navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.barStyle = .default
     }
     
     override func viewDidLoad() {
@@ -26,8 +26,7 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         self.title = "Receitas"
 
-        let listaDeReceitas = cdManager.listaReceitas()
-        lista.listaReceitas = listaDeReceitas
+        lista.listaReceitas = cdManager.listaReceitas()
         
         setupSearchBar()
         setupViewConstraints()
@@ -61,10 +60,12 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         lista.tableView.reloadData()
         
         if !nomeSearch.isEmpty {
-            lista.listaReceitas = cdManager.requestReceitaByName(nome: nomeSearch)
+            let listaToOrder = cdManager.requestReceitaByName(nome: nomeSearch)
+            lista.listaReceitas = listaToOrder.sorted(by: { $0.nomeReceita! < $1.nomeReceita! })
             lista.scopeSearch()
         } else {
-            lista.listaReceitas = cdManager.listaReceitas()
+            let listaToOrder = cdManager.listaReceitas()
+            lista.listaReceitas = listaToOrder.sorted(by: { $0.nomeReceita! < $1.nomeReceita! })
             lista.scopeSearch()
         }
     }
