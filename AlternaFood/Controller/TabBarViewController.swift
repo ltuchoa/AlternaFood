@@ -13,17 +13,21 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let alimentos = UINavigationController(rootViewController: ViewController())
+        let alimentos = UINavigationController(rootViewController: ListaAlimentosViewController())
         alimentos.tabBarItem = UITabBarItem(title: "Alimentos", image: UIImage(named: "lista_icon"), tag: 0)
 
-        let receitas = UINavigationController(rootViewController: ViewController())
+        let receitas = UINavigationController(rootViewController: ListaReceitasViewController())
         receitas.tabBarItem = UITabBarItem(title: "Receitas", image: UIImage(named: "receitas_icon"), tag: 1)
-
+        
         let tabBarList = [alimentos, receitas]
+        setupStyle()
         viewControllers = tabBarList
     }
 
     func setupStyle() {
+        tabBar.tintColor = UIColor.init(named: "actionColor")
+        tabBar.unselectedItemTintColor = UIColor.init(named: "tabColor")
+        tabBar.isTranslucent = false
     }
 
     func removeSeparetor() {
