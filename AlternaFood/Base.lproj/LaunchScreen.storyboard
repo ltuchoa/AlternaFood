@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FjK-J8-XY7">
-                                <rect key="frame" x="88" y="354" width="238" height="197"/>
+                                <rect key="frame" x="77.5" y="337" width="259" height="232"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.92551678420000005" green="0.96102458239999999" blue="0.94117498399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="FjK-J8-XY7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4yF-E8-Fvl"/>
-                            <constraint firstItem="FjK-J8-XY7" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.219866" id="CCI-TO-hjK"/>
-                            <constraint firstItem="FjK-J8-XY7" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.574879" id="dyi-wS-ftN"/>
-                            <constraint firstItem="FjK-J8-XY7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gUg-Go-oiP"/>
+                            <constraint firstItem="FjK-J8-XY7" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.258929" id="9Ef-bL-bdw"/>
+                            <constraint firstItem="FjK-J8-XY7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="9Qe-bx-3X7"/>
+                            <constraint firstItem="FjK-J8-XY7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PT5-HB-gMr"/>
+                            <constraint firstItem="FjK-J8-XY7" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.625604" id="afW-o5-4Ob"/>
                         </constraints>
                     </view>
                 </viewController>

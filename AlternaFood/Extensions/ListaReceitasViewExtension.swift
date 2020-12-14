@@ -10,12 +10,12 @@ import UIKit
 extension ListaReceitasView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listaReceitas.count
+        return listaTableReceita.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ReceitaCardTableViewCell()
-        let receita = listaReceitas[indexPath.row]
+        let receita = listaTableReceita[indexPath.row]
 //        print(receita.nomeReceita)
         cell.receitaTable = receita
         return cell
@@ -27,7 +27,7 @@ extension ListaReceitasView: UITableViewDelegate, UITableViewDataSource {
         animateCell(cell: cell)
 
         let viewController = DescricaoReceitaViewController()
-        viewController.receita = listaReceitas[indexPath.row]
+        viewController.receita = listaTableReceita[indexPath.row]
         rootViewController?.pushViewController(viewController, animated: true)
     }
 

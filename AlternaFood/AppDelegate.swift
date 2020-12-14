@@ -14,7 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let jsonParser = JsonParser()
-
+        
+        if let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            let cdManager = CDManager()
+            if UserDefaults.standard.string(forKey: "Build") != build {
+                print(build)
+                cdManager.clearDatabase(entity: "Alimento")
+                cdManager.clearDatabase(entity: "Substituto")
+                cdManager.clearDatabase(entity: "Receita")
+                UserDefaults.standard.setValue(build, forKey: "Build")
+                UserDefaults.standard.setValue(false, forKey: "First Launch")
+            }
+        }
+        
         if UserDefaults.standard.bool(forKey: "First Launch") == false {
             if !jsonParser.populateAlimentoCD() ||
                 !jsonParser.populateSubstitutosCD() ||
@@ -24,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 return false
             }
         }
-        
         UserDefaults.standard.set(true, forKey: "First Launch")
         
         UNUserNotificationCenter.current()

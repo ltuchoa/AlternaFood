@@ -12,9 +12,9 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     
     let titleLabel = UILabel()
     let savedButton = UIButton()
-    var saved: Bool = false
+    var saved: Bool?
     
-    let ckManager = CKManager()
+    let cdManager = CDManager()
     
     var receita: Receita? {
         didSet {
@@ -44,13 +44,13 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         rating.settings.updateOnTouch = true
         rating.settings.fillMode = .precise
         rating.settings.filledColor = UIColor.init(named: "actionColor")!
-        rating.settings.starSize = 24
+        rating.settings.starSize = 0
         rating.settings.starMargin = 5
         rating.settings.filledBorderColor = UIColor.init(named: "actionColor")!
         rating.settings.filledImage = UIImage(named: "starFilledIcon")
         rating.settings.emptyImage = UIImage(named: "starEmptyIcon")
         
-        rating.text = "4.6 (58)"
+        //rating.text = "4.6 (58)"
         rating.settings.textMargin = 8  
 //        rating.settings.textColor = UIColor.black
         rating.settings.textFont = UIFont.systemFont(ofSize: 20, weight: .medium)
@@ -61,6 +61,9 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 //        configCell()
+        DispatchQueue.main.async {
+            self.updateSavedSate()
+        }
         configButton()
         configTitleLabel()
         setupRatingConstraints()
@@ -73,6 +76,11 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateSavedSate() {
+        saved = receita?.isSaved
+        updateCloudButton()
     }
     
     func configCell() {
@@ -108,7 +116,7 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: self.savedButton.leadingAnchor, constant: -10),
+            titleLabel.trailingAnchor.constraint(equalTo: self.savedButton.leadingAnchor, constant: -20),
             titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 20)
         ])
     }
@@ -150,19 +158,28 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     }
     
     @objc func saveTapped() {
+        
         if saved == false {
-            savedButton.setImage(UIImage.init(named: "bookmark.fill"), for: .normal)
             saved = true
-            guard let uuid = receita?.idReceita else {return}
-            ckManager.saveRecipeToCloud(uuid: uuid)
+            print("SAVED")
         } else {
-            guard let uuid = receita?.idReceita else {return}
-            print("AQUi rapaz")
-            ckManager.getIdRecord(uuid: uuid)
-            
-            savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
             saved = false
+            print("UNSAVE")
         }
+        
+        receita?.isSaved = saved!
+        _ = cdManager.saveContext()
+        updateCloudButton()
+    }
+    
+    func updateCloudButton() {
+        
+        if saved == true {
+            savedButton.setImage(UIImage.init(named: "bookmark.fill"), for: .normal)
+        } else {
+            savedButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
+        }
+    
     }
     
 }

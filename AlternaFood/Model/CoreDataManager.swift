@@ -14,6 +14,8 @@ class CDManager {
 
     let viewContext = ((UIApplication.shared.delegate as? AppDelegate) ?? AppDelegate()).persistentContainer.viewContext
     
+    let coordinator = ((UIApplication.shared.delegate as? AppDelegate) ?? AppDelegate()).persistentContainer.persistentStoreCoordinator
+    
     func saveContext() -> Bool {
         
         do {
@@ -108,7 +110,7 @@ class CDManager {
     func requestAlimentoByName(nome: String) -> [Alimento] {
         let requestAlim = Alimento.fetchRequest() as NSFetchRequest<Alimento>
         //NSPredicate(format: "SELF CONTAINS %@", "anc")
-        requestAlim.predicate = NSPredicate(format: "nomeAlimento CONTAINS %@", nome)
+        requestAlim.predicate = NSPredicate(format: "nomeAlimento CONTAINS[CD] %@", nome)
         //requestAlim.predicate = NSPredicate(format: "nomeAlimento == %@", nome)
         
         do {
@@ -124,7 +126,7 @@ class CDManager {
     func requestReceitaByName(nome: String) -> [Receita] {
         let requestRecei = Receita.fetchRequest() as NSFetchRequest<Receita>
         //NSPredicate(format: "SELF CONTAINS %@", "anc")
-        requestRecei.predicate = NSPredicate(format: "nomeReceita CONTAINS %@", nome)
+        requestRecei.predicate = NSPredicate(format: "nomeReceita CONTAINS[CD] %@", nome)
         //requestAlim.predicate = NSPredicate(format: "nomeAlimento == %@", nome)
         
         do {
@@ -166,5 +168,19 @@ class CDManager {
         }
         
         return receitas
+    }
+    
+    func clearDatabase(entity: String ) {
+        let context = viewContext
+        let coord = coordinator
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity )
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try coord.execute(deleteRequest, with: context)
+        } catch let error as NSError {
+            debugPrint(error)
+        }
     }
 }

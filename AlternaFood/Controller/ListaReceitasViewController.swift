@@ -14,8 +14,8 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
     let cdManager = CDManager()
     
     override func viewWillAppear(_ animated: Bool) {
-//        self.navigationController?.navigationBar.tintColor = UIColor.black
-//        navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.barStyle = .default
     }
     
     override func viewDidLoad() {
@@ -26,11 +26,22 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         self.title = "Receitas"
 
-        let listaDeReceitas = cdManager.listaReceitas()
-        lista.listaReceitas = listaDeReceitas
+        lista.listaReceitas = cdManager.listaReceitas()
         
         setupSearchBar()
         setupViewConstraints()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        switch lista.segmented.selectedSegmentIndex {
+        case 0:
+            lista.scopeAll()
+        case 1:
+            lista.scopeSaved()
+        default:
+            break
+        }
+
     }
     
     func setupSearchBar() {
@@ -38,6 +49,7 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         UISearchBar.appearance().tintColor = UIColor.init(named: "actionColor")
         search.searchBar.setValue("Cancelar", forKey: "cancelButtonText")
         search.searchResultsUpdater = self
+        search.searchBar.placeholder = "Pesquisa"
         search.obscuresBackgroundDuringPresentation = false
         self.navigationItem.searchController = search
     }
@@ -45,15 +57,19 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let nomeSearch = searchController.searchBar.text else { return }
         
+        lista.tableView.reloadData()
+        
         if !nomeSearch.isEmpty {
-            lista.listaReceitas = cdManager.requestReceitaByName(nome: nomeSearch)
-            lista.tableView.reloadData()
+            let listaToOrder = cdManager.requestReceitaByName(nome: nomeSearch)
+            lista.listaReceitas = listaToOrder.sorted(by: { $0.nomeReceita! < $1.nomeReceita! })
+            lista.scopeSearch()
         } else {
-            lista.listaReceitas = cdManager.listaReceitas()
-            lista.tableView.reloadData()
+            let listaToOrder = cdManager.listaReceitas()
+            lista.listaReceitas = listaToOrder.sorted(by: { $0.nomeReceita! < $1.nomeReceita! })
+            lista.scopeSearch()
         }
     }
-
+    
     func setupViewConstraints() {
         self.view.addSubview(lista)
         self.lista.translatesAutoresizingMaskIntoConstraints = false

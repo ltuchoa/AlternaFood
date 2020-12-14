@@ -24,6 +24,9 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         self.title = "Alimentos"
         
+        let alimentosToOrder = cdManeger.listaAlimentos()
+        alimentos = alimentosToOrder.sorted(by: { $0.nomeAlimento! < $1.nomeAlimento! })
+        
         setUpCollectionview()
         setCollectionViewDelegates()
         
@@ -38,6 +41,7 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
     func setUpSearchBar() {
         let search = UISearchController(searchResultsController: nil)
         UISearchBar.appearance().tintColor = UIColor.init(named: "actionColor")
+        search.searchBar.placeholder = "Pesquisa"
         search.searchBar.setValue("Cancelar", forKey: "cancelButtonText")
         search.searchResultsUpdater = self
         search.obscuresBackgroundDuringPresentation = false

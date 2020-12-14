@@ -156,7 +156,7 @@
         "substitutoID": "306CD431-0B69-454A-9FA3-4DDEC0947A8A",
         "substitutoNome": "Aquafaba",
         "substitutoDescricao": "Aquafaba é um líquido resultante do cozimento de leguminosas como feijão, grão de bico e lentilha.",
-        "substitutoFoto": "",
+        "substitutoFoto": "emptyStateFoto",
         "substitutoIcon": "graodebicoIcon",
         "substitutoDosAlimentosID": [],
         "substitutoReceitas": []
@@ -203,15 +203,6 @@
         "substitutoDescricao": "Grão de bico é uma ótima fonte de fibras e proteínas, sendo também um alimento com baixo nível glicêmico, ajudando assim a controlar os níveis de açúcar no sangue.",
         "substitutoFoto": "graodebicoFoto",
         "substitutoIcon": "graodebicoIcon",
-        "substitutoDosAlimentosID": [],
-        "substitutoReceitas": []
-    },
-    {
-        "substitutoID": "BD2EA4CF-FB67-402D-B4C3-8B01A2AAFE7D",
-        "substitutoNome": "Bicarbonato com vinagre",
-        "substitutoDescricao": "",
-        "substitutoFoto": "",
-        "substitutoIcon": "bicarbonatoIcon",
         "substitutoDosAlimentosID": [],
         "substitutoReceitas": []
     },
@@ -266,15 +257,6 @@
         "substitutoDescricao": "O milho é rico em fibras, proteína, antioxidantes, além de conter fólico. Dessa  forma é um alimento muito benéfico para o coração, ajudando também a prevenir infecções e alguns tipos de câncer.",
         "substitutoFoto": "milhoFoto",
         "substitutoIcon": "milhoIcon",
-        "substitutoDosAlimentosID": [],
-        "substitutoReceitas": []
-    },
-    {
-        "substitutoID": "03D32002-3AE5-44FF-9E3E-D3B5E7DF36AB",
-        "substitutoNome": "Bolacha agua e sal ",
-        "substitutoDescricao": "",
-        "substitutoFoto": "bolachaFoto",
-        "substitutoIcon": "bolachaIcon",
         "substitutoDosAlimentosID": [],
         "substitutoReceitas": []
     },

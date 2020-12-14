@@ -52,7 +52,10 @@ extension ListaAlimentosViewController: UICollectionViewDelegate, UICollectionVi
         print("User tapped on item \(indexPath.row)")
         let viewController = ListaSubstitutosViewController()
         viewController.idAlimento = alimentos[indexPath.row].idAlimento
-        viewController.substitutos = alimentos[indexPath.row].listaSubstitutos
+        viewController.nomeAlimento = alimentos[indexPath.row].nomeAlimento
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: alimentos[indexPath.row].nomeAlimento, style: .plain, target: self, action: #selector(popToPrevious))
+        let substitutosOrder = alimentos[indexPath.row].listaSubstitutos
+        viewController.substitutos = substitutosOrder.sorted(by: { $0.nomeSubstituto! < $1.nomeSubstituto! })
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
@@ -74,4 +77,10 @@ extension ListaAlimentosViewController: UICollectionViewDelegate, UICollectionVi
                                        }, completion: nil)
                        })
     }
+    
+    @objc private func popToPrevious() {
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

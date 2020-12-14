@@ -11,6 +11,7 @@ class DescricaoReceitaViewController: UIViewController {
 
     let headerImage = HeaderImageView()
     let descricaoReceitaView = DescricaoReceitaView()
+    let ckManager = CKManager()
     
     var receita: Receita? {
         didSet {
