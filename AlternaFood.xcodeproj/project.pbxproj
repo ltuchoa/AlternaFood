@@ -180,18 +180,10 @@
 		545C3ADD2566E5B40095273A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */,
-				A4A6F4762569A0110094F278 /* DescriptionView.swift */,
-				A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */,
-				562CB05225680AAB00F729FD /* CustomCell.swift */,
-				5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */,
-				5465699C256BE3AD00298373 /* ReceitaCardViewCell.swift */,
-				546569A1256BE3FD00298373 /* TagView.swift */,
-				A4447557256D4DAD00527955 /* HeaderImageView.swift */,
-				A444755C256D51FA00527955 /* ReceitaCardTableViewCell.swift */,
-				730B87FC2575ACC900FAD42D /* DescricaoReceitaView.swift */,
-				730B88012575D0C000FAD42D /* HeaderDescricaoReceitaTableViewCell.swift */,
-				542A059025750FEE003ED2CC /* ListaReceitasView.swift */,
+				A4F8E62C2587914100EC6973 /* FoodsList */,
+				A4F8E62A258790CF00EC6973 /* DescriptionSubs */,
+				A4F8E629258790BC00EC6973 /* RecipeList */,
+				A4F8E628258790A800EC6973 /* DescriptionRecipes */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,6 +307,46 @@
 				A444759525751DA000527955 /* Icon.png */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		A4F8E628258790A800EC6973 /* DescriptionRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				730B87FC2575ACC900FAD42D /* DescricaoReceitaView.swift */,
+				730B88012575D0C000FAD42D /* HeaderDescricaoReceitaTableViewCell.swift */,
+			);
+			path = DescriptionRecipes;
+			sourceTree = "<group>";
+		};
+		A4F8E629258790BC00EC6973 /* RecipeList */ = {
+			isa = PBXGroup;
+			children = (
+				5465699C256BE3AD00298373 /* ReceitaCardViewCell.swift */,
+				542A059025750FEE003ED2CC /* ListaReceitasView.swift */,
+				546569A1256BE3FD00298373 /* TagView.swift */,
+				A444755C256D51FA00527955 /* ReceitaCardTableViewCell.swift */,
+			);
+			path = RecipeList;
+			sourceTree = "<group>";
+		};
+		A4F8E62A258790CF00EC6973 /* DescriptionSubs */ = {
+			isa = PBXGroup;
+			children = (
+				A4A6F4762569A0110094F278 /* DescriptionView.swift */,
+				A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */,
+				A4447557256D4DAD00527955 /* HeaderImageView.swift */,
+			);
+			path = DescriptionSubs;
+			sourceTree = "<group>";
+		};
+		A4F8E62C2587914100EC6973 /* FoodsList */ = {
+			isa = PBXGroup;
+			children = (
+				5664091F256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift */,
+				A4A6F4592566F5AB0094F278 /* CardCollectionViewCell.swift */,
+				562CB05225680AAB00F729FD /* CustomCell.swift */,
+			);
+			path = FoodsList;
 			sourceTree = "<group>";
 		};
 		A776FE80256CA74600DF9691 /* JSonParser */ = {
