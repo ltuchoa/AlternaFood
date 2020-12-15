@@ -10,7 +10,6 @@ import UIKit
 class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
 
     let lista = ListaReceitasView()
-    
     let cdManager = CDManager()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +24,8 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         self.title = "Receitas"
-
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addRecipe))
+        self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor")
         lista.listaReceitas = cdManager.listaReceitas()
         
         setupSearchBar()
@@ -42,6 +42,11 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
             break
         }
 
+    }
+    
+    @objc func addRecipe() {
+        let add = AdicionarReceitaViewController()
+        self.present(add, animated: true, completion: .none)
     }
     
     func setupSearchBar() {

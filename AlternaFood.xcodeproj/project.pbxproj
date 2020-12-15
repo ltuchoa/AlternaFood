@@ -49,6 +49,9 @@
 		A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F47125699A790094F278 /* DescriptionViewController.swift */; };
 		A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4762569A0110094F278 /* DescriptionView.swift */; };
 		A4A6F484256A2D570094F278 /* DescriptionSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */; };
+		A4AC2C7F2588DEB100C412A7 /* AdicionarReceitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2C7E2588DEB100C412A7 /* AdicionarReceitaViewController.swift */; };
+		A4AC2C852588DF2900C412A7 /* AddStepOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2C842588DF2900C412A7 /* AddStepOneView.swift */; };
+		A4AC2C8D2588EC7900C412A7 /* FakeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2C8C2588EC7900C412A7 /* FakeNavigationView.swift */; };
 		A71734CF25712580004DF61F /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71734CE25712580004DF61F /* CoreDataManagerTests.swift */; };
 		A71734E8257133D0004DF61F /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71734E7257133D0004DF61F /* JsonParserTests.swift */; };
 		A776FE82256CA76400DF9691 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776FE81256CA76400DF9691 /* JsonParser.swift */; };
@@ -134,6 +137,9 @@
 		A4A6F47125699A790094F278 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		A4A6F4762569A0110094F278 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSubTableViewCell.swift; sourceTree = "<group>"; };
+		A4AC2C7E2588DEB100C412A7 /* AdicionarReceitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarReceitaViewController.swift; sourceTree = "<group>"; };
+		A4AC2C842588DF2900C412A7 /* AddStepOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepOneView.swift; sourceTree = "<group>"; };
+		A4AC2C8C2588EC7900C412A7 /* FakeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNavigationView.swift; sourceTree = "<group>"; };
 		A71734CE25712580004DF61F /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
 		A71734E7257133D0004DF61F /* JsonParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 		A776FE81256CA76400DF9691 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 		545C3ADD2566E5B40095273A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4AC2C832588DEBF00C412A7 /* AddRecipe */,
 				A4F8E62C2587914100EC6973 /* FoodsList */,
 				A4F8E62A258790CF00EC6973 /* DescriptionSubs */,
 				A4F8E629258790BC00EC6973 /* RecipeList */,
@@ -297,6 +304,7 @@
 				736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */,
 				545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */,
 				A444758F2575189A00527955 /* NotificacaoViewController.swift */,
+				A4AC2C7E2588DEB100C412A7 /* AdicionarReceitaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +315,15 @@
 				A444759525751DA000527955 /* Icon.png */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		A4AC2C832588DEBF00C412A7 /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				A4AC2C842588DF2900C412A7 /* AddStepOneView.swift */,
+				A4AC2C8C2588EC7900C412A7 /* FakeNavigationView.swift */,
+			);
+			path = AddRecipe;
 			sourceTree = "<group>";
 		};
 		A4F8E628258790A800EC6973 /* DescriptionRecipes */ = {
@@ -664,8 +681,11 @@
 				562CB05325680AAB00F729FD /* CustomCell.swift in Sources */,
 				56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */,
 				542A059125750FEE003ED2CC /* ListaReceitasView.swift in Sources */,
+				A4AC2C7F2588DEB100C412A7 /* AdicionarReceitaViewController.swift in Sources */,
 				5465699D256BE3AD00298373 /* ReceitaCardViewCell.swift in Sources */,
+				A4AC2C852588DF2900C412A7 /* AddStepOneView.swift in Sources */,
 				730B87F025759DF700FAD42D /* DescricaoReceitaViewController.swift in Sources */,
+				A4AC2C8D2588EC7900C412A7 /* FakeNavigationView.swift in Sources */,
 				730B87FD2575ACC900FAD42D /* DescricaoReceitaView.swift in Sources */,
 				A789CB77256F481B001FCDC3 /* Substituto+CoreDataProperties.swift in Sources */,
 				568058ED257FB7F700BE03AB /* Receita+CoreDataProperties.swift in Sources */,
