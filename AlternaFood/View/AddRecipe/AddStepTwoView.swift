@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TTGTagCollectionView
 
 class AddStepTwoView: UIView {
     
@@ -13,7 +14,8 @@ class AddStepTwoView: UIView {
         super.init(frame: frame)
         
         constraintIngredientesLabel()
-        contraintIngredientesField()
+        constraintIngredientesField()
+        constraintTags()
     }
 
     required init?(coder: NSCoder) {
@@ -35,6 +37,24 @@ class AddStepTwoView: UIView {
         title.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         return title
     }()
+
+    lazy var tags: TTGTextTagCollectionView = {
+        let tags = TTGTextTagCollectionView()
+        tags.alignment = .left
+        tags.delegate = self
+
+        let config = TTGTextTagConfig()
+        config.backgroundColor = UIColor.init(named: "tagColor")
+        config.textColor = .white
+        config.borderWidth = 0
+        config.shadowOpacity = 0.1
+        config.cornerRadius = 5
+        config.selectedBackgroundColor = .systemRed
+
+        tags.addTags(["Água", "Castanha"], with: config)
+
+        return tags
+    }()
     
     func constraintIngredientesLabel() {
         addSubview(ingredientesLabel)
@@ -45,7 +65,7 @@ class AddStepTwoView: UIView {
         ])
     }
     
-    func contraintIngredientesField() {
+    func constraintIngredientesField() {
         addSubview(ingredientesField)
         ingredientesField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -53,5 +73,31 @@ class AddStepTwoView: UIView {
             ingredientesField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20)
         ])
     }
+
+    func constraintTags() {
+        addSubview(tags)
+        tags.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tags.topAnchor.constraint(equalTo: ingredientesField.bottomAnchor, constant: 40),
+            tags.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            tags.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 20)
+        ])
+    }
+
+    func addTags(ingredientes: [String]) {
+        let config = TTGTextTagConfig()
+        config.backgroundColor = UIColor.init(named: "tagColor")
+        config.textColor = .white
+        config.borderWidth = 0
+        config.shadowOpacity = 0.1
+        config.cornerRadius = 5
+        config.selectedBackgroundColor = .systemRed
+
+        self.tags.addTags(ingredientes, with: config)
+    }
     
+}
+
+extension AddStepTwoView: TTGTextTagCollectionViewDelegate {
+
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TTGTagCollectionView
 
 class AddStepThreeView: UIView {
     
@@ -14,6 +15,7 @@ class AddStepThreeView: UIView {
         
         constraintPreparoLabel()
         contraintPreparoField()
+        constraintTags()
     }
 
     required init?(coder: NSCoder) {
@@ -35,6 +37,24 @@ class AddStepThreeView: UIView {
         title.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         return title
     }()
+
+    lazy var tags: TTGTextTagCollectionView = {
+        let tags = TTGTextTagCollectionView()
+        tags.alignment = .left
+        tags.delegate = self
+
+        let config = TTGTextTagConfig()
+        config.backgroundColor = UIColor.init(named: "tagColor")
+        config.textColor = .white
+        config.borderWidth = 0
+        config.shadowOpacity = 0.1
+        config.cornerRadius = 5
+        config.selectedBackgroundColor = .systemRed
+
+        tags.addTags(["Deixe a castanha de molho por 8 horas", "Despeje a água e lave as castanhas", "Adicione água e castanha no liquidificador", "Bata bem por alguns minutos"], with: config)
+
+        return tags
+    }()
     
     func constraintPreparoLabel() {
         addSubview(preparoLabel)
@@ -53,5 +73,31 @@ class AddStepThreeView: UIView {
             preparoField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20)
         ])
     }
+
+    func constraintTags() {
+        addSubview(tags)
+        tags.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tags.topAnchor.constraint(equalTo: preparoField.bottomAnchor, constant: 40),
+            tags.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            tags.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 20)
+        ])
+    }
+
+    func addTags(ingredientes: [String]) {
+        let config = TTGTextTagConfig()
+        config.backgroundColor = UIColor.init(named: "tagColor")
+        config.textColor = .white
+        config.borderWidth = 0
+        config.shadowOpacity = 0.1
+        config.cornerRadius = 5
+        config.selectedBackgroundColor = .systemRed
+
+        self.tags.addTags(ingredientes, with: config)
+    }
     
+}
+
+extension AddStepThreeView: TTGTextTagCollectionViewDelegate {
+
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		13DFF3B300110C203C6267FD /* Pods_AlternaFoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA1F3224B43D7927AB03BB9 /* Pods_AlternaFoodTests.framework */; };
+		5400E388258A4232003F5DDC /* StepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400E387258A4232003F5DDC /* StepOneViewController.swift */; };
+		5400E390258A426D003F5DDC /* StepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400E38F258A426D003F5DDC /* StepTwoViewController.swift */; };
+		5400E395258A43B0003F5DDC /* StepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400E394258A43B0003F5DDC /* StepThreeViewController.swift */; };
+		5400E39A258A444E003F5DDC /* StepFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5400E399258A444E003F5DDC /* StepFourViewController.swift */; };
 		542A059125750FEE003ED2CC /* ListaReceitasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542A059025750FEE003ED2CC /* ListaReceitasView.swift */; };
 		542A059625752052003ED2CC /* ListaReceitasViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542A059525752052003ED2CC /* ListaReceitasViewExtension.swift */; };
 		545C3AE02566E5DA0095273A /* ListaSubstitutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */; };
@@ -49,9 +53,7 @@
 		A4A6F47225699A790094F278 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F47125699A790094F278 /* DescriptionViewController.swift */; };
 		A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F4762569A0110094F278 /* DescriptionView.swift */; };
 		A4A6F484256A2D570094F278 /* DescriptionSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */; };
-		A4AC2C7F2588DEB100C412A7 /* AdicionarReceitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2C7E2588DEB100C412A7 /* AdicionarReceitaViewController.swift */; };
 		A4AC2C852588DF2900C412A7 /* AddStepOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2C842588DF2900C412A7 /* AddStepOneView.swift */; };
-		A4AC2C8D2588EC7900C412A7 /* FakeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2C8C2588EC7900C412A7 /* FakeNavigationView.swift */; };
 		A4AC2C9A25899D0B00C412A7 /* AddStepTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2C9925899D0B00C412A7 /* AddStepTwoView.swift */; };
 		A4AC2C9F25899EBD00C412A7 /* AddStepThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2C9E25899EBD00C412A7 /* AddStepThreeView.swift */; };
 		A4AC2CA425899F1100C412A7 /* AddStepFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC2CA325899F1100C412A7 /* AddStepFourView.swift */; };
@@ -91,6 +93,10 @@
 		238EB9704482A7BB95D62BCF /* Pods_AlternaFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlternaFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		387A051957879E78E8EFAFAE /* Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43B7FDBDB1CC35A282AC38B4 /* Pods-AlternaFood-AlternaFoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; path = "Target Support Files/Pods-AlternaFood-AlternaFoodUITests/Pods-AlternaFood-AlternaFoodUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5400E387258A4232003F5DDC /* StepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepOneViewController.swift; sourceTree = "<group>"; };
+		5400E38F258A426D003F5DDC /* StepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwoViewController.swift; sourceTree = "<group>"; };
+		5400E394258A43B0003F5DDC /* StepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThreeViewController.swift; sourceTree = "<group>"; };
+		5400E399258A444E003F5DDC /* StepFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFourViewController.swift; sourceTree = "<group>"; };
 		542A059025750FEE003ED2CC /* ListaReceitasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReceitasView.swift; sourceTree = "<group>"; };
 		542A059525752052003ED2CC /* ListaReceitasViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaReceitasViewExtension.swift; sourceTree = "<group>"; };
 		545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSubstitutosViewController.swift; sourceTree = "<group>"; };
@@ -140,9 +146,7 @@
 		A4A6F47125699A790094F278 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		A4A6F4762569A0110094F278 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		A4A6F483256A2D570094F278 /* DescriptionSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSubTableViewCell.swift; sourceTree = "<group>"; };
-		A4AC2C7E2588DEB100C412A7 /* AdicionarReceitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarReceitaViewController.swift; sourceTree = "<group>"; };
 		A4AC2C842588DF2900C412A7 /* AddStepOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepOneView.swift; sourceTree = "<group>"; };
-		A4AC2C8C2588EC7900C412A7 /* FakeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNavigationView.swift; sourceTree = "<group>"; };
 		A4AC2C9925899D0B00C412A7 /* AddStepTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepTwoView.swift; sourceTree = "<group>"; };
 		A4AC2C9E25899EBD00C412A7 /* AddStepThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepThreeView.swift; sourceTree = "<group>"; };
 		A4AC2CA325899F1100C412A7 /* AddStepFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepFourView.swift; sourceTree = "<group>"; };
@@ -189,6 +193,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5400E383258A41C4003F5DDC /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				5400E387258A4232003F5DDC /* StepOneViewController.swift */,
+				5400E38F258A426D003F5DDC /* StepTwoViewController.swift */,
+				5400E394258A43B0003F5DDC /* StepThreeViewController.swift */,
+				5400E399258A444E003F5DDC /* StepFourViewController.swift */,
+			);
+			path = AddRecipe;
+			sourceTree = "<group>";
+		};
 		545C3ADD2566E5B40095273A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +318,7 @@
 		736CB77B25654B7A00A51F28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5400E383258A41C4003F5DDC /* AddRecipe */,
 				A789CB94256F48DE001FCDC3 /* TabBarViewController.swift */,
 				A4A6F47125699A790094F278 /* DescriptionViewController.swift */,
 				730B87EF25759DF700FAD42D /* DescricaoReceitaViewController.swift */,
@@ -310,7 +326,6 @@
 				736CB74225654A9B00A51F28 /* ListaAlimentosViewController.swift */,
 				545C3ADF2566E5DA0095273A /* ListaSubstitutosViewController.swift */,
 				A444758F2575189A00527955 /* NotificacaoViewController.swift */,
-				A4AC2C7E2588DEB100C412A7 /* AdicionarReceitaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,7 +341,6 @@
 		A4AC2C832588DEBF00C412A7 /* AddRecipe */ = {
 			isa = PBXGroup;
 			children = (
-				A4AC2C8C2588EC7900C412A7 /* FakeNavigationView.swift */,
 				A4AC2C842588DF2900C412A7 /* AddStepOneView.swift */,
 				A4AC2C9925899D0B00C412A7 /* AddStepTwoView.swift */,
 				A4AC2C9E25899EBD00C412A7 /* AddStepThreeView.swift */,
@@ -680,6 +694,7 @@
 				A4A6F484256A2D570094F278 /* DescriptionSubTableViewCell.swift in Sources */,
 				A789CB95256F48DE001FCDC3 /* TabBarViewController.swift in Sources */,
 				730B87F82575A0F100FAD42D /* UINavigationControllerExtension.swift in Sources */,
+				5400E388258A4232003F5DDC /* StepOneViewController.swift in Sources */,
 				736CB74325654A9B00A51F28 /* ListaAlimentosViewController.swift in Sources */,
 				A444755D256D51FA00527955 /* ReceitaCardTableViewCell.swift in Sources */,
 				56640920256BD98B00A55CA1 /* CustomCollectionViewFlowLayout.swift in Sources */,
@@ -691,16 +706,15 @@
 				562CB05325680AAB00F729FD /* CustomCell.swift in Sources */,
 				56CBD253256CA23400D7F807 /* ListaSubstitutosViewControllerExtension.swift in Sources */,
 				542A059125750FEE003ED2CC /* ListaReceitasView.swift in Sources */,
-				A4AC2C7F2588DEB100C412A7 /* AdicionarReceitaViewController.swift in Sources */,
 				A4AC2C9A25899D0B00C412A7 /* AddStepTwoView.swift in Sources */,
 				5465699D256BE3AD00298373 /* ReceitaCardViewCell.swift in Sources */,
 				A4AC2C852588DF2900C412A7 /* AddStepOneView.swift in Sources */,
 				730B87F025759DF700FAD42D /* DescricaoReceitaViewController.swift in Sources */,
-				A4AC2C8D2588EC7900C412A7 /* FakeNavigationView.swift in Sources */,
 				730B87FD2575ACC900FAD42D /* DescricaoReceitaView.swift in Sources */,
 				A789CB77256F481B001FCDC3 /* Substituto+CoreDataProperties.swift in Sources */,
 				568058ED257FB7F700BE03AB /* Receita+CoreDataProperties.swift in Sources */,
 				736CB73F25654A9B00A51F28 /* AppDelegate.swift in Sources */,
+				5400E395258A43B0003F5DDC /* StepThreeViewController.swift in Sources */,
 				A789CB76256F481B001FCDC3 /* Alimento+CoreDataClass.swift in Sources */,
 				736CB74125654A9B00A51F28 /* SceneDelegate.swift in Sources */,
 				A4447558256D4DAD00527955 /* HeaderImageView.swift in Sources */,
@@ -708,6 +722,7 @@
 				A4A6F4772569A0110094F278 /* DescriptionView.swift in Sources */,
 				56CBD240256C9F3C00D7F807 /* ListaAlimentosViewControllerExtension.swift in Sources */,
 				A4AC2C9F25899EBD00C412A7 /* AddStepThreeView.swift in Sources */,
+				5400E390258A426D003F5DDC /* StepTwoViewController.swift in Sources */,
 				A44475902575189A00527955 /* NotificacaoViewController.swift in Sources */,
 				A776FE82256CA76400DF9691 /* JsonParser.swift in Sources */,
 				542A059625752052003ED2CC /* ListaReceitasViewExtension.swift in Sources */,
@@ -716,6 +731,7 @@
 				73260E3C25680E0D005A1F1F /* CoreDataManager.swift in Sources */,
 				736CB74925654A9B00A51F28 /* AlternaFood.xcdatamodeld in Sources */,
 				568058EC257FB7F700BE03AB /* Receita+CoreDataClass.swift in Sources */,
+				5400E39A258A444E003F5DDC /* StepFourViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

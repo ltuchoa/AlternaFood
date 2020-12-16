@@ -45,8 +45,12 @@ class ListaReceitasViewController: UIViewController, UISearchResultsUpdating {
     }
     
     @objc func addRecipe() {
-        let add = AdicionarReceitaViewController()
-        self.present(add, animated: true, completion: .none)
+//        let add = AdicionarReceitaViewController()
+//        self.present(add, animated: true, completion: .none)
+        let myVC = StepOneViewController()
+        let navController = UINavigationController(rootViewController: myVC)
+
+        self.navigationController?.present(navController, animated: true, completion: nil)
     }
     
     func setupSearchBar() {
