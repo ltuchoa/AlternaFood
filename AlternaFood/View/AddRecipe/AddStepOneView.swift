@@ -59,6 +59,7 @@ class AddStepOneView: UIView {
         tempo.tintColor = UIColor.init(named: "actionColor")
         tempo.textColor = UIColor.init(named: "actionColor")
         tempo.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        tempo.keyboardType = .numberPad    //testar os teclados
         return tempo
     }()
     
@@ -68,6 +69,7 @@ class AddStepOneView: UIView {
         porcao.tintColor = UIColor.init(named: "actionColor")
         porcao.textColor = UIColor.init(named: "actionColor")
         porcao.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        porcao.keyboardType = .numberPad //testar os teclados
         return porcao
     }()
     
