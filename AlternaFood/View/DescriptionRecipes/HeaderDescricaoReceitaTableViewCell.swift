@@ -38,18 +38,30 @@ class HeaderDescricaoReceitaTableViewCell: UITableViewCell {
     
     let rating: CosmosView = {
         let rating = CosmosView()
-        rating.rating = 4.6
+        rating.rating = 4.0
         
         rating.settings.totalStars = 5
         rating.settings.updateOnTouch = true
-        rating.settings.fillMode = .precise
+        rating.settings.fillMode = .half
         rating.settings.filledColor = UIColor.init(named: "actionColor")!
-        rating.settings.starSize = 0
+        rating.settings.starSize = 25
         rating.settings.starMargin = 5
         rating.settings.filledBorderColor = UIColor.init(named: "actionColor")!
         rating.settings.filledImage = UIImage(named: "starFilledIcon")
         rating.settings.emptyImage = UIImage(named: "starEmptyIcon")
-        
+        guard let uuid = UUID(uuidString: "07BA6D10-9FE4-456A-937D-66C126F5F676") else { return rating}
+        CKManager().getRateRecipe(recipeID: uuid) { (result) in
+            switch result {
+            case .success(let result):
+                rating.text = "\(result)"
+                let rate = "\(result)"
+                
+                rating.rating = Double(rate) ?? 0
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
         //rating.text = "4.6 (58)"
         rating.settings.textMargin = 8  
 //        rating.settings.textColor = UIColor.black

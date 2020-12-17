@@ -35,6 +35,8 @@ class ListaAlimentosViewController: UIViewController, UISearchResultsUpdating, U
         print(alimentos.count)
         
         setUpSearchBar()
+        guard let uuid = UUID(uuidString: "07BA6D10-9FE4-456A-937D-66C126F5F676") else { return }
+        CKManager().saveNewRateToCloud(newRate: 4.5, uuid: uuid)
 
     }
     

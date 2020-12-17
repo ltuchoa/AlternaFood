@@ -97,6 +97,7 @@ class CKManager {
     
     func saveNewRateToCloud(newRate: Float, uuid: UUID) {
         let nota = CKRecord(recordType: "PublicRate")
+        nota.setValue(uuid.debugDescription, forKey: "recipeID")
         nota.setValue(newRate, forKey: "rate")
 
         publicDatabase.save(nota) { (record, error) in
@@ -109,14 +110,26 @@ class CKManager {
         }
     }
 
-    func getRateRecipe(recipeName: String) {
-        let query = CKQuery(recordType: recipeName, predicate: NSPredicate(value: true))
-        publicDatabase.perform(query, inZoneWith: nil) { (records, _) in
-            guard let records = records else { return }
+    func getRateRecipe(recipeID: UUID, completion: @escaping (Result< Any, Error>) -> Void) {
+        let query = CKQuery(recordType: "PublicRate", predicate: NSPredicate(value: true))
+        publicDatabase.perform(query, inZoneWith: nil) { (records, error) in
+            guard let records = records else {
+                if let error = error {
+                    completion(.failure(error))
+                }
+                return
+            }
             for record in records {
                 print(record)
-                guard let content = record.value(forKey: "rate") else { return }
-                print(content)
+                guard let content = record.value(forKey: "recipeID") else {
+                    return
+                }
+                if content as? String == recipeID.debugDescription {
+                    if let rate = record.value(forKey: "rate") {
+                        print(rate)
+                        completion(.success(rate))
+                    }
+                }
             }
         }
     }

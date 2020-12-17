@@ -20,6 +20,15 @@ class ListaSubstitutosViewController: UIViewController {
         configNav()
         view.backgroundColor = .systemBackground
         setUpCollectionview()
+        guard let uuid = UUID(uuidString: "07BA6D10-9FE4-456A-937D-66C126F5F676") else { return }
+        CKManager().getRateRecipe(recipeID: uuid) { (result) in
+            switch result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func configNav() {

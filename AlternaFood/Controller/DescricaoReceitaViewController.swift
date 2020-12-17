@@ -42,6 +42,7 @@ class DescricaoReceitaViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.init(named: "actionColor2")
         navigationController?.navigationBar.barStyle = .default
+        
     }
     
     func configHeaderImageView() {
