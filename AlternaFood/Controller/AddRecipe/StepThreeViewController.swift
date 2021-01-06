@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StepThreeViewController: UIViewController {
+class StepThreeViewController: UIViewController, UITextFieldDelegate {
 
     let stepThree = AddStepThreeView()
 
@@ -16,6 +16,7 @@ class StepThreeViewController: UIViewController {
         view.backgroundColor = .white
         setupNavBar()
         constraintStepThree()
+        stepThree.preparoField.delegate = self
     }
 
     func setupNavBar() {
@@ -25,6 +26,17 @@ class StepThreeViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Voltar", style: .plain, target: self, action: #selector(backView))
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        stepThree.preparo = stepThree.preparoField.text
+        stepThree.preparoField.resignFirstResponder()
+        stepThree.arrayPreparo.append(stepThree.preparoField.text ?? "Sem ingredientes")
+        stepThree.updateTags()
+        print(stepThree.preparo)
+        print(stepThree.arrayPreparo)
+        
+        return false
+    }
+    
     @objc func nextStep() {
         let stepFour = StepFourViewController()
         self.navigationController?.pushViewController(stepFour, animated: false)

@@ -28,6 +28,9 @@ class StepOneViewController: UIViewController {
     }
 
     @objc func nextStep() {
+        stepOne.saveTitleField()
+        stepOne.saveTempoField()
+        stepOne.savePorcaoField()
         let stepTwo = StepTwoViewController()
         self.navigationController?.pushViewController(stepTwo, animated: false)
     }

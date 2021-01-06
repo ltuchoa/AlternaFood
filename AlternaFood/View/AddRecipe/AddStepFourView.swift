@@ -13,7 +13,7 @@ class AddStepFourView: UIView {
         super.init(frame: frame)
         
         constraintFotoLabel()
-        constraintFotoButton()
+        constraintfotoImage()
         
     }
 
@@ -28,17 +28,10 @@ class AddStepFourView: UIView {
         return title
     }()
     
-//    let fotoImage: UIImage = {
-//        let foto = UIImage()
-//        return foto
-//    }()
-    
-    let fotoButton: UIButton = {
-        let foto = UIButton(type: .custom)
-//        button.frame = CGRect(x: 0.0, y: 0.0, width: 50, height: 50)
-        foto.setTitle("Cancelar", for: .normal)
-        foto.setTitleColor(UIColor.init(named: "actionColor"), for: .normal)
-        foto.addTarget(self, action: #selector(fotoButtonTapped(fotoButton:_:)), for: UIControl.Event.touchUpInside)
+    let fotoImage: UIImageView = {
+        let foto = UIImageView(image: UIImage(named: "emptyStateFoto"))
+        foto.layer.cornerRadius = 12
+        foto.clipsToBounds = true
         return foto
     }()
     
@@ -51,39 +44,16 @@ class AddStepFourView: UIView {
         ])
     }
     
-    func constraintFotoButton() {
-        addSubview(fotoButton)
-        fotoButton.translatesAutoresizingMaskIntoConstraints = false
+    func constraintfotoImage() {
+        addSubview(fotoImage)
+        fotoImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            fotoButton.topAnchor.constraint(equalTo: fotoLabel.bottomAnchor, constant: 15),
-            fotoButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20)
+            fotoImage.topAnchor.constraint(equalTo: fotoLabel.bottomAnchor, constant: 20),
+            fotoImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            fotoImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.27),
+            fotoImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.85)
         ])
-    }
-    
-    @objc func fotoButtonTapped(fotoButton: UIButton,_ sender:UIBarButtonItem!) {
-        print("ola")
-        let fotoPick = UIImagePickerController()
-        fotoPick.sourceType = .photoLibrary
-        fotoPick.delegate = self
-        fotoPick.allowsEditing = true
-        fotoPick.present(fotoPick, animated: true )
-        
     }
 }
 
-extension AddStepFourView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-//        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-//            fotoImage = image
-//        }
-        
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-}
+

@@ -9,6 +9,10 @@ import UIKit
 
 class AddStepOneView: UIView {
     
+    var title: String?
+    var tempo: String?
+    var porcao: String?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         constraintTitleLabel()
@@ -53,6 +57,11 @@ class AddStepOneView: UIView {
         return title
     }()
     
+    func saveTitleField() {
+        title = titleField.text
+        print(title)
+    }
+    
     let tempoField: UITextField = {
         let tempo = UITextField()
         tempo.attributedPlaceholder = NSAttributedString(string: "Tempo", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(named: "placeHolderColor")])
@@ -62,6 +71,11 @@ class AddStepOneView: UIView {
         tempo.keyboardType = .numberPad    //testar os teclados
         return tempo
     }()
+    
+    func saveTempoField() {
+        tempo = tempoField.text
+        print(tempo)
+    }
     
     let porcaoField: UITextField = {
         let porcao = UITextField()
@@ -73,6 +87,10 @@ class AddStepOneView: UIView {
         return porcao
     }()
     
+    func savePorcaoField() {
+        porcao = porcaoField.text
+        print(porcao)
+    }
     
     func constraintTitleLabel() {
         addSubview(titleLabel)
@@ -88,7 +106,8 @@ class AddStepOneView: UIView {
         titleField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
-            titleField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20)
+            titleField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            titleField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 20)
         ])
     }
     
@@ -98,6 +117,7 @@ class AddStepOneView: UIView {
         NSLayoutConstraint.activate([
             tempoLabel.topAnchor.constraint(equalTo: titleField.bottomAnchor, constant: 20),
             tempoLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20)
+            
         ])
     }
     
@@ -106,7 +126,8 @@ class AddStepOneView: UIView {
         tempoField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tempoField.topAnchor.constraint(equalTo: tempoLabel.bottomAnchor, constant: 15),
-            tempoField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20)
+            tempoField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            tempoField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 20)
         ])
     }
     
@@ -124,7 +145,8 @@ class AddStepOneView: UIView {
         porcaoField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             porcaoField.topAnchor.constraint(equalTo: porcaoLabel.bottomAnchor, constant: 15),
-            porcaoField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20)
+            porcaoField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            porcaoField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 20)
         ])
     }
 }

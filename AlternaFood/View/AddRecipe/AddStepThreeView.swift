@@ -10,6 +10,10 @@ import TTGTagCollectionView
 
 class AddStepThreeView: UIView {
     
+    var preparo: String?
+    
+    var arrayPreparo: [String] = []
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -43,6 +47,10 @@ class AddStepThreeView: UIView {
         tags.alignment = .left
         tags.delegate = self
 
+        return tags
+    }()
+    
+    func updateTags() {
         let config = TTGTextTagConfig()
         config.backgroundColor = UIColor.init(named: "tagColor")
         config.textColor = .white
@@ -51,10 +59,8 @@ class AddStepThreeView: UIView {
         config.cornerRadius = 5
         config.selectedBackgroundColor = .systemRed
 
-        tags.addTags(["Deixe a castanha de molho por 8 horas", "Despeje a água e lave as castanhas", "Adicione água e castanha no liquidificador", "Bata bem por alguns minutos"], with: config)
-
-        return tags
-    }()
+        self.tags.addTag(preparo, with: config)
+    }
     
     func constraintPreparoLabel() {
         addSubview(preparoLabel)
@@ -83,19 +89,6 @@ class AddStepThreeView: UIView {
             tags.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 20)
         ])
     }
-
-    func addTags(ingredientes: [String]) {
-        let config = TTGTextTagConfig()
-        config.backgroundColor = UIColor.init(named: "tagColor")
-        config.textColor = .white
-        config.borderWidth = 0
-        config.shadowOpacity = 0.1
-        config.cornerRadius = 5
-        config.selectedBackgroundColor = .systemRed
-
-        self.tags.addTags(ingredientes, with: config)
-    }
-    
 }
 
 extension AddStepThreeView: TTGTextTagCollectionViewDelegate {
