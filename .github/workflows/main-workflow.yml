@@ -1,15 +1,14 @@
-name: Swift
+name: Cache, Build & Test
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
 
 jobs:
   test:
 
-    name: Test
+    name: Cache, Build & Test
     env:
       SCHEME: "AlternaFood"
       DEVICE: "iPhone 11"
