@@ -18,9 +18,8 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        destination: ['platform=iOS Simulator,OS=14.2,name=iPhone 11']
-        xcode: ['/Applications/Xcode_12.2.app/Contents/Developer']
-
+        destination: ['platform=iOS Simulator,OS=14.4,name=iPhone 12']
+        
     steps:
 
       - name: Checkout
@@ -28,6 +27,7 @@ jobs:
 
       - name: Cache
         uses: actions/cache@v2
+        id: pods-cache
         with:
             path: Pods
             key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
@@ -35,6 +35,8 @@ jobs:
               ${{ runner.os }}-pods-
               
       - name: Install Pods
+        if: 
+          steps.pods-cache.outputs.cache-hit != 'true'
         run: |
           pod install
           
