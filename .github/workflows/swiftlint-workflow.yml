@@ -1,7 +1,7 @@
 name: SwiftLint
 
 on:
-  pull_request:
+  push:
     branches:
       - main
       - developer
@@ -10,8 +10,11 @@ jobs:
   SwiftLint:
     runs-on: ubuntu-latest
     steps:
+      - name: Check Out
       - uses: actions/checkout@v2
-      - name: SwiftLint (Only files changed in the PR)
-        uses: norio-nomura/action-swiftlint@3.2.1
-        env:
-          DIFF_BASE: ${{ github.base_ref }}
+      
+      - name: Run linters
+        uses: wearerequired/lint-action@master
+        with:
+          swiftlint: true
+          swiftlint_args: "--max-warnings 0"
