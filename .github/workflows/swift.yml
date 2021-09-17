@@ -1,0 +1,50 @@
+name: Swift
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+
+    name: Test
+    env:
+      SCHEME: "AlternaFood"
+      DEVICE: "iPhone 11"
+      DERIVED_DATA_PATH: "DerivedData"
+
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=14.2,name=iPhone 11']
+        xcode: ['/Applications/Xcode_12.2.app/Contents/Developer']
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+            path: Pods
+            key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+            restore-keys: |
+              ${{ runner.os }}-pods-
+              
+      - name: Bundle Install
+        run: 
+          bundle install --deployment
+          
+      - name: Cocoapods
+        run: 
+          bundle exec pod install
+          
+      - name: Build and Test
+        run: |
+          xcodebuild clean test -project AlternaFood.xcworkspace -scheme AlternaFood -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        env: 
+          destination: ${{ matrix.destination }}
+      
