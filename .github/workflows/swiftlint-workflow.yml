@@ -6,9 +6,6 @@ on:
       - '.github/workflows/swiftlint.yml'
       - '.swiftlint.yml'
       - '**/*.swift'
-    branches:
-      - main
-      - developer
 
 jobs:
   SwiftLint:
