@@ -43,5 +43,5 @@ jobs:
         env: 
           destination: ${{ matrix.destination }}
         
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1.2.1
+      - name: Coverage
+        uses: sersoft-gmbh/swift-coverage-action@v2
