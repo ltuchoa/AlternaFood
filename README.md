@@ -1,3 +1,3 @@
 # AlternaFood é um app de saúde
 
-Muito bom.
+Muito bom esse app.
